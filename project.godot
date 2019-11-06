@@ -320,11 +320,6 @@ _global_script_classes=[ {
 "path": "res://ivoyager/system_tree/temp_rings.gd"
 }, {
 "base": "Reference",
-"class": "TestClass",
-"language": "GDScript",
-"path": "res://ivoyager/program_refs/test_class.gd"
-}, {
-"base": "Reference",
 "class": "ThemeManager",
 "language": "GDScript",
 "path": "res://ivoyager/program_refs/theme_manager.gd"
@@ -417,7 +412,6 @@ _global_script_class_icons={
 "SystemBuilder": "",
 "TableReader": "",
 "TempRings": "",
-"TestClass": "",
 "ThemeManager": "",
 "TimeControl": "",
 "Timekeeper": "",
