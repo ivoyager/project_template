@@ -4,7 +4,7 @@
 # how to extend an existing class or add a new class (these are commented out).
 #
 # Requirements:
-#    1. File must have the same name as its directory (+".gd")
+#    1. This file must have the same name as its directory (+".gd")
 #    2. Must have the 3 constants below
 #    3. Must have function extension_init()
 #

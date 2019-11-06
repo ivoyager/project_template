@@ -1,0 +1,5 @@
+THIS IS A TEMPLATE FILE!
+
+Developers should replace this file with up-to-date credit information inclusive for all included files (e.g., the ivoyager submodule, addons, non-ivoyager assets, etc.).
+
+I, Voyager credit information is in directory "ivoyager", file CREDITS.md.
