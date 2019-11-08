@@ -1,7 +1,5 @@
-THIS IS A TEMPLATE FILE!
+THIS FILE IS A PLACEHOLDER ONLY!
 
-Developers should replace this file with up-to-date license information inclusive for all included files (e.g., the ivoyager submodule, addons, non-ivoyager assets, etc.).
-
-For I, Voyager license, see file ivoyager/LICENCE.txt.
-For copyright of material distributed in I, Voyager, see file ivoyager/COPYRIGHT.txt.
-
+For I, Voyager license, see LICENSE.txt file in the "ivoyager" submodule
+repository at https://github.com/ivoyager/ivoyager, or in the "ivoyager"
+subdirectory of this software distribution.
