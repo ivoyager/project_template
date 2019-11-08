@@ -28,16 +28,17 @@ func extension_init():
 	Global.allow_time_reversal = false
 	
 	# You can extend and replace an existing class. For example, if MyExtendedBody
-	# extends Body, then this line would cause MyExtendedBody to be used in the
-	# solar system build...
+	# extends Body, then this line would cause MyExtendedBody to be used instead
+	# of Body in the solar system build...
 	# ProjectBuilder.procedural_classes._Body_ = MyExtendedBody
 	
-	# Add a "program node" class (ProjectBuider will instantiate & add)...
+	# "Program nodes" and "program reerences" are classes instantiated by
+	# ProjectBuider. This line would add one of your own...
 	# ProjectBuilder.program_nodes._MyProgramNode_ = MyProgramNode
 
 func _on_project_objects_instantiated() -> void:
-	# Here you can access and change init values for objects instantiated by
-	# ProjectBuilder (if node, this is before they are added to the tree).
+	# Here you can access and change init values for program nodes and
+	# program references (for nodes, before they are added to the tree).
 	var settings_manager: SettingsManager = Global.objects.SettingsManager
 	settings_manager.defaults.save_base_name = "Template"
 
@@ -46,7 +47,8 @@ func _on_gui_entered_tree(gui_panel: Control) -> void:
 	# ProjectBuilder (i.e., SelectionPanel, InfoPanel, NavigationPanel) before
 	# they are added to the tree.
 	if gui_panel is InfoPanel:
-		# For example, you could add to or modify InfoPanel subpanels...
+		# For example, you could add 2 of your own InfoPanel "subpanels" before
+		# the Wiki subpanel (so there would be 3 buttons on the InfoPanel)...
 		gui_panel.subpanel_classes = [
 			# MySubpanel1,
 			# MySubpanel2,
