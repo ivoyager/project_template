@@ -1,6 +1,8 @@
 # I, Voyager Project Template
 This file is a placeholder. You should replace it with your project README.md.
 
+For help with the Project Template, see this [tutorial](https://ivoyager.dev/forum/index.php?p=/discussion/20/how-to-make-a-new-project-from-the-project-template#latest) or ask questions on [our forum](https://ivoyager.dev/forum/).
+
 Homepage: https://ivoyager.dev
 
 ### What is I, Voyager?
