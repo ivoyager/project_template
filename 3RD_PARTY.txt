@@ -1,0 +1,6 @@
+THIS FILE IS A PLACEHOLDER ONLY!
+
+For comprehensive copyright and licence information of 3rd party files
+distributed in I, Voyager, see 3RD_PARTY.txt in the "ivoyager" submodule
+repository at https://github.com/ivoyager/ivoyager or in the "ivoyager"
+subdirectory of this software distribution.
