@@ -23,6 +23,7 @@ func extension_init():
 	Global.connect("gui_entered_tree", self, "_on_gui_entered_tree")
 	
 	# Change global init values...
+	Global.project_name = "I Voyager Project Template"
 	Global.save_file_extension = "TemplateSave"
 	Global.save_file_extension_name = "Template Save"
 	Global.allow_time_reversal = false
