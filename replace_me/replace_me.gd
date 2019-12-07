@@ -21,6 +21,7 @@ const EXTENSION_VERSION_YMD := 20191109 # can test for addon requirement by date
 func extension_init():
 	ProjectBuilder.connect("project_objects_instantiated", self, "_on_project_objects_instantiated")
 	Global.connect("gui_entered_tree", self, "_on_gui_entered_tree")
+	Global.connect("system_tree_ready", self, "_on_system_tree_ready")
 	
 	# Change global init values...
 	Global.project_name = "I Voyager Project Template"
@@ -55,3 +56,7 @@ func _on_gui_entered_tree(gui_panel: Control) -> void:
 			# MySubpanel2,
 			InfoSubpanelWiki,
 		]
+
+func _on_system_tree_ready(_is_new_game: bool) -> void:
+	pass
+
