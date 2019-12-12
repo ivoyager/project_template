@@ -46,17 +46,12 @@ func _on_project_objects_instantiated() -> void:
 
 func _on_gui_entered_tree(gui_panel: Control) -> void:
 	# Here you can access and change init values for GUI classes not defined in
-	# ProjectBuilder (i.e., SelectionPanel, InfoPanel, NavigationPanel) before
+	# ProjectBuilder (i.e., SelectionPanel & NavigationPanel) before
 	# they are added to the tree.
-	if gui_panel is InfoPanel:
-		# For example, you could add 2 of your own InfoPanel "subpanels" before
-		# the Wiki subpanel (so there would be 3 buttons on the InfoPanel)...
-		gui_panel.subpanel_classes = [
-			# MySubpanel1,
-			# MySubpanel2,
-			InfoSubpanelWiki,
-		]
+	pass
 
 func _on_system_tree_ready(_is_new_game: bool) -> void:
+	# The solar system has been built or loaded, but we haven't started the
+	# sim yet. (See Global for additional sim-state signals.)
 	pass
 
