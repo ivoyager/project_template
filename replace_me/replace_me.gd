@@ -56,7 +56,7 @@ func extension_init():
 func _on_project_objects_instantiated() -> void:
 	# Here you can access and change init values for program nodes and
 	# program references (for nodes, before they are added to the tree).
-	var settings_manager: SettingsManager = Global.objects.SettingsManager
+	var settings_manager: SettingsManager = Global.program.SettingsManager
 	settings_manager.defaults.save_base_name = "Template"
 
 func _on_gui_entered_tree(_gui_panel: Control) -> void:
