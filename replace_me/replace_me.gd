@@ -16,7 +16,8 @@
 # limitations under the License.
 # *****************************************************************************
 # This is an example "extension" file that changes some init values and shows
-# how to extend an existing class or add a new class (these are commented out).
+# how to extend an existing class or add a new class. See ivoyager_planetarium
+# repository planetarium/planetarium.gd for a much bigger example.
 #
 # Requirements:
 #    1. This file must have the same name as its directory (+".gd")
