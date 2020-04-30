@@ -1,6 +1,8 @@
 # I, Voyager Project Template
 This file is a placeholder. You should replace it with your project README.md.
 
+Quick note: "Use this template" will clone the "outer project" including .gitmodules file, but will not clone the ivoyager submodule. You will need to fork & clone that yourself, and init the submodule in your project. (After that you can pull ivoyager changes or submit pull requests based on your improvements.) 
+
 For help with the Project Template, see this [tutorial](https://ivoyager.dev/forum/index.php?p=/discussion/20/how-to-make-a-new-project-from-the-project-template#latest) or ask questions on [our forum](https://ivoyager.dev/forum/).
 
 Homepage: https://ivoyager.dev
