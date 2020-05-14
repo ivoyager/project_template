@@ -36,7 +36,6 @@ const EXTENSION_VERSION_YMD := 20200513 # can test for addon requirement by date
 
 func extension_init():
 	ProjectBuilder.connect("project_objects_instantiated", self, "_on_project_objects_instantiated")
-	Global.connect("gui_entered_tree", self, "_on_gui_entered_tree")
 	Global.connect("system_tree_ready", self, "_on_system_tree_ready")
 	
 	# Change global init values...
