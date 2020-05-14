@@ -30,8 +30,8 @@
 extends Reference
 
 const EXTENSION_NAME := "Replace Me!"
-const EXTENSION_VERSION := "dev"
-const EXTENSION_VERSION_YMD := 20191109 # can test for addon requirement by date
+const EXTENSION_VERSION := "0.0.6-alpha"
+const EXTENSION_VERSION_YMD := 20200513 # can test for addon requirement by date
 
 
 func extension_init():
@@ -41,8 +41,8 @@ func extension_init():
 	
 	# Change global init values...
 	Global.project_name = "I Voyager Project Template"
-	Global.save_file_extension = "TemplateSave"
-	Global.save_file_extension_name = "Template Save"
+	Global.save_file_extension = "MyProjectSave"
+	Global.save_file_extension_name = "My Project Save"
 	Global.allow_time_reversal = false
 	
 	# You can extend and replace an existing class. For example, if MyExtendedBody
@@ -59,12 +59,6 @@ func _on_project_objects_instantiated() -> void:
 	# program references (for nodes, before they are added to the tree).
 	var settings_manager: SettingsManager = Global.program.SettingsManager
 	settings_manager.defaults.save_base_name = "Template"
-
-func _on_gui_entered_tree(_gui_panel: Control) -> void:
-	# Here you can access and change init values for GUI classes not defined in
-	# ProjectBuilder (i.e., SelectionPanel & NavigationPanel) before
-	# they are added to the tree.
-	pass
 
 func _on_system_tree_ready(_is_new_game: bool) -> void:
 	# The solar system has been built or loaded, but we haven't started the
