@@ -20,9 +20,9 @@
 # repository planetarium/planetarium.gd for a much bigger example.
 #
 # Requirements:
-#    1. This file must have the same name as its directory (+".gd")
+#    1. This file must have the same name as its directory + ".gd"
 #    2. Must have the 3 constants below
-#    3. Must have function extension_init()
+#    3. Must have function "extension_init"
 #
 # This file could extend a Node if you want, but it would have to add itself to
 # the tree.
@@ -34,7 +34,7 @@ const EXTENSION_VERSION := "0.0.6-alpha"
 const EXTENSION_VERSION_YMD := 20200513 # can test for addon requirement by date
 
 
-func extension_init():
+func extension_init() -> void:
 	ProjectBuilder.connect("project_objects_instantiated", self, "_on_project_objects_instantiated")
 	Global.connect("system_tree_ready", self, "_on_system_tree_ready")
 	
@@ -43,6 +43,10 @@ func extension_init():
 	Global.save_file_extension = "MyProjectSave"
 	Global.save_file_extension_name = "My Project Save"
 	Global.allow_time_reversal = false
+	
+	# Add or replace ProjectBuilder classes...
+	ProjectBuilder.gui_controls._ProjectGUI_ = GUIParent
+	
 	
 	# You can extend and replace an existing class. For example, if MyExtendedBody
 	# extends Body, then this line would cause MyExtendedBody to be used instead

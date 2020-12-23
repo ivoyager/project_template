@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://replace_me/gui/gui_parent.gd" type="Script" id=1]
+[ext_resource path="res://ivoyager/gui_widgets/selection_image.tscn" type="PackedScene" id=2]
+
+[node name="GUIParent" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectPanel" type="PanelContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -294.0
+margin_right = 294.0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBox" type="HBoxContainer" parent="SelectPanel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 287.0
+margin_bottom = 287.0
+
+[node name="SelectionImage" parent="SelectPanel/HBox" instance=ExtResource( 2 )]
+margin_top = 0.0
+margin_bottom = 280.0
+
+[node name="NavPanel" type="PanelContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -14.0
+margin_top = -14.0
+grow_horizontal = 0
+grow_vertical = 0
