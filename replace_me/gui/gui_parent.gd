@@ -22,8 +22,7 @@
 extends Control
 class_name GUIParent
 
-# SCENE path must be defined below for our ProjectBuilder to add it (also, see
-# how replace_me.gd adds this class to the ProjectBuilder dictionary).
+# SCENE path must be defined below for our ProjectBuilder to add it.
 const SCENE := "res://replace_me/gui/gui_parent.tscn"
 
 # A SelectionManager instance manages our current selection. To find this
@@ -45,10 +44,12 @@ func project_init() -> void:
 	Global.connect("project_builder_finished", self, "_on_project_builder_finished",
 			[], CONNECT_ONESHOT)
 	Global.connect("system_tree_built_or_loaded", self, "_on_system_tree_built_or_loaded")
-	Global.connect("setting_changed", self, "_settings_listener")
+#	Global.connect("setting_changed", self, "_settings_listener")
 
 func _on_project_builder_finished() -> void:
-	pass
+	# We hook up to a theme managed by ThemeManager so that fonts can resize if
+	# user changes GUI size in options
+	theme = Global.themes.main
 
 func _on_system_tree_built_or_loaded(is_new_game: bool) -> void:
 	if !is_new_game:
@@ -57,14 +58,6 @@ func _on_system_tree_built_or_loaded(is_new_game: bool) -> void:
 #	var registrar: Registrar = Global.program.Registrar
 #	var start_selection: SelectionItem = registrar.selection_items[Global.start_body_name]
 #	selection_manager.select(start_selection)
-
-func _settings_listener(setting: String, _value) -> void:
-	match setting:
-		"gui_size":
-			pass
-#			yield(get_tree(), "idle_frame")
-#			rect_min_size = Vector2(0, 0)
-
 
 
 
