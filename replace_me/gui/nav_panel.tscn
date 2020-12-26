@@ -18,5 +18,3 @@ __meta__ = {
 }
 
 [node name="SystemNavigator" parent="." instance=ExtResource( 2 )]
-margin_right = 7.0
-margin_bottom = 7.0
