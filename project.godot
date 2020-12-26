@@ -72,7 +72,7 @@ _global_script_classes=[ {
 "base": "Control",
 "class": "GUIParent",
 "language": "GDScript",
-"path": "res://replace_me/gui/gui_parent.gd"
+"path": "res://replace_me/example_gui/gui_parent.gd"
 }, {
 "base": "Reference",
 "class": "GUIUtils",

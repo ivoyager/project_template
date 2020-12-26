@@ -18,25 +18,17 @@
 
 extends PanelContainer
 
-
 func _ready() -> void:
 	Global.connect("gui_refresh_requested", self, "_delayed_resize_to_corner")
 	Global.connect("setting_changed", self, "_settings_listener")
-	# widget mods
-	
+	# widget mods here
 	
 
 func _delayed_resize_to_corner() -> void:
 	yield(get_tree(), "idle_frame")
 	set_anchors_and_margins_preset(PRESET_BOTTOM_RIGHT, PRESET_MODE_MINSIZE)
-	# debug
-	print($SystemNavigator.rect_size)
 
 func _settings_listener(setting: String, _value) -> void:
 	match setting:
 		"gui_size":
 			_delayed_resize_to_corner()
-
-
-
-

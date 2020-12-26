@@ -2,7 +2,7 @@
 
 [ext_resource path="res://ivoyager/gui_widgets/selection_image.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ivoyager/gui_widgets/selection_label.tscn" type="PackedScene" id=2]
-[ext_resource path="res://replace_me/gui/select_panel.gd" type="Script" id=3]
+[ext_resource path="res://replace_me/example_gui/select_panel.gd" type="Script" id=3]
 [ext_resource path="res://ivoyager/gui_widgets/selection_buttons.tscn" type="PackedScene" id=4]
 [ext_resource path="res://ivoyager/gui_widgets/range_label.tscn" type="PackedScene" id=5]
 [ext_resource path="res://ivoyager/gui_widgets/track_controler.tscn" type="PackedScene" id=6]
@@ -10,6 +10,7 @@
 [ext_resource path="res://ivoyager/gui_widgets/latitude_longitude.tscn" type="PackedScene" id=8]
 [ext_resource path="res://ivoyager/gui_widgets/focal_length_buttons.tscn" type="PackedScene" id=9]
 [ext_resource path="res://ivoyager/gui_widgets/focal_length_label.tscn" type="PackedScene" id=10]
+
 
 [node name="SelectPanel" type="PanelContainer"]
 anchor_top = 1.0

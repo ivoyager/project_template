@@ -23,7 +23,7 @@ extends Control
 class_name GUIParent
 
 # SCENE path must be defined below for our ProjectBuilder to add it.
-const SCENE := "res://replace_me/gui/gui_parent.tscn"
+const SCENE := "res://replace_me/example_gui/gui_parent.tscn"
 
 # A SelectionManager instance manages our current selection. To find this
 # instanace, various GUI widgets search up their ancestor tree for the first
@@ -41,10 +41,10 @@ const PERSIST_OBJ_PROPERTIES := ["selection_manager"]
 
 # All objects added by ProjectBuilder need a "project_init" function.
 func project_init() -> void:
-	Global.connect("project_builder_finished", self, "_on_project_builder_finished",
-			[], CONNECT_ONESHOT)
+	Global.connect("project_builder_finished", self, "_on_project_builder_finished")
 	Global.connect("system_tree_built_or_loaded", self, "_on_system_tree_built_or_loaded")
-#	Global.connect("setting_changed", self, "_settings_listener")
+	Global.connect("simulator_exited", self, "_on_simulator_exited")
+	hide()
 
 func _on_project_builder_finished() -> void:
 	# We hook up to a theme managed by ThemeManager so that fonts can resize if
@@ -55,10 +55,7 @@ func _on_system_tree_built_or_loaded(is_new_game: bool) -> void:
 	if !is_new_game:
 		return
 	selection_manager = _SelectionManager_.new()
-#	var registrar: Registrar = Global.program.Registrar
-#	var start_selection: SelectionItem = registrar.selection_items[Global.start_body_name]
-#	selection_manager.select(start_selection)
+	show()
 
-
-
-
+func _on_simulator_exited() -> void:
+	hide()
