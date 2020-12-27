@@ -52,9 +52,8 @@ func _on_project_builder_finished() -> void:
 	theme = Global.themes.main
 
 func _on_system_tree_built_or_loaded(is_new_game: bool) -> void:
-	if !is_new_game:
-		return
-	selection_manager = _SelectionManager_.new()
+	if is_new_game:
+		selection_manager = _SelectionManager_.new()
 	show()
 
 func _on_simulator_exited() -> void:

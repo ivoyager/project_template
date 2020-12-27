@@ -1,8 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://replace_me/example_gui/nav_panel.gd" type="Script" id=1]
 [ext_resource path="res://ivoyager/gui_widgets/system_navigator.tscn" type="PackedScene" id=2]
-
+[ext_resource path="res://ivoyager/gui_widgets/asteroid_group_buttons.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ivoyager/gui_widgets/time_control.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ivoyager/gui_widgets/camera_lock.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ivoyager/gui_widgets/date_time.tscn" type="PackedScene" id=6]
 
 [node name="NavPanel" type="PanelContainer"]
 anchor_left = 1.0
@@ -19,3 +22,52 @@ __meta__ = {
 }
 
 [node name="SystemNavigator" parent="." instance=ExtResource( 2 )]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 534.0
+margin_bottom = 51.0
+
+[node name="TopHBox" type="HBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 534.0
+margin_bottom = 27.0
+size_flags_vertical = 0
+
+[node name="Control" type="Control" parent="TopHBox"]
+margin_right = 192.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+
+[node name="CameraLock" parent="TopHBox/Control" instance=ExtResource( 5 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 97.0
+margin_bottom = 20.0
+align = 0
+
+[node name="DateTime" parent="TopHBox" instance=ExtResource( 6 )]
+margin_left = 196.0
+margin_right = 330.0
+align = 1
+
+[node name="TimeControl" parent="TopHBox" instance=ExtResource( 4 )]
+margin_left = 334.0
+margin_top = 0.0
+margin_right = 527.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="BottomVBox" type="VBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 534.0
+margin_bottom = 51.0
+size_flags_vertical = 8
+
+[node name="AsteroidGroupButtons" parent="BottomVBox" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 527.0
+margin_bottom = 44.0
