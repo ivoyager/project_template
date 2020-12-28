@@ -15,6 +15,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # *****************************************************************************
+# You can modify widgets or set widget init values (which contribute to panel
+# size) in _ready() here. The NavPanel mainly fits to the SystemNavigator
+# widget, with other content strategically placed above and below planets and
+# mooons.
 
 extends PanelContainer
 
@@ -22,11 +26,14 @@ func _ready() -> void:
 	Global.connect("gui_refresh_requested", self, "_delayed_resize_to_corner")
 	Global.connect("setting_changed", self, "_settings_listener")
 	# widget mods here
-	
+	$BottomVBox/HBox/Hotkeys.connect("pressed", Global, "emit_signal", ["hotkeys_requested"])
+	$BottomVBox/HBox/MainMenu.connect("pressed", Global, "emit_signal", ["open_main_menu_requested"])
 
 func _delayed_resize_to_corner() -> void:
 	yield(get_tree(), "idle_frame")
 	set_anchors_and_margins_preset(PRESET_BOTTOM_RIGHT, PRESET_MODE_MINSIZE)
+	yield(get_tree(), "idle_frame")
+	print("NavPanel size: ", rect_size)
 
 func _settings_listener(setting: String, _value) -> void:
 	match setting:

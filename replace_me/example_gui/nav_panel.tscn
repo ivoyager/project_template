@@ -24,18 +24,18 @@ __meta__ = {
 [node name="SystemNavigator" parent="." instance=ExtResource( 2 )]
 margin_left = 7.0
 margin_top = 7.0
-margin_right = 534.0
-margin_bottom = 51.0
+margin_right = 491.0
+margin_bottom = 71.0
 
 [node name="TopHBox" type="HBoxContainer" parent="."]
 margin_left = 7.0
 margin_top = 7.0
-margin_right = 534.0
+margin_right = 491.0
 margin_bottom = 27.0
 size_flags_vertical = 0
 
 [node name="Control" type="Control" parent="TopHBox"]
-margin_right = 192.0
+margin_right = 171.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 
@@ -47,14 +47,14 @@ margin_bottom = 20.0
 align = 0
 
 [node name="DateTime" parent="TopHBox" instance=ExtResource( 6 )]
-margin_left = 196.0
-margin_right = 330.0
+margin_left = 175.0
+margin_right = 309.0
 align = 1
 
 [node name="TimeControl" parent="TopHBox" instance=ExtResource( 4 )]
-margin_left = 334.0
+margin_left = 313.0
 margin_top = 0.0
-margin_right = 527.0
+margin_right = 484.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 alignment = 2
@@ -62,12 +62,26 @@ alignment = 2
 [node name="BottomVBox" type="VBoxContainer" parent="."]
 margin_left = 7.0
 margin_top = 7.0
-margin_right = 534.0
-margin_bottom = 51.0
+margin_right = 491.0
+margin_bottom = 71.0
 size_flags_vertical = 8
 
 [node name="AsteroidGroupButtons" parent="BottomVBox" instance=ExtResource( 3 )]
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 527.0
-margin_bottom = 44.0
+
+[node name="HBox" type="HBoxContainer" parent="BottomVBox"]
+margin_top = 44.0
+margin_right = 484.0
+margin_bottom = 64.0
+alignment = 2
+
+[node name="Hotkeys" type="Button" parent="BottomVBox/HBox"]
+margin_left = 198.0
+margin_right = 327.0
+margin_bottom = 20.0
+text = "BUTTON_HOTKEYS"
+
+[node name="MainMenu" type="Button" parent="BottomVBox/HBox"]
+margin_left = 331.0
+margin_right = 484.0
+margin_bottom = 20.0
+text = "BUTTON_MAIN_MENU"
