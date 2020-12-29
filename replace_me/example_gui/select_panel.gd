@@ -19,26 +19,26 @@
 
 extends PanelContainer
 
-var panel_heights := [300.0, 354.0, 400.0]
-var left_vbox_widths := [210.0, 270.0, 350.0]
-var right_vbox_widths := [210.0, 270.0, 350.0]
+var content_sizes := [
+	Vector2(421.0, 277.0), # GUI_SMALL
+	Vector2(561.0, 340.0), # GUI_MEDIUM
+	Vector2(698.0, 407.0), # GUI_LARGE
+]
 var v_spacer_sizes := [3.0, 4.0, 5.0]
 var horizontal_separations := [6.0, 8.0, 10.0]
 
 func _ready() -> void:
-	Global.connect("gui_refresh_requested", self, "_delayed_resize_to_corner")
+	Global.connect("gui_refresh_requested", self, "_resize_to_corner")
 	Global.connect("setting_changed", self, "_settings_listener")
 	# widget mods here
 	$VBox/BottomHBox/ViewButtons/Outward.hide()
 
-func _delayed_resize_to_corner() -> void:
+func _resize_to_corner() -> void:
 	var gui_size: int = Global.settings.gui_size
-	$VBox.rect_min_size.y = panel_heights[gui_size]
-	$VBox/MainHBox/LeftVBox.rect_min_size.x = left_vbox_widths[gui_size]
-	$VBox/MainHBox/RightVBox.rect_min_size.x = right_vbox_widths[gui_size]
+	$VBox.rect_min_size = content_sizes[gui_size]
 	$VBox/VSpacer.rect_min_size.y = v_spacer_sizes[gui_size]
 	$VBox/MainHBox.set("custom_constants/separation", horizontal_separations[gui_size])
-	yield(get_tree(), "idle_frame")
+	yield(get_tree(), "idle_frame") # wait for content to resize
 	set_anchors_and_margins_preset(PRESET_BOTTOM_LEFT, PRESET_MODE_MINSIZE)
 	yield(get_tree(), "idle_frame")
 	print("SelectPanel size: ", rect_size)
@@ -46,4 +46,4 @@ func _delayed_resize_to_corner() -> void:
 func _settings_listener(setting: String, _value) -> void:
 	match setting:
 		"gui_size":
-			_delayed_resize_to_corner()
+			_resize_to_corner()
