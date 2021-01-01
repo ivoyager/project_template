@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://replace_me/example_gui/nav_panel.gd" type="Script" id=1]
 [ext_resource path="res://ivoyager/gui_widgets/system_navigator.tscn" type="PackedScene" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://ivoyager/gui_widgets/time_control.tscn" type="PackedScene" id=4]
 [ext_resource path="res://ivoyager/gui_widgets/camera_lock.tscn" type="PackedScene" id=5]
 [ext_resource path="res://ivoyager/gui_widgets/date_time.tscn" type="PackedScene" id=6]
-[ext_resource path="res://ivoyager/gui_widgets/gui_nav_checkbox.tscn" type="PackedScene" id=7]
 
 [node name="NavPanel" type="PanelContainer"]
 anchor_left = 1.0
@@ -62,7 +61,7 @@ alignment = 2
 
 [node name="BottomVBox" type="VBoxContainer" parent="."]
 margin_left = 7.0
-margin_top = 7.0
+margin_top = 11.0
 margin_right = 491.0
 margin_bottom = 75.0
 size_flags_vertical = 8
@@ -72,19 +71,17 @@ size_flags_vertical = 8
 [node name="HBox" type="HBoxContainer" parent="BottomVBox"]
 margin_top = 44.0
 margin_right = 484.0
-margin_bottom = 68.0
+margin_bottom = 64.0
 alignment = 2
-
-[node name="GUINavCheckbox" parent="BottomVBox/HBox" instance=ExtResource( 7 )]
 
 [node name="Hotkeys" type="Button" parent="BottomVBox/HBox"]
 margin_left = 198.0
 margin_right = 327.0
-margin_bottom = 24.0
+margin_bottom = 20.0
 text = "BUTTON_HOTKEYS"
 
 [node name="MainMenu" type="Button" parent="BottomVBox/HBox"]
 margin_left = 331.0
 margin_right = 484.0
-margin_bottom = 24.0
+margin_bottom = 20.0
 text = "BUTTON_MAIN_MENU"
