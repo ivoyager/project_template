@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://ivoyager/gui_widgets/selection_image.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ivoyager/gui_widgets/selection_label.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://ivoyager/gui_widgets/focal_length_label.tscn" type="PackedScene" id=10]
 [ext_resource path="res://ivoyager/gui_widgets/show_buttons.tscn" type="PackedScene" id=11]
 [ext_resource path="res://ivoyager/gui_widgets/selection_data.tscn" type="PackedScene" id=12]
+[ext_resource path="res://ivoyager/gui_widgets/mod_dynamic.tscn" type="PackedScene" id=13]
 
 [node name="SelectPanel" type="PanelContainer"]
 anchor_top = 1.0
@@ -147,3 +148,6 @@ margin_left = 964.0
 margin_top = 0.0
 margin_right = 1005.0
 margin_bottom = 24.0
+
+[node name="ModDynamic" parent="." instance=ExtResource( 13 )]
+margin_right = 1012.0
