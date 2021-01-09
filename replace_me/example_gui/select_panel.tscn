@@ -26,25 +26,24 @@ __meta__ = {
 [node name="VBox" type="VBoxContainer" parent="."]
 margin_left = 7.0
 margin_top = 7.0
-margin_right = 886.0
+margin_right = 1012.0
 margin_bottom = 347.0
-rect_min_size = Vector2( 553, 340 )
 
 [node name="MainHBox" type="HBoxContainer" parent="VBox"]
-margin_right = 879.0
+margin_right = 1005.0
 margin_bottom = 304.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 10
 
 [node name="LeftVBox" type="VBoxContainer" parent="VBox/MainHBox"]
-margin_right = 434.0
+margin_right = 497.0
 margin_bottom = 304.0
 size_flags_horizontal = 3
 alignment = 1
 
 [node name="HBox" type="HBoxContainer" parent="VBox/MainHBox/LeftVBox"]
-margin_right = 434.0
+margin_right = 497.0
 margin_bottom = 20.0
 
 [node name="SelectionButtons" parent="VBox/MainHBox/LeftVBox/HBox" instance=ExtResource( 4 )]
@@ -53,31 +52,31 @@ margin_bottom = 20.0
 size_flags_horizontal = 2
 
 [node name="SelectionLabel" parent="VBox/MainHBox/LeftVBox/HBox" instance=ExtResource( 2 )]
-margin_left = 201.0
+margin_left = 232.0
 margin_top = 3.0
-margin_right = 233.0
+margin_right = 264.0
 margin_bottom = 17.0
 align = 1
 
 [node name="Spacer" type="Control" parent="VBox/MainHBox/LeftVBox/HBox"]
-margin_left = 237.0
-margin_right = 434.0
+margin_left = 268.0
+margin_right = 497.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 
 [node name="HBox2" type="HBoxContainer" parent="VBox/MainHBox/LeftVBox"]
 margin_top = 24.0
-margin_right = 434.0
+margin_right = 497.0
 margin_bottom = 38.0
 
 [node name="RangeLabel" parent="VBox/MainHBox/LeftVBox/HBox2" instance=ExtResource( 5 )]
-margin_right = 215.0
+margin_right = 246.0
 size_flags_horizontal = 3
 align = 1
 
 [node name="LatitudeLongitude" parent="VBox/MainHBox/LeftVBox/HBox2" instance=ExtResource( 8 )]
-margin_left = 219.0
-margin_right = 434.0
+margin_left = 250.0
+margin_right = 497.0
 size_flags_horizontal = 3
 align = 1
 
@@ -88,41 +87,41 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 0.0
 margin_top = 42.0
-margin_right = 434.0
+margin_right = 497.0
 margin_bottom = 304.0
 stretch_mode = 6
 
 [node name="RightVBox" type="VBoxContainer" parent="VBox/MainHBox"]
-margin_left = 444.0
-margin_right = 879.0
+margin_left = 507.0
+margin_right = 1005.0
 margin_bottom = 304.0
 size_flags_horizontal = 3
 
 [node name="ShowButtons" parent="VBox/MainHBox/RightVBox" instance=ExtResource( 11 )]
-margin_left = 59.0
-margin_right = 435.0
+margin_left = 122.0
+margin_right = 498.0
 size_flags_horizontal = 8
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBox/MainHBox/RightVBox"]
 margin_top = 24.0
-margin_right = 435.0
+margin_right = 498.0
 margin_bottom = 304.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 scroll_horizontal_enabled = false
 
 [node name="SelectionData" parent="VBox/MainHBox/RightVBox/ScrollContainer" instance=ExtResource( 12 )]
-margin_right = 435.0
+margin_right = 498.0
 
 [node name="VSpacer" type="Control" parent="VBox"]
 margin_top = 308.0
-margin_right = 879.0
+margin_right = 1005.0
 margin_bottom = 312.0
 rect_min_size = Vector2( 0, 4 )
 
 [node name="BottomHBox" type="HBoxContainer" parent="VBox"]
 margin_top = 316.0
-margin_right = 879.0
+margin_right = 1005.0
 margin_bottom = 340.0
 
 [node name="ViewButtons" parent="VBox/BottomHBox" instance=ExtResource( 7 )]
@@ -132,19 +131,19 @@ margin_bottom = 20.0
 
 [node name="TrackControler" parent="VBox/BottomHBox" instance=ExtResource( 6 )]
 margin_left = 489.0
-margin_right = 784.0
+margin_right = 910.0
 margin_bottom = 24.0
 size_flags_horizontal = 3
 alignment = 1
 
 [node name="FocalLengthLabel" parent="VBox/BottomHBox" instance=ExtResource( 10 )]
-margin_left = 788.0
+margin_left = 914.0
 margin_top = 5.0
-margin_right = 834.0
+margin_right = 960.0
 margin_bottom = 19.0
 
 [node name="FocalLengthButtons" parent="VBox/BottomHBox" instance=ExtResource( 9 )]
-margin_left = 838.0
+margin_left = 964.0
 margin_top = 0.0
-margin_right = 879.0
+margin_right = 1005.0
 margin_bottom = 24.0
