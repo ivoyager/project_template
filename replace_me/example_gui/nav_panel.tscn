@@ -7,7 +7,7 @@
 [ext_resource path="res://ivoyager/gui_widgets/camera_lock.tscn" type="PackedScene" id=5]
 [ext_resource path="res://ivoyager/gui_widgets/date_time.tscn" type="PackedScene" id=6]
 [ext_resource path="res://ivoyager/gui_widgets/mouse_only_gui_nav.tscn" type="PackedScene" id=7]
-[ext_resource path="res://ivoyager/gui_widgets/mod_resize_w_settings.tscn" type="PackedScene" id=8]
+[ext_resource path="res://ivoyager/gui_widgets/mod_dynamic.tscn" type="PackedScene" id=8]
 
 [node name="NavPanel" type="PanelContainer"]
 anchor_left = 1.0
@@ -104,4 +104,6 @@ margin_right = 610.0
 margin_bottom = 24.0
 text = "BUTTON_MAIN_MENU"
 
-[node name="ModResizeWSettings" parent="." instance=ExtResource( 8 )]
+[node name="ModDynamic" parent="." instance=ExtResource( 8 )]
+margin_right = 617.0
+margin_bottom = 75.0
