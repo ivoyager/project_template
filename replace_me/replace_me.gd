@@ -45,8 +45,7 @@ func extension_init() -> void:
 	Global.allow_time_reversal = false
 	
 	# Add or replace ProjectBuilder classes...
-	ProjectBuilder.gui_controls._ProjectGUI_ = GUIParent
-	
+#	ProjectBuilder.gui_controls._ProjectGUI_ = MyTopGUIControl
 	
 	# You can extend and replace an existing class. For example, if MyExtendedBody
 	# extends Body, then this line would cause MyExtendedBody to be used instead
