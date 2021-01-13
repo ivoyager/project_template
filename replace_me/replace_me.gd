@@ -39,6 +39,7 @@ func extension_init() -> void:
 	Global.connect("system_tree_ready", self, "_on_system_tree_ready")
 	
 	# Change global init values...
+	Global.allow_dev_tools = true
 	Global.project_name = "I Voyager Project Template"
 	Global.save_file_extension = "MyProjectSave"
 	Global.save_file_extension_name = "My Project Save"
