@@ -1,7 +1,7 @@
 # replace_me.gd
 # This file is part of I, Voyager (https://ivoyager.dev)
 # *****************************************************************************
-# Copyright (c) 2017-2020 Charlie Whitfield
+# Copyright (c) 2017-2021 Charlie Whitfield
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -39,14 +39,14 @@ func extension_init() -> void:
 	Global.connect("system_tree_ready", self, "_on_system_tree_ready")
 	
 	# Change global init values...
+	Global.allow_dev_tools = true
 	Global.project_name = "I Voyager Project Template"
 	Global.save_file_extension = "MyProjectSave"
 	Global.save_file_extension_name = "My Project Save"
 	Global.allow_time_reversal = false
 	
 	# Add or replace ProjectBuilder classes...
-	ProjectBuilder.gui_controls._ProjectGUI_ = GUIParent
-	
+#	ProjectBuilder.gui_controls._ProjectGUI_ = MyTopGUIControl
 	
 	# You can extend and replace an existing class. For example, if MyExtendedBody
 	# extends Body, then this line would cause MyExtendedBody to be used instead
