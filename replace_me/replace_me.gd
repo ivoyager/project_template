@@ -30,8 +30,8 @@
 extends Reference
 
 const EXTENSION_NAME := "Replace Me!"
-const EXTENSION_VERSION := "0.0.6-alpha"
-const EXTENSION_VERSION_YMD := 20200513 # can test for addon requirement by date
+const EXTENSION_VERSION := "0.0.7-alpha"
+const EXTENSION_VERSION_YMD := 20210122 # int allows easy >= tests
 
 
 func extension_init() -> void:
