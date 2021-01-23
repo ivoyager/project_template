@@ -32,8 +32,8 @@
 extends Reference
 
 const EXTENSION_NAME := "Replace Me!"
-const EXTENSION_VERSION := "0.0.7-alpha"
-const EXTENSION_VERSION_YMD := 20210122 # int allows easy >= tests
+const EXTENSION_VERSION := "0.0.8-dev"
+const EXTENSION_VERSION_YMD := 20210123 # int allows easy >= tests
 
 
 func extension_init() -> void:
