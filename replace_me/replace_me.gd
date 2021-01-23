@@ -1,7 +1,9 @@
 # replace_me.gd
-# This file is part of I, Voyager (https://ivoyager.dev)
+# This file is part of I, Voyager
+# https://ivoyager.dev
 # *****************************************************************************
 # Copyright (c) 2017-2021 Charlie Whitfield
+# "I, Voyager" is a registered trademark of Charlie Whitfield
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -30,8 +32,8 @@
 extends Reference
 
 const EXTENSION_NAME := "Replace Me!"
-const EXTENSION_VERSION := "0.0.7-alpha"
-const EXTENSION_VERSION_YMD := 20210122 # int allows easy >= tests
+const EXTENSION_VERSION := "0.0.8-dev"
+const EXTENSION_VERSION_YMD := 20210123 # int allows easy >= tests
 
 
 func extension_init() -> void:
