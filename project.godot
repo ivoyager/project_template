@@ -265,6 +265,11 @@ _global_script_classes=[ {
 "path": "res://ivoyager/prog_builders/saver_loader.gd"
 }, {
 "base": "Reference",
+"class": "Scheduler",
+"language": "GDScript",
+"path": "res://ivoyager/prog_refs/scheduler.gd"
+}, {
+"base": "Reference",
 "class": "SelectionBuilder",
 "language": "GDScript",
 "path": "res://ivoyager/prog_builders/selection_builder.gd"
@@ -283,11 +288,6 @@ _global_script_classes=[ {
 "class": "SettingsManager",
 "language": "GDScript",
 "path": "res://ivoyager/prog_refs/settings_manager.gd"
-}, {
-"base": "Reference",
-"class": "SimTimer",
-"language": "GDScript",
-"path": "res://ivoyager/prog_refs/sim_timer.gd"
 }, {
 "base": "Reference",
 "class": "SleepManager",
@@ -411,11 +411,11 @@ _global_script_class_icons={
 "RingsBuilder": "",
 "SaveDialog": "",
 "SaverLoader": "",
+"Scheduler": "",
 "SelectionBuilder": "",
 "SelectionItem": "",
 "SelectionManager": "",
 "SettingsManager": "",
-"SimTimer": "",
 "SleepManager": "",
 "StateManager": "",
 "StrUtils": "",
