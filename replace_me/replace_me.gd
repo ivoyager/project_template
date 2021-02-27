@@ -26,8 +26,10 @@
 #    3. Must have function "extension_init"
 
 const EXTENSION_NAME := "Replace Me!"
-const EXTENSION_VERSION := "0.0.8-alpha"
-const EXTENSION_VERSION_YMD := 20210210 # int allows easy >= tests
+const EXTENSION_VERSION := "0.0.9-dev"
+const EXTENSION_VERSION_YMD := 20210226 # int allows easy >= tests
+
+const USE_THREADS := true # false can help threaded code debugging (e.g., I/O)
 
 func extension_init() -> void:
 	prints(EXTENSION_NAME, EXTENSION_VERSION)
@@ -41,6 +43,7 @@ func extension_init() -> void:
 	Global.save_file_extension_name = "My Project Save"
 	Global.start_body_name = "PLANET_MARS"
 	Global.start_time = 21.12135 * UnitDefs.YEAR # from J2000 epoch
+	Global.use_threads = USE_THREADS
 	
 	# Add or replace ProjectBuilder classes...
 #	ProjectBuilder.gui_controls._ProjectGUI_ = MyTopGUIControl
