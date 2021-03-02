@@ -33,8 +33,7 @@ const USE_THREADS := true # false can help threaded code debugging (e.g., I/O)
 
 func extension_init() -> void:
 	prints(EXTENSION_NAME, EXTENSION_VERSION)
-	ProjectBuilder.connect("project_objects_instantiated", self,
-			"_on_project_objects_instantiated")
+	Global.connect("project_objects_instantiated", self, "_on_project_objects_instantiated")
 	Global.connect("system_tree_ready", self, "_on_system_tree_ready")
 	
 	# Change global init values...
