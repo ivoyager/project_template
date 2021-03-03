@@ -27,11 +27,11 @@
 
 const EXTENSION_NAME := "Replace Me!"
 const EXTENSION_VERSION := "0.0.9-dev"
-const EXTENSION_VERSION_YMD := 20210226 # int allows easy >= tests
+const EXTENSION_VERSION_YMD := 20210302 # int allows easy >= tests
 
 const USE_THREADS := true # false can help threaded code debugging (e.g., I/O)
 
-func extension_init() -> void:
+func _extension_init() -> void:
 	prints(EXTENSION_NAME, EXTENSION_VERSION)
 	Global.connect("project_objects_instantiated", self, "_on_project_objects_instantiated")
 	Global.connect("system_tree_ready", self, "_on_system_tree_ready")
