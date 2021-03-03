@@ -23,7 +23,7 @@
 # Requirements:
 #    1. This file must have the same name as its directory + ".gd"
 #    2. Must have the 3 constants below
-#    3. Must have function "extension_init"
+#    3. Must have function "_extension_init"
 
 const EXTENSION_NAME := "Replace Me!"
 const EXTENSION_VERSION := "0.0.9-dev"
