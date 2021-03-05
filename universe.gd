@@ -35,11 +35,19 @@ const AMPERE := 1.0
 const KELVIN := 1.0
 const CANDELA := 1.0
 
-# Nots:
+# Nots on base SI units:
 # See ivoyager/static/UnitDefs.gd for conversion of base units to derived
-# units. Values here don't matter *in theory*. They affect internal float
-# representation of quantities, but not physics or display because everything
-# is converted (e.g., if you double METER, then the gravitational constant will
-# be appropriately increased by eight-fold). However, in practice, the Godot
-# Engine will break with some values of METER. 
-
+# units. Values here don't matter *in theory* because everything is converted.
+# E.g., if you double METER, then the gravitational constant will be
+# appropriately increased by eight-fold. They affect internal float values but
+# not physics or display. 
+#
+# However, in practice, METER has to be set properly or the Godot Engine will
+# break or fail to show things. This works in conjunction with dynamic changes
+# in Camera.near and .far (see ivoyager/tree_nodes/vygr_camera.gd).
+# Setting METER = 1.0 causes AABB and other errors. Values must be tested at
+# extreems of distance, from close asteroid zoom to 200 AU solar system view.
+# For Godot 3.2.2 and before, 1e-9 or smaller worked well. With Godot 3.2.3, we
+# needed to decrease to 1e-13 to prevent distant objects disappearing. (The 
+# cost of very small values is that, when zoomed close, more distant objects
+# including orbit lines disappear.)
