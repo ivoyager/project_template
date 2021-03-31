@@ -26,8 +26,8 @@
 #    3. Must have function "_extension_init"
 
 const EXTENSION_NAME := "Replace Me!"
-const EXTENSION_VERSION := "0.0.9-dev"
-const EXTENSION_VERSION_YMD := 20210326 # int allows easy >= tests
+const EXTENSION_VERSION := "0.0.9-dev-3-31"
+const EXTENSION_VERSION_YMD := 20210331 # int allows easy >= tests
 
 const USE_THREADS := true # false can help threaded code debugging (e.g., I/O)
 
@@ -39,6 +39,8 @@ func _extension_init() -> void:
 	
 	# Change global init values...
 	Global.project_name = EXTENSION_NAME
+	Global.project_version = EXTENSION_VERSION # helps load file debug
+	Global.project_version_ymd = EXTENSION_VERSION_YMD # helps load file debug
 	Global.save_file_extension = "MyProjectSave"
 	Global.save_file_extension_name = "My Project Save"
 	Global.start_body_name = "PLANET_MARS"
