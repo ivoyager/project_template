@@ -26,13 +26,13 @@
 #    3. Must have function "_extension_init"
 
 const EXTENSION_NAME := "Replace Me!"
-const EXTENSION_VERSION := "0.0.9-alpha"
-const EXTENSION_VERSION_YMD := 20210429 # int allows easy >= tests
+const EXTENSION_VERSION: String = Global.IVOYAGER_VERSION # replace!
+const EXTENSION_VERSION_YMD: int = Global.IVOYAGER_VERSION_YMD # replace! int allows easy >= tests
 
 const USE_THREADS := true # false can help threaded code debugging (e.g., I/O)
 
 func _extension_init() -> void:
-	prints(EXTENSION_NAME, EXTENSION_VERSION)
+	prints(EXTENSION_NAME, EXTENSION_VERSION, EXTENSION_VERSION_YMD)
 	print("Use threads = ", USE_THREADS)
 	Global.connect("project_objects_instantiated", self, "_on_project_objects_instantiated")
 	Global.connect("system_tree_ready", self, "_on_system_tree_ready")
