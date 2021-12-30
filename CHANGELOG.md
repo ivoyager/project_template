@@ -6,9 +6,9 @@ See cloning and downloading instructions [here](https://www.ivoyager.dev/downloa
 
 ## [Unreleased v0.0.10] - TBD
 
-Currently developing using Godot 3.4.2.stable.
+Under development using Godot 3.4.2.stable.
 
-Requires non-Git-tracked development assets from 2021-12-28 [here](https://github.com/ivoyager/non_release_assets/releases/tag/2021-12-28).
+Requires non-Git-tracked [development assets from 2021-12-28](https://github.com/ivoyager/non_release_assets/releases/tag/2021-12-28).
 
 ### Added
 * A project level CHANGELOG.md!
