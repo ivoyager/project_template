@@ -4,21 +4,18 @@ This file documents changes to the Project Template project only. For changes to
 
 File format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-See cloning and downloading instructions [here](https://www.ivoyager.dev/download/).
+See cloning and downloading instructions [here](https://www.ivoyager.dev/devs/).
 
-## [Unreleased v0.0.10] - TBD
+## [v0.0.10] - 2022-01-09
 
-Under development using Godot 3.4.2.stable.
+Developed using Godot 3.4.2.stable.
 
-Requires non-Git-tracked [development assets from 2021-12-28](https://github.com/ivoyager/non_release_assets/releases/tag/2021-12-28).
+Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
 
 ### Added
 * A project level CHANGELOG.md!
 
-### Changes
-* Updates and fixes in README.md.
-
 ##
 *Older project-level changes are documented in* [ivoyager/CHANGELOG.md](https://github.com/ivoyager/ivoyager/blob/master/CHANGELOG.md).
 
-[Unreleased v0.0.10]: https://github.com/ivoyager/project_template/compare/v0.0.9-alpha...HEAD
+[v0.0.10]: https://github.com/ivoyager/project_template/compare/v0.0.9-alpha...v0.0.10
