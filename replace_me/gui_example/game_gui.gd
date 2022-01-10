@@ -1,4 +1,4 @@
-# example_game_gui.gd
+# game_gui.gd
 # This file is part of I, Voyager
 # https://ivoyager.dev
 # *****************************************************************************
@@ -18,15 +18,13 @@
 # limitations under the License.
 # *****************************************************************************
 #
-# THIS IS AN EXAMPLE GUI SCENE! It may change in the future. You should
-# duplicate this scene or build your own GUI scenes outside of the ivoyager
-# directory.
+# THIS IS AN EXAMPLE GUI SCENE! You can modify it or replace it.
 
 extends Control
-class_name ExampleGameGUI
+class_name GameGUI
 
 # SCENE path must be defined below for our ProjectBuilder to add it.
-const SCENE := "res://replace_me/gui_example/example_game_gui.tscn"
+const SCENE := "res://replace_me/gui_example/game_gui.tscn"
 
 # A SelectionManager instance manages our current selection. To find this
 # instanace, various GUI widgets search up their ancestor tree for the first

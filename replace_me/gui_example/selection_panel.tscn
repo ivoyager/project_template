@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://replace_me/gui_example/example_selection_panel.gd" type="Script" id=1]
+[ext_resource path="res://replace_me/gui_example/selection_panel.gd" type="Script" id=1]
 [ext_resource path="res://ivoyager/gui_widgets/selection_buttons.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ivoyager/gui_mods/control_sized.tscn" type="PackedScene" id=3]
 [ext_resource path="res://ivoyager/gui_widgets/range_label.tscn" type="PackedScene" id=4]
@@ -14,8 +14,7 @@
 [ext_resource path="res://ivoyager/gui_widgets/selection_data.tscn" type="PackedScene" id=12]
 [ext_resource path="res://ivoyager/gui_widgets/focal_length_label.tscn" type="PackedScene" id=13]
 
-
-[node name="ExampleSelectionPanel" type="PanelContainer"]
+[node name="SelectionPanel" type="PanelContainer"]
 anchor_top = 1.0
 anchor_bottom = 1.0
 margin_top = -354.0

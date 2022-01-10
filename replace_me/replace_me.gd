@@ -46,7 +46,7 @@ func _extension_init() -> void:
 	Global.start_time = 21.12135 * UnitDefs.YEAR # from J2000 epoch
 	Global.use_threads = USE_THREADS
 	# Set project GUI
-	ProjectBuilder.gui_nodes._ProjectGUI_ = ExampleGameGUI
+	ProjectBuilder.gui_nodes._ProjectGUI_ = GameGUI
 	ProjectBuilder.gui_nodes._SplashScreen_ = PBDSplashScreen
 	
 	# You can extend and replace an existing class. For example, if ExtendedBody
