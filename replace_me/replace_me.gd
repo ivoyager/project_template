@@ -26,8 +26,8 @@
 #    3. Must have function "_extension_init"
 
 const EXTENSION_NAME := "Replace Me!"
-const EXTENSION_VERSION := "0.0.10"
-const EXTENSION_VERSION_YMD := 20220109 # int allows easy >= tests
+const EXTENSION_VERSION := "0.0.11-dev"
+const EXTENSION_VERSION_YMD := 20220110 # int allows easy >= tests
 
 const USE_THREADS := true # false can help threaded code debugging (e.g., I/O)
 
@@ -36,7 +36,6 @@ func _extension_init() -> void:
 	print("Use threads = ", USE_THREADS)
 	Global.connect("project_objects_instantiated", self, "_on_project_objects_instantiated")
 	Global.connect("system_tree_ready", self, "_on_system_tree_ready")
-	
 	# Change global init values...
 	Global.project_name = EXTENSION_NAME
 	Global.project_version = EXTENSION_VERSION # helps load file debug
@@ -46,13 +45,13 @@ func _extension_init() -> void:
 	Global.start_body_name = "PLANET_MARS"
 	Global.start_time = 21.12135 * UnitDefs.YEAR # from J2000 epoch
 	Global.use_threads = USE_THREADS
-	
-	# Add or replace ProjectBuilder classes...
-#	ProjectBuilder.gui_controls._ProjectGUI_ = MyTopGUIControl
+	# Set project GUI
+	ProjectBuilder.gui_nodes._ProjectGUI_ = ExampleGameGUI
+	ProjectBuilder.gui_nodes._SplashScreen_ = PBDSplashScreen
 	
 	# You can extend and replace an existing class. For example, if ExtendedBody
-	# extends Body, then this line would cause ExtendedBody to be used instead
-	# of Body in the solar system build...
+	# extends Body, then the following line would cause ExtendedBody to be used
+	# instead of Body in the solar system build...
 	# ProjectBuilder.procedural_classes._Body_ = ExtendedBody
 	
 	# "Program nodes" and "program reerences" are classes instantiated by

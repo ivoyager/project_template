@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/pale_blue_dot.png-02c8d7b34cba13ec6714aaa48b27f6cd.s3tc.stex"
-path.etc2="res://.import/pale_blue_dot.png-02c8d7b34cba13ec6714aaa48b27f6cd.etc2.stex"
+path.s3tc="res://.import/pale_blue_dot.png-8d2697bfadbd36c96a0b4eea1bb0e86f.s3tc.stex"
+path.etc2="res://.import/pale_blue_dot.png-8d2697bfadbd36c96a0b4eea1bb0e86f.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://pale_blue_dot.png"
-dest_files=[ "res://.import/pale_blue_dot.png-02c8d7b34cba13ec6714aaa48b27f6cd.s3tc.stex", "res://.import/pale_blue_dot.png-02c8d7b34cba13ec6714aaa48b27f6cd.etc2.stex" ]
+source_file="res://replace_me/pale_blue_dot.png"
+dest_files=[ "res://.import/pale_blue_dot.png-8d2697bfadbd36c96a0b4eea1bb0e86f.s3tc.stex", "res://.import/pale_blue_dot.png-8d2697bfadbd36c96a0b4eea1bb0e86f.etc2.stex" ]
 
 [params]
 
