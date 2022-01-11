@@ -26,10 +26,10 @@ class_name GameGUI
 # SCENE path must be defined below for our IVProjectBuilder to add it.
 const SCENE := "res://replace_me/gui_example/game_gui.tscn"
 
-# A SelectionManager instance manages our current selection. To find this
+# An IVSelectionManager instance manages our current selection. To find this
 # instanace, various GUI widgets search up their ancestor tree for the first
 # node that has a "selection_manager" member.
-var selection_manager: SelectionManager
+var selection_manager: IVSelectionManager
 
 onready var _SelectionManager_: Script = IVGlobal.script_classes._SelectionManager_
 
