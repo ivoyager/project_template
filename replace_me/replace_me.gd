@@ -61,9 +61,9 @@ func _extension_init() -> void:
 func _on_project_objects_instantiated() -> void:
 	# Here you can access and change init values for program nodes and
 	# program references (for nodes, before they are added to the tree).
-	var timekeeper: Timekeeper = IVGlobal.program.Timekeeper
+	var timekeeper: IVTimekeeper = IVGlobal.program.Timekeeper
 	timekeeper.start_speed = 1
-	var settings_manager: SettingsManager = IVGlobal.program.SettingsManager
+	var settings_manager: IVSettingsManager = IVGlobal.program.SettingsManager
 	settings_manager.defaults.save_base_name = "Template"
 
 func _on_system_tree_ready(_is_new_game: bool) -> void:

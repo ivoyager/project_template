@@ -25,7 +25,7 @@ class_name PBDSplashScreen
 const SCENE := "res://replace_me/gui_example/pbd_splash_screen.tscn"
 
 var _settings: Dictionary = IVGlobal.settings
-var _settings_manager: SettingsManager
+var _settings_manager: IVSettingsManager
 onready var _pbd_caption: Label = find_node("PBDCaption")
 
 func _project_init():
