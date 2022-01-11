@@ -34,36 +34,36 @@ const USE_THREADS := true # false can help threaded code debugging (e.g., I/O)
 func _extension_init() -> void:
 	prints(EXTENSION_NAME, EXTENSION_VERSION, EXTENSION_VERSION_YMD)
 	print("Use threads = ", USE_THREADS)
-	Global.connect("project_objects_instantiated", self, "_on_project_objects_instantiated")
-	Global.connect("system_tree_ready", self, "_on_system_tree_ready")
+	IVGlobal.connect("project_objects_instantiated", self, "_on_project_objects_instantiated")
+	IVGlobal.connect("system_tree_ready", self, "_on_system_tree_ready")
 	# Change global init values...
-	Global.project_name = EXTENSION_NAME
-	Global.project_version = EXTENSION_VERSION # helps load file debug
-	Global.project_version_ymd = EXTENSION_VERSION_YMD # helps load file debug
-	Global.save_file_extension = "MyProjectSave"
-	Global.save_file_extension_name = "My Project Save"
-	Global.start_body_name = "PLANET_MARS"
-	Global.start_time = 21.12135 * UnitDefs.YEAR # from J2000 epoch
-	Global.use_threads = USE_THREADS
+	IVGlobal.project_name = EXTENSION_NAME
+	IVGlobal.project_version = EXTENSION_VERSION # helps load file debug
+	IVGlobal.project_version_ymd = EXTENSION_VERSION_YMD # helps load file debug
+	IVGlobal.save_file_extension = "MyProjectSave"
+	IVGlobal.save_file_extension_name = "My Project Save"
+	IVGlobal.start_body_name = "PLANET_MARS"
+	IVGlobal.start_time = 21.12135 * IVUnits.YEAR # from J2000 epoch
+	IVGlobal.use_threads = USE_THREADS
 	# Set project GUI
-	ProjectBuilder.gui_nodes._ProjectGUI_ = GameGUI
-	ProjectBuilder.gui_nodes._SplashScreen_ = PBDSplashScreen
+	IVProjectBuilder.gui_nodes._ProjectGUI_ = GameGUI
+	IVProjectBuilder.gui_nodes._SplashScreen_ = PBDSplashScreen
 	
 	# You can extend and replace an existing class. For example, if ExtendedBody
 	# extends Body, then the following line would cause ExtendedBody to be used
 	# instead of Body in the solar system build...
-	# ProjectBuilder.procedural_classes._Body_ = ExtendedBody
+	# IVProjectBuilder.procedural_classes._Body_ = ExtendedBody
 	
 	# "Program nodes" and "program reerences" are classes instantiated by
 	# ProjectBuider. This line would add one of your own...
-	# ProjectBuilder.program_nodes._MyProgramNode_ = MyProgramNode
+	# IVProjectBuilder.program_nodes._MyProgramNode_ = MyProgramNode
 
 func _on_project_objects_instantiated() -> void:
 	# Here you can access and change init values for program nodes and
 	# program references (for nodes, before they are added to the tree).
-	var timekeeper: Timekeeper = Global.program.Timekeeper
+	var timekeeper: IVTimekeeper = IVGlobal.program.Timekeeper
 	timekeeper.start_speed = 1
-	var settings_manager: SettingsManager = Global.program.SettingsManager
+	var settings_manager: IVSettingsManager = IVGlobal.program.SettingsManager
 	settings_manager.defaults.save_base_name = "Template"
 
 func _on_system_tree_ready(_is_new_game: bool) -> void:
