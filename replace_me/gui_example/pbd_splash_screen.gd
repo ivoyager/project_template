@@ -24,17 +24,17 @@ extends Control
 class_name PBDSplashScreen
 const SCENE := "res://replace_me/gui_example/pbd_splash_screen.tscn"
 
-var _settings: Dictionary = Global.settings
+var _settings: Dictionary = IVGlobal.settings
 var _settings_manager: SettingsManager
 onready var _pbd_caption: Label = find_node("PBDCaption")
 
 func _project_init():
-	Global.connect("simulator_started", self, "hide")
-	Global.connect("simulator_exited", self, "show")
-	_settings_manager = Global.program.SettingsManager
+	IVGlobal.connect("simulator_started", self, "hide")
+	IVGlobal.connect("simulator_exited", self, "show")
+	_settings_manager = IVGlobal.program.SettingsManager
 
 func _ready():
-	theme = Global.themes.splash_screen
+	theme = IVGlobal.themes.splash_screen
 	find_node("VersionLabel").set_version_label("", true, true, "\n", "",
 			"\n\n(c) 2017-2022\nCharlie Whitfield")
 	find_node("MainMenu").is_splash_config = true
@@ -46,7 +46,7 @@ func _ready():
 		_pbd_caption.text = "TXT_PBD_LONG"
 	else:
 		_pbd_caption.text = "TXT_PBD_SHORT"
-	if Global.skip_splash_screen:
+	if IVGlobal.skip_splash_screen:
 		hide()
 
 func _pbd_mouse_entered() -> void:

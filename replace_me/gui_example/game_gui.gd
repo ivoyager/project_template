@@ -23,7 +23,7 @@
 extends Control
 class_name GameGUI
 
-# SCENE path must be defined below for our ProjectBuilder to add it.
+# SCENE path must be defined below for our IVProjectBuilder to add it.
 const SCENE := "res://replace_me/gui_example/game_gui.tscn"
 
 # A SelectionManager instance manages our current selection. To find this
@@ -31,20 +31,20 @@ const SCENE := "res://replace_me/gui_example/game_gui.tscn"
 # node that has a "selection_manager" member.
 var selection_manager: SelectionManager
 
-onready var _SelectionManager_: Script = Global.script_classes._SelectionManager_
+onready var _SelectionManager_: Script = IVGlobal.script_classes._SelectionManager_
 
 # This node has an object we want to persist through game save/loads. Presence
 # of the first constant below tells SaveBuilder that this node has something to
-# save ("= false" because THIS node is added by ProjectBuilder, not
+# save ("= false" because THIS node is added by IVProjectBuilder, not
 # procedurally). The second constant tells SaveBuilder what to persist.
 const PERSIST_AS_PROCEDURAL_OBJECT := false
 const PERSIST_PROPERTIES := ["selection_manager"]
 
-# All objects added by ProjectBuilder need a "_project_init" function.
+# All objects added by IVProjectBuilder need a "_project_init" function.
 func _project_init() -> void:
-	Global.connect("project_builder_finished", self, "_on_project_builder_finished")
-	Global.connect("system_tree_built_or_loaded", self, "_on_system_tree_built_or_loaded")
-	Global.connect("simulator_exited", self, "_on_simulator_exited")
+	IVGlobal.connect("project_builder_finished", self, "_on_project_builder_finished")
+	IVGlobal.connect("system_tree_built_or_loaded", self, "_on_system_tree_built_or_loaded")
+	IVGlobal.connect("simulator_exited", self, "_on_simulator_exited")
 	hide()
 
 func _ready():
@@ -61,7 +61,7 @@ func _ready():
 func _on_project_builder_finished() -> void:
 	# We hook up to a theme managed by ThemeManager so that fonts can resize if
 	# user changes GUI size in options
-	theme = Global.themes.main
+	theme = IVGlobal.themes.main
 
 func _on_system_tree_built_or_loaded(is_new_game: bool) -> void:
 	if is_new_game:

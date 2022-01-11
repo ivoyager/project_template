@@ -65,39 +65,14 @@ _global_script_classes=[ {
 "path": "res://ivoyager/gui_admin/credits_popup.gd"
 }, {
 "base": "Reference",
-"class": "Debug",
-"language": "GDScript",
-"path": "res://ivoyager/static/debug.gd"
-}, {
-"base": "Reference",
-"class": "Enums",
-"language": "GDScript",
-"path": "res://ivoyager/static/enums.gd"
-}, {
-"base": "Reference",
 "class": "EnvironmentBuilder",
 "language": "GDScript",
 "path": "res://ivoyager/prog_builders/environment_builder.gd"
 }, {
 "base": "Reference",
-"class": "FileUtils",
-"language": "GDScript",
-"path": "res://ivoyager/static/file_utils.gd"
-}, {
-"base": "Reference",
 "class": "FontManager",
 "language": "GDScript",
 "path": "res://ivoyager/prog_refs/font_manager.gd"
-}, {
-"base": "Reference",
-"class": "GDUtils",
-"language": "GDScript",
-"path": "res://ivoyager/static/gd_utils.gd"
-}, {
-"base": "Reference",
-"class": "GUIUtils",
-"language": "GDScript",
-"path": "res://ivoyager/static/gui_utils.gd"
 }, {
 "base": "Control",
 "class": "GameGUI",
@@ -138,6 +113,41 @@ _global_script_classes=[ {
 "class": "IOManager",
 "language": "GDScript",
 "path": "res://ivoyager/prog_refs/io_manager.gd"
+}, {
+"base": "Reference",
+"class": "IVDebug",
+"language": "GDScript",
+"path": "res://ivoyager/static/debug.gd"
+}, {
+"base": "Reference",
+"class": "IVEnums",
+"language": "GDScript",
+"path": "res://ivoyager/static/enums.gd"
+}, {
+"base": "Reference",
+"class": "IVFiles",
+"language": "GDScript",
+"path": "res://ivoyager/static/files.gd"
+}, {
+"base": "Reference",
+"class": "IVGUIUtils",
+"language": "GDScript",
+"path": "res://ivoyager/static/gui_utils.gd"
+}, {
+"base": "Reference",
+"class": "IVMath",
+"language": "GDScript",
+"path": "res://ivoyager/static/math.gd"
+}, {
+"base": "Reference",
+"class": "IVUnits",
+"language": "GDScript",
+"path": "res://ivoyager/static/units.gd"
+}, {
+"base": "Reference",
+"class": "IVUtils",
+"language": "GDScript",
+"path": "res://ivoyager/static/utils.gd"
 }, {
 "base": "Node",
 "class": "InputHandler",
@@ -188,11 +198,6 @@ _global_script_classes=[ {
 "class": "MainProgBar",
 "language": "GDScript",
 "path": "res://ivoyager/gui_admin/main_prog_bar.gd"
-}, {
-"base": "Reference",
-"class": "Math",
-"language": "GDScript",
-"path": "res://ivoyager/static/math.gd"
 }, {
 "base": "Reference",
 "class": "MinorBodiesBuilder",
@@ -325,11 +330,6 @@ _global_script_classes=[ {
 "path": "res://ivoyager/prog_nodes/state_manager.gd"
 }, {
 "base": "Reference",
-"class": "StrUtils",
-"language": "GDScript",
-"path": "res://ivoyager/static/str_utils.gd"
-}, {
-"base": "Reference",
 "class": "SystemBuilder",
 "language": "GDScript",
 "path": "res://ivoyager/prog_builders/system_builder.gd"
@@ -358,11 +358,6 @@ _global_script_classes=[ {
 "class": "TranslationImporter",
 "language": "GDScript",
 "path": "res://ivoyager/initializers/translation_importer.gd"
-}, {
-"base": "Reference",
-"class": "UnitDefs",
-"language": "GDScript",
-"path": "res://ivoyager/static/unit_defs.gd"
 }, {
 "base": "Reference",
 "class": "View",
@@ -411,13 +406,8 @@ _global_script_class_icons={
 "Composition": "",
 "CompositionBuilder": "",
 "CreditsPopup": "",
-"Debug": "",
-"Enums": "",
 "EnvironmentBuilder": "",
-"FileUtils": "",
 "FontManager": "",
-"GDUtils": "",
-"GUIUtils": "",
 "GameGUI": "",
 "HUDLabel": "",
 "HUDOrbit": "",
@@ -426,6 +416,13 @@ _global_script_class_icons={
 "HUDsManager": "",
 "HotkeysPopup": "",
 "IOManager": "",
+"IVDebug": "",
+"IVEnums": "",
+"IVFiles": "",
+"IVGUIUtils": "",
+"IVMath": "",
+"IVUnits": "",
+"IVUtils": "",
 "InputHandler": "",
 "InputMapManager": "",
 "LPoint": "",
@@ -436,7 +433,6 @@ _global_script_class_icons={
 "MainMenuManager": "",
 "MainMenuPopup": "",
 "MainProgBar": "",
-"Math": "",
 "MinorBodiesBuilder": "",
 "MinorBodiesManager": "",
 "ModelBuilder": "",
@@ -463,14 +459,12 @@ _global_script_class_icons={
 "SettingsManager": "",
 "SleepManager": "",
 "StateManager": "",
-"StrUtils": "",
 "SystemBuilder": "",
 "TableImporter": "",
 "TableReader": "",
 "ThemeManager": "",
 "Timekeeper": "",
 "TranslationImporter": "",
-"UnitDefs": "",
 "View": "",
 "ViewCaching": "",
 "VisualsHelper": "",
@@ -493,8 +487,8 @@ icon="res://jupiter-icon-128.png"
 
 [autoload]
 
-Global="*res://ivoyager/singletons/global.gd"
-ProjectBuilder="*res://ivoyager/singletons/project_builder.gd"
+IVGlobal="*res://ivoyager/singletons/global.gd"
+IVProjectBuilder="*res://ivoyager/singletons/project_builder.gd"
 
 [debug]
 
