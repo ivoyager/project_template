@@ -32,7 +32,7 @@ var _under_moons_spacer_sizes := [55.0, 66.0, 77.0]
 
 func _ready() -> void:
 	# modify widgets here
-	IVGlobal.connect("update_gui_needed", self, "_resize")
+	IVGlobal.connect("update_gui_requested", self, "_resize")
 	IVGlobal.connect("setting_changed", self, "_settings_listener")
 
 func _resize() -> void:
