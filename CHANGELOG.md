@@ -12,6 +12,9 @@ Developed using Godot 3.4.2.stable.
 
 Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
 
+### Added
+* Hotkey cntr-G toggles show/hide all project GUI (default hotkey).
+
 ### Changes
 * Added project-level si_base_unit.gd static class and removed universe.tscn & universe.gd to support 'ivoyager' submodule changes.
 * gui_example directory was moved from 'ivoyager' submodule to this project's replace_me directory.
