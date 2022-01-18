@@ -294,10 +294,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://ivoyager/tree_refs/selection_item.gd"
 }, {
-"base": "Reference",
+"base": "Node",
 "class": "IVSelectionManager",
 "language": "GDScript",
-"path": "res://ivoyager/tree_refs/selection_manager.gd"
+"path": "res://ivoyager/tree_nodes/selection_manager.gd"
 }, {
 "base": "IVCacheManager",
 "class": "IVSettingsManager",
