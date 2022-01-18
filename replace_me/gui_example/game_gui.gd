@@ -17,19 +17,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # *****************************************************************************
-#
-# THIS IS AN EXAMPLE GUI SCENE! You can modify it or replace it.
-
-extends Control
 class_name GameGUI
-
-# SCENE path must be defined below for our IVProjectBuilder to add it.
+extends Control
 const SCENE := "res://replace_me/gui_example/game_gui.tscn"
 
+# THIS IS AN EXAMPLE GUI SCENE! You can modify it or replace it.
+#
+# SCENE path must be defined above for our IVProjectBuilder to add it.
+#
 # An IVSelectionManager instance manages our current selection. To find this
 # instanace, various GUI widgets search up their ancestor tree for the first
 # node that has a "selection_manager" member.
 var selection_manager: IVSelectionManager
+
+var _state: Dictionary = IVGlobal.state
 
 onready var _SelectionManager_: Script = IVGlobal.script_classes._SelectionManager_
 
@@ -40,6 +41,7 @@ onready var _SelectionManager_: Script = IVGlobal.script_classes._SelectionManag
 const PERSIST_AS_PROCEDURAL_OBJECT := false
 const PERSIST_PROPERTIES := ["selection_manager"]
 
+
 # All objects added by IVProjectBuilder need a "_project_init" function.
 func _project_init() -> void:
 	IVGlobal.connect("project_builder_finished", self, "_on_project_builder_finished")
@@ -47,8 +49,10 @@ func _project_init() -> void:
 	IVGlobal.connect("simulator_exited", self, "_on_simulator_exited")
 	hide()
 
+
 func _ready():
-	pass
+	IVGlobal.connect("show_hide_gui_requested", self, "show_hide_gui")
+	
 	# Example code below assigns a transparent style to all panels
 #	var style_box := StyleBoxFlat.new()
 #	style_box.bg_color = Color(1.0, 1.0, 1.0, 0.0)
@@ -58,10 +62,12 @@ func _ready():
 #			continue
 #		panel_container.set("custom_styles/panel", style_box)
 
+
 func _on_project_builder_finished() -> void:
 	# We hook up to a theme managed by ThemeManager so that fonts can resize if
 	# user changes GUI size in options
 	theme = IVGlobal.themes.main
+
 
 func _on_system_tree_built_or_loaded(is_new_game: bool) -> void:
 	if is_new_game:
@@ -69,5 +75,20 @@ func _on_system_tree_built_or_loaded(is_new_game: bool) -> void:
 		add_child(selection_manager)
 	show()
 
+
 func _on_simulator_exited() -> void:
 	hide()
+
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("toggle_all_gui"):
+		show_hide_gui()
+	else:
+		return # input NOT handled!
+	get_tree().set_input_as_handled()
+
+
+func show_hide_gui(is_toggle := true, is_show := true) -> void:
+	if !_state.is_system_built:
+		return
+	visible = !visible if is_toggle else is_show
