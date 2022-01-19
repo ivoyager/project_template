@@ -274,10 +274,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://ivoyager/prog_nodes/save_manager.gd"
 }, {
-"base": "Reference",
+"base": "Node",
 "class": "IVScheduler",
 "language": "GDScript",
-"path": "res://ivoyager/prog_refs/scheduler.gd"
+"path": "res://ivoyager/prog_nodes/scheduler.gd"
 }, {
 "base": "Reference",
 "class": "IVSelectionBuilder",
