@@ -26,7 +26,7 @@
 #    3. Must have function "_extension_init"
 
 const EXTENSION_NAME := "Replace Me!"
-const EXTENSION_VERSION := "0.0.11-RC1"
+const EXTENSION_VERSION := "0.0.11"
 const EXTENSION_VERSION_YMD := 20220119 # int allows easy >= tests
 
 const USE_THREADS := true # false can help threaded code debugging (e.g., I/O)
