@@ -28,18 +28,19 @@ const SCENE := "res://replace_me/gui_example/game_gui.tscn"
 # An IVSelectionManager instance manages our current selection. To find this
 # instanace, various GUI widgets search up their ancestor tree for the first
 # node that has a "selection_manager" member.
+
+# This node has an object we want to persist through game save/loads. Presence
+# of the first constant below tells SaveBuilder that this node has something to
+# save. The second constant tells SaveBuilder what to persist.
+const PERSIST_MODE := IVEnums.PERSIST_PROPERTIES_ONLY
+const PERSIST_PROPERTIES := ["selection_manager"]
+
 var selection_manager: IVSelectionManager
 
 var _state: Dictionary = IVGlobal.state
 
 onready var _SelectionManager_: Script = IVGlobal.script_classes._SelectionManager_
 
-# This node has an object we want to persist through game save/loads. Presence
-# of the first constant below tells SaveBuilder that this node has something to
-# save ("= false" because THIS node is added by IVProjectBuilder, not
-# procedurally). The second constant tells SaveBuilder what to persist.
-const PERSIST_AS_PROCEDURAL_OBJECT := false
-const PERSIST_PROPERTIES := ["selection_manager"]
 
 
 # All objects added by IVProjectBuilder need a "_project_init" function.
