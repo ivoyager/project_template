@@ -27,9 +27,10 @@
 
 const EXTENSION_NAME := "Replace Me!"
 const EXTENSION_VERSION := "0.0.13-DEV"
-const EXTENSION_VERSION_YMD := 20220226 # int allows easy >= tests
+const EXTENSION_VERSION_YMD := 20220724 # int allows easy >= tests
 
 const USE_THREADS := true # false can help threaded code debugging (e.g., I/O)
+
 
 func _extension_init() -> void:
 	prints(EXTENSION_NAME, EXTENSION_VERSION, EXTENSION_VERSION_YMD)
@@ -58,6 +59,7 @@ func _extension_init() -> void:
 	# ProjectBuider. This line would add one of your own...
 	# IVProjectBuilder.program_nodes._MyProgramNode_ = MyProgramNode
 
+
 func _on_project_objects_instantiated() -> void:
 	# Here you can access and change init values for program nodes and
 	# program references (for nodes, before they are added to the tree).
@@ -65,6 +67,7 @@ func _on_project_objects_instantiated() -> void:
 	timekeeper.start_speed = 1
 	var settings_manager: IVSettingsManager = IVGlobal.program.SettingsManager
 	settings_manager.defaults.save_base_name = "Template"
+
 
 func _on_system_tree_ready(_is_new_game: bool) -> void:
 	# The solar system has been built or loaded, but we haven't started the
