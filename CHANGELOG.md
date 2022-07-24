@@ -8,12 +8,12 @@ See cloning and downloading instructions [here](https://www.ivoyager.dev/develop
 
 ## [v0.0.13] - Unreleased
 
-Developed using Godot 3.4.2.stable.
+Currently under development using Godot 3.4.4.stable and 3.5-rc7.
 
 Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
 
-### Changes
-* Updated 'ivoyager' to v0.0.13-DEV
+### Changed
+* Updated submodule 'ivoyager' to latest master branch commit.
 
 ## [v0.0.12] - 2022-01-20
 
@@ -21,8 +21,8 @@ Developed using Godot 3.4.2.stable.
 
 Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
 
-### Changes
-* Updated 'ivoyager' to v0.0.12
+### Changed
+* Updated submodule 'ivoyager' to v0.0.12.
 
 ## [v0.0.11] - 2022-01-19
 
@@ -33,10 +33,11 @@ Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases]
 ### Added
 * Hotkey cntr-G toggles show/hide all project GUI (default hotkey).
 
-### Changes
+### Changed
 * Added project-level si_base_unit.gd static class and removed universe.tscn & universe.gd to support 'ivoyager' submodule changes.
 * gui_example directory was moved from 'ivoyager' submodule to this project's replace_me directory.
 * Reorganization and renaming of files and gui classes.
+* Updated submodule 'ivoyager' to v0.0.11.
 
 ## [v0.0.10] - 2022-01-09
 
@@ -46,6 +47,9 @@ Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases]
 
 ### Added
 * A project level CHANGELOG.md!
+
+### Changed
+* Updated submodule 'ivoyager' to v0.0.10.
 
 ##
 *Older project-level changes are documented in* [ivoyager/CHANGELOG.md](https://github.com/ivoyager/ivoyager/blob/master/CHANGELOG.md).
