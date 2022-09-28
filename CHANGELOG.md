@@ -6,14 +6,14 @@ File format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 See cloning and downloading instructions [here](https://www.ivoyager.dev/developers/).
 
-## [v0.0.13] - Unreleased
+## [v0.0.13] - 2022-09-28
 
-Currently under development using Godot 3.5. Requires 3.5!
+Developed using Godot 3.5.1.stable.
 
 Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
 
 ### Changed
-* Updated submodule 'ivoyager' to latest master branch commit.
+* Updated submodule 'ivoyager' to v0.0.13.
 
 ## [v0.0.12] - 2022-01-20
 
@@ -54,7 +54,7 @@ Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases]
 ##
 *Older project-level changes are documented in* [ivoyager/CHANGELOG.md](https://github.com/ivoyager/ivoyager/blob/master/CHANGELOG.md).
 
-[v0.0.13]: https://github.com/ivoyager/project_template/compare/v0.0.12...HEAD
+[v0.0.13]: https://github.com/ivoyager/project_template/compare/v0.0.12...v0.0.13
 [v0.0.12]: https://github.com/ivoyager/project_template/compare/v0.0.11...v0.0.12
 [v0.0.11]: https://github.com/ivoyager/project_template/compare/v0.0.10...v0.0.11
 [v0.0.10]: https://github.com/ivoyager/project_template/compare/v0.0.9-alpha...v0.0.10
