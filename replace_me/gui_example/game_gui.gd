@@ -53,6 +53,7 @@ func _project_init() -> void:
 
 func _ready():
 	IVGlobal.connect("show_hide_gui_requested", self, "show_hide_gui")
+	add_child(IVFragmentLabel.new())
 	
 	# Example code below assigns a transparent style to all panels
 #	var style_box := StyleBoxFlat.new()
