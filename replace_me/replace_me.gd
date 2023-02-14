@@ -27,7 +27,7 @@
 
 const EXTENSION_NAME := "Replace Me!"
 const EXTENSION_VERSION := "0.0.14-DEV"
-const EXTENSION_VERSION_YMD := 20230203 # int allows easy >= tests
+const EXTENSION_VERSION_YMD := 20230214 # int allows easy >= tests
 
 const USE_THREADS := true # false can help threaded code debugging (e.g., I/O)
 
