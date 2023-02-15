@@ -154,7 +154,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://ivoyager/tree_nodes/fragment_identifier.gd"
 }, {
-"base": "Reference",
+"base": "Label",
 "class": "IVFragmentLabel",
 "language": "GDScript",
 "path": "res://ivoyager/tree_nodes/fragment_label.gd"

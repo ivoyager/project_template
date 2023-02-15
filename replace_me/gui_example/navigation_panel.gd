@@ -28,13 +28,18 @@ var _settings: Dictionary = IVGlobal.settings
 
 
 func _ready() -> void:
-	# modify widgets here
 	IVGlobal.connect("update_gui_requested", self, "_resize")
 	IVGlobal.connect("setting_changed", self, "_settings_listener")
+	
+	# widgets
+	$"%AsteroidsHScroll".add_bodies_from_table("asteroids")
+	$"%SpacecraftHScroll".add_bodies_from_table("spacecrafts")
+
 
 func _resize() -> void:
 	pass
 #	never mind...
+
 
 func _settings_listener(setting: String, _value) -> void:
 	if setting == "gui_size":
