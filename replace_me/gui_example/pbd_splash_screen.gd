@@ -2,7 +2,7 @@
 # This file is part of I, Voyager
 # https://ivoyager.dev
 # *****************************************************************************
-# Copyright 2017-2022 Charlie Whitfield
+# Copyright 2017-2023 Charlie Whitfield
 # I, Voyager is a registered trademark of Charlie Whitfield in the US
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -26,7 +26,6 @@ const SCENE := "res://replace_me/gui_example/pbd_splash_screen.tscn"
 
 var _settings: Dictionary = IVGlobal.settings
 var _settings_manager: IVSettingsManager
-onready var _pbd_caption: Label = find_node("PBDCaption")
 
 func _project_init():
 	IVGlobal.connect("simulator_started", self, "hide")
@@ -35,28 +34,28 @@ func _project_init():
 
 func _ready():
 	theme = IVGlobal.themes.splash_screen
-	find_node("VersionLabel").set_version_label("", true, true, "\n", "",
-			"\n\n(c) 2017-2022\nCharlie Whitfield")
-	find_node("MainMenu").is_splash_config = true
-	_pbd_caption.connect("mouse_entered", self, "_pbd_mouse_entered")
-	_pbd_caption.connect("mouse_exited", self, "_pbd_mouse_exited")
-	_pbd_caption.connect("gui_input", self, "_pbd_caption_input")
-	_pbd_caption.set("custom_colors/font_color", Color.lightblue)
+	$"%VersionLabel".set_version_label("", true, true, "\n", "",
+			"\n\n(c) 2017-2023\nCharlie Whitfield")
+	$"%MainMenu".is_splash_config = true
+	$"%PBDCaption".connect("mouse_entered", self, "_pbd_mouse_entered")
+	$"%PBDCaption".connect("mouse_exited", self, "_pbd_mouse_exited")
+	$"%PBDCaption".connect("gui_input", self, "_pbd_caption_input")
+	$"%PBDCaption".set("custom_colors/font_color", Color.lightblue)
 	if _settings.pbd_splash_caption_open:
-		_pbd_caption.text = "TXT_PBD_LONG"
+		$"%PBDCaption".text = "TXT_PBD_LONG"
 	else:
-		_pbd_caption.text = "TXT_PBD_SHORT"
+		$"%PBDCaption".text = "TXT_PBD_SHORT"
 	if IVGlobal.skip_splash_screen:
 		hide()
 
 func _pbd_mouse_entered() -> void:
-	_pbd_caption.set("custom_colors/font_color", Color.white)
+	$"%PBDCaption".set("custom_colors/font_color", Color.white)
 	
 func _pbd_mouse_exited() -> void:
-	_pbd_caption.set("custom_colors/font_color", Color.lightskyblue)
+	$"%PBDCaption".set("custom_colors/font_color", Color.lightskyblue)
 
 func _pbd_caption_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_pressed():
 		var is_open: bool = !_settings.pbd_splash_caption_open
 		_settings_manager.change_current("pbd_splash_caption_open", is_open)
-		_pbd_caption.text = "TXT_PBD_LONG" if is_open else "TXT_PBD_SHORT"
+		$"%PBDCaption".text = "TXT_PBD_LONG" if is_open else "TXT_PBD_SHORT"

@@ -1,4 +1,4 @@
-# navigation_panel.gd
+# huds_panel.gd
 # This file is part of I, Voyager
 # https://ivoyager.dev
 # *****************************************************************************
@@ -19,28 +19,15 @@
 # *****************************************************************************
 #
 # THIS IS AN EXAMPLE GUI SCENE! You can modify it or replace it.
-#
-
 
 extends PanelContainer
 
-var _settings: Dictionary = IVGlobal.settings
-
 
 func _ready() -> void:
-	IVGlobal.connect("update_gui_requested", self, "_resize")
-	IVGlobal.connect("setting_changed", self, "_settings_listener")
-	
-	# widgets
-	$"%AsteroidsHScroll".add_bodies_from_table("asteroids")
-	$"%SpacecraftHScroll".add_bodies_from_table("spacecrafts")
+	$ControlSized.default_sizes = [
+	Vector2(320.0, 291.0), # GUI_SMALL
+	Vector2(420.0, 354.0), # GUI_MEDIUM
+	Vector2(523.0, 421.0), # GUI_LARGE
+]
 
 
-func _resize() -> void:
-	pass
-#	never mind...
-
-
-func _settings_listener(setting: String, _value) -> void:
-	if setting == "gui_size":
-		_resize()

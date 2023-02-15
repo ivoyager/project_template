@@ -5,7 +5,6 @@
 [ext_resource path="res://ivoyager/gui_widgets/main_menu.tscn" type="PackedScene" id=3]
 [ext_resource path="res://ivoyager/gui_widgets/version_label.tscn" type="PackedScene" id=4]
 
-
 [node name="PBDSplashScreen" type="ColorRect"]
 pause_mode = 2
 anchor_right = 1.0
@@ -47,12 +46,14 @@ __meta__ = {
 }
 
 [node name="VersionLabel" parent="AspectRatioContainer/TextureRect/LeftBox" instance=ExtResource( 4 )]
+unique_name_in_owner = true
 margin_right = 218.0
 margin_bottom = 841.0
 size_flags_vertical = 1
 valign = 2
 
 [node name="MainMenu" parent="AspectRatioContainer/TextureRect/LeftBox" instance=ExtResource( 3 )]
+unique_name_in_owner = true
 margin_left = 0.0
 margin_top = 0.0
 margin_right = 0.0
@@ -61,6 +62,7 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 
 [node name="PBDCaption" type="Label" parent="AspectRatioContainer/TextureRect"]
+unique_name_in_owner = true
 anchor_left = 0.73
 anchor_top = 0.055
 anchor_right = 0.967
@@ -73,6 +75,3 @@ size_flags_vertical = 0
 text = "LABEL_PBD_SHORT"
 valign = 2
 autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}

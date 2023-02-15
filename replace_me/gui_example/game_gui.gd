@@ -2,7 +2,7 @@
 # This file is part of I, Voyager
 # https://ivoyager.dev
 # *****************************************************************************
-# Copyright 2017-2022 Charlie Whitfield
+# Copyright 2017-2023 Charlie Whitfield
 # I, Voyager is a registered trademark of Charlie Whitfield in the US
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -53,6 +53,7 @@ func _project_init() -> void:
 
 func _ready():
 	IVGlobal.connect("show_hide_gui_requested", self, "show_hide_gui")
+	add_child(IVFragmentLabel.new()) # Uses IVFragmentIdentifier to label asteroids
 	
 	# Example code below assigns a transparent style to all panels
 #	var style_box := StyleBoxFlat.new()
