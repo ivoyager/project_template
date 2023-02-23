@@ -19,9 +19,6 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 ratio = 1.778
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect" type="TextureRect" parent="AspectRatioContainer"]
 margin_left = 59.895
@@ -36,23 +33,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LeftBox" type="MarginContainer" parent="AspectRatioContainer/TextureRect"]
-anchor_left = 0.03
-anchor_top = 0.055
-anchor_right = 0.16
-anchor_bottom = 0.945
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="VBox" type="VBoxContainer" parent="AspectRatioContainer/TextureRect"]
+anchor_top = 0.039
+anchor_right = 0.137
+anchor_bottom = 0.944
+margin_left = 16.0
+margin_top = 13.145
+margin_right = -14.1888
+margin_bottom = -0.0800781
 
-[node name="VersionLabel" parent="AspectRatioContainer/TextureRect/LeftBox" instance=ExtResource( 4 )]
-unique_name_in_owner = true
-margin_right = 218.0
-margin_bottom = 841.0
-size_flags_vertical = 1
-valign = 2
-
-[node name="MainMenu" parent="AspectRatioContainer/TextureRect/LeftBox" instance=ExtResource( 3 )]
+[node name="MainMenu" parent="AspectRatioContainer/TextureRect/VBox" instance=ExtResource( 3 )]
 unique_name_in_owner = true
 margin_left = 0.0
 margin_top = 0.0
@@ -60,6 +50,27 @@ margin_right = 0.0
 margin_bottom = 0.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
+
+[node name="ProjectTemplateLabel" type="Label" parent="AspectRatioContainer/TextureRect/VBox"]
+margin_top = 4.0
+margin_right = 199.0
+margin_bottom = 771.0
+size_flags_vertical = 3
+text = "Project Template"
+valign = 2
+
+[node name="VersionLabel" parent="AspectRatioContainer/TextureRect/VBox" instance=ExtResource( 4 )]
+margin_top = 775.0
+margin_right = 199.0
+margin_bottom = 789.0
+
+[node name="CopyrightLabel" type="Label" parent="AspectRatioContainer/TextureRect/VBox"]
+margin_top = 793.0
+margin_right = 199.0
+margin_bottom = 841.0
+text = "
+(c) 2017-2023
+Charlie Whitfield"
 
 [node name="PBDCaption" type="Label" parent="AspectRatioContainer/TextureRect"]
 unique_name_in_owner = true
