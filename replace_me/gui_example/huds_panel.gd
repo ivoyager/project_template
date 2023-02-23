@@ -25,9 +25,9 @@ extends PanelContainer
 
 func _ready() -> void:
 	$ControlSized.default_sizes = [
-	Vector2(320.0, 291.0), # GUI_SMALL
-	Vector2(420.0, 354.0), # GUI_MEDIUM
-	Vector2(523.0, 421.0), # GUI_LARGE
+	Vector2(0.0, 291.0), # GUI_SMALL
+	Vector2(0.0, 354.0), # GUI_MEDIUM
+	Vector2(0.0, 421.0), # GUI_LARGE
 ]
 
 
