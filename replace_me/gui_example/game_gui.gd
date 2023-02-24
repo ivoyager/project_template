@@ -48,7 +48,7 @@ func _on_project_builder_finished() -> void:
 	theme = IVGlobal.themes.main
 
 
-func _input(event: InputEvent) -> void:
+func _unhandled_key_input(event: InputEventKey) -> void:
 	if event.is_action_pressed("toggle_all_gui"):
 		show_hide_gui()
 		get_tree().set_input_as_handled()
