@@ -29,7 +29,7 @@ const EXTENSION_NAME := "Replace Me!"
 const EXTENSION_VERSION := "0.0.14"
 const EXTENSION_BUILD := "" # hotfix or debug build
 const EXTENSION_STATE := "dev" # 'dev', 'alpha', 'beta', 'rc', ''
-const EXTENSION_YMD := 20230223 # int allows easy >= tests
+const EXTENSION_YMD := 20230225 # int allows easy >= tests
 
 const USE_THREADS := true # false can help threaded code debugging (e.g., I/O)
 
@@ -41,6 +41,7 @@ func _extension_init() -> void:
 	
 	print("Use threads = ", USE_THREADS)
 	IVGlobal.connect("project_objects_instantiated", self, "_on_project_objects_instantiated")
+	IVGlobal.connect("project_nodes_added", self, "_on_project_nodes_added")
 	IVGlobal.connect("system_tree_ready", self, "_on_system_tree_ready")
 	
 	# change global init values
@@ -59,7 +60,6 @@ func _extension_init() -> void:
 	# modify classes
 	IVProjectBuilder.gui_nodes._SplashScreen_ = PBDSplashScreen
 	IVProjectBuilder.gui_nodes._GameGUI_ = GameGUI
-	IVProjectBuilder.move_top_gui_children_to_index = [null, null, "GameGUI"] # move to index 2
 
 
 func _on_project_objects_instantiated() -> void:
@@ -69,6 +69,11 @@ func _on_project_objects_instantiated() -> void:
 	timekeeper.start_speed = 1
 	var settings_manager: IVSettingsManager = IVGlobal.program.SettingsManager
 	settings_manager.defaults.save_base_name = "Template"
+
+
+func _on_project_nodes_added() -> void:
+	IVProjectBuilder.move_top_gui_child_to_sibling("GameGUI", "SplashScreen", true)
+	
 
 
 func _on_system_tree_ready(_is_new_game: bool) -> void:

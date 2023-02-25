@@ -149,7 +149,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://ivoyager/program/font_manager.gd"
 }, {
-"base": "Reference",
+"base": "Viewport",
 "class": "IVFragmentIdentifier",
 "language": "GDScript",
 "path": "res://ivoyager/program/fragment_identifier.gd"
@@ -199,7 +199,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://ivoyager/program/io_manager.gd"
 }, {
-"base": "Reference",
+"base": "IVCacheManager",
 "class": "IVInputMapManager",
 "language": "GDScript",
 "path": "res://ivoyager/program/input_map_manager.gd"
@@ -374,7 +374,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://ivoyager/program/save_manager.gd"
 }, {
-"base": "Reference",
+"base": "Node",
 "class": "IVScheduler",
 "language": "GDScript",
 "path": "res://ivoyager/program/scheduler.gd"
@@ -419,7 +419,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://ivoyager/gui_widgets/selection_wiki_link.gd"
 }, {
-"base": "Reference",
+"base": "IVCacheManager",
 "class": "IVSettingsManager",
 "language": "GDScript",
 "path": "res://ivoyager/program/settings_manager.gd"
@@ -444,7 +444,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://ivoyager/tree_refs/small_bodies_group.gd"
 }, {
-"base": "Reference",
+"base": "Node",
 "class": "IVSmallBodiesGroupIndexing",
 "language": "GDScript",
 "path": "res://ivoyager/program/small_bodies_group_indexing.gd"
