@@ -34,8 +34,6 @@ func _project_init():
 
 func _ready():
 	theme = IVGlobal.themes.splash_screen
-	$"%VersionLabel".set_version_label("", true, true, "\n", "",
-			"\n\n(c) 2017-2023\nCharlie Whitfield")
 	$"%MainMenu".is_splash_config = true
 	$"%PBDCaption".connect("mouse_entered", self, "_pbd_mouse_entered")
 	$"%PBDCaption".connect("mouse_exited", self, "_pbd_mouse_exited")
