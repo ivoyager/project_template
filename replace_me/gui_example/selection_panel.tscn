@@ -131,9 +131,26 @@ margin_bottom = 340.0
 mouse_filter = 2
 
 [node name="ViewButtons" parent="VBox/BottomHBox" instance=ExtResource( 7 )]
-margin_top = 2.0
+margin_top = 0.0
 margin_right = 341.0
-margin_bottom = 22.0
+margin_bottom = 24.0
+
+[node name="Zoom" type="Button" parent="VBox/BottomHBox/ViewButtons"]
+margin_right = 114.0
+margin_bottom = 24.0
+text = "BUTTON_ZOOM"
+
+[node name="Fortyfive" type="Button" parent="VBox/BottomHBox/ViewButtons"]
+margin_left = 118.0
+margin_right = 239.0
+margin_bottom = 24.0
+text = "BUTTON_45_DEG"
+
+[node name="Top" type="Button" parent="VBox/BottomHBox/ViewButtons"]
+margin_left = 243.0
+margin_right = 341.0
+margin_bottom = 24.0
+text = "BUTTON_TOP"
 
 [node name="Spacer1" type="Control" parent="VBox/BottomHBox"]
 margin_left = 345.0
