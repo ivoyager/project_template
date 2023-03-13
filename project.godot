@@ -209,11 +209,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://ivoyager/gui_popups/load_dialog.gd"
 }, {
-"base": "CheckBox",
-"class": "IVLockVisibleCkbx",
-"language": "GDScript",
-"path": "res://ivoyager/gui_mods/panel_lock_visible_ckbx.gd"
-}, {
 "base": "Reference",
 "class": "IVLogInitializer",
 "language": "GDScript",
@@ -303,11 +298,6 @@ _global_script_classes=[ {
 "class": "IVPlanetMoonButtons",
 "language": "GDScript",
 "path": "res://ivoyager/gui_widgets/planet_moon_buttons.gd"
-}, {
-"base": "Node",
-"class": "IVProjectCyclablePanels",
-"language": "GDScript",
-"path": "res://ivoyager/gui_mods/project_cyclable_panels.gd"
 }, {
 "base": "Reference",
 "class": "IVQuantityFormatter",
@@ -665,7 +655,6 @@ _global_script_class_icons={
 "IVLatLongLabel": "",
 "IVLinkLabel": "",
 "IVLoadDialog": "",
-"IVLockVisibleCkbx": "",
 "IVLogInitializer": "",
 "IVMDFileLabel": "",
 "IVMainMenu": "",
@@ -684,7 +673,6 @@ _global_script_class_icons={
 "IVOrbit": "",
 "IVOrbitBuilder": "",
 "IVPlanetMoonButtons": "",
-"IVProjectCyclablePanels": "",
 "IVQuantityFormatter": "",
 "IVRangeLabel": "",
 "IVRangeValue": "",
