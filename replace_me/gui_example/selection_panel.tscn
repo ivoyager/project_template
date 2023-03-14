@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://replace_me/gui_example/selection_panel.gd" type="Script" id=1]
 [ext_resource path="res://ivoyager/gui_widgets/selection_buttons.tscn" type="PackedScene" id=2]
@@ -6,13 +6,16 @@
 [ext_resource path="res://ivoyager/gui_widgets/range_label.tscn" type="PackedScene" id=4]
 [ext_resource path="res://ivoyager/gui_widgets/lat_long_label.tscn" type="PackedScene" id=5]
 [ext_resource path="res://ivoyager/gui_widgets/selection_image.tscn" type="PackedScene" id=6]
-[ext_resource path="res://ivoyager/gui_widgets/view_buttons.tscn" type="PackedScene" id=7]
+[ext_resource path="res://ivoyager/gui_widgets/view_button.tscn" type="PackedScene" id=7]
 [ext_resource path="res://ivoyager/gui_widgets/track_ckbxs.tscn" type="PackedScene" id=8]
 [ext_resource path="res://ivoyager/gui_widgets/focal_length_buttons.tscn" type="PackedScene" id=9]
 [ext_resource path="res://ivoyager/gui_widgets/selection_label.tscn" type="PackedScene" id=10]
+[ext_resource path="res://ivoyager/gui_widgets/view_save_flow.tscn" type="PackedScene" id=11]
 [ext_resource path="res://ivoyager/gui_widgets/selection_data.tscn" type="PackedScene" id=12]
 [ext_resource path="res://ivoyager/gui_widgets/focal_length_label.tscn" type="PackedScene" id=13]
 [ext_resource path="res://ivoyager/gui_widgets/up_lock_ckbx.tscn" type="PackedScene" id=14]
+[ext_resource path="res://ivoyager/gui_widgets/view_save_button.tscn" type="PackedScene" id=15]
+[ext_resource path="res://ivoyager/gui_widgets/huds_popup_button.tscn" type="PackedScene" id=16]
 
 [node name="SelectionPanel" type="PanelContainer"]
 anchor_top = 1.0
@@ -105,7 +108,28 @@ margin_bottom = 304.0
 mouse_filter = 2
 size_flags_horizontal = 3
 
+[node name="ViewSaveFlow" parent="VBox/MainHBox/RightVBox" instance=ExtResource( 11 )]
+unique_name_in_owner = true
+margin_top = 0.0
+margin_right = 489.0
+margin_bottom = 20.0
+
+[node name="HUDsPopupButton" parent="VBox/MainHBox/RightVBox/ViewSaveFlow" instance=ExtResource( 16 )]
+margin_right = 109.0
+
+[node name="ViewSaveButton" parent="VBox/MainHBox/RightVBox/ViewSaveFlow" instance=ExtResource( 15 )]
+unique_name_in_owner = true
+margin_left = 113.0
+margin_right = 216.0
+margin_bottom = 20.0
+
+[node name="Home" parent="VBox/MainHBox/RightVBox/ViewSaveFlow" instance=ExtResource( 7 )]
+margin_left = 220.0
+margin_right = 332.0
+text = "BUTTON_HOME"
+
 [node name="ScrollContainer" type="ScrollContainer" parent="VBox/MainHBox/RightVBox"]
+margin_top = 24.0
 margin_right = 489.0
 margin_bottom = 304.0
 mouse_filter = 1
@@ -130,23 +154,18 @@ margin_right = 988.0
 margin_bottom = 340.0
 mouse_filter = 2
 
-[node name="ViewButtons" parent="VBox/BottomHBox" instance=ExtResource( 7 )]
-margin_top = 0.0
-margin_right = 341.0
-margin_bottom = 24.0
-
-[node name="Zoom" type="Button" parent="VBox/BottomHBox/ViewButtons"]
+[node name="Zoom" parent="VBox/BottomHBox" instance=ExtResource( 7 )]
 margin_right = 114.0
 margin_bottom = 24.0
 text = "BUTTON_ZOOM"
 
-[node name="Fortyfive" type="Button" parent="VBox/BottomHBox/ViewButtons"]
+[node name="Fortyfive" parent="VBox/BottomHBox" instance=ExtResource( 7 )]
 margin_left = 118.0
 margin_right = 239.0
 margin_bottom = 24.0
 text = "BUTTON_45_DEG"
 
-[node name="Top" type="Button" parent="VBox/BottomHBox/ViewButtons"]
+[node name="Top" parent="VBox/BottomHBox" instance=ExtResource( 7 )]
 margin_left = 243.0
 margin_right = 341.0
 margin_bottom = 24.0
