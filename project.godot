@@ -554,11 +554,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://ivoyager/gui_widgets/view_button.gd"
 }, {
-"base": "HBoxContainer",
-"class": "IVViewButtons",
-"language": "GDScript",
-"path": "res://ivoyager/gui_widgets/view_buttons.gd"
-}, {
 "base": "Reference",
 "class": "IVViewDefaults",
 "language": "GDScript",
@@ -739,7 +734,6 @@ _global_script_class_icons={
 "IVVersionLabel": "",
 "IVView": "",
 "IVViewButton": "",
-"IVViewButtons": "",
 "IVViewDefaults": "",
 "IVViewManager": "",
 "IVViewSaveButton": "",

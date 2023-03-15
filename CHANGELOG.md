@@ -8,12 +8,12 @@ See cloning and downloading instructions [here](https://www.ivoyager.dev/develop
 
 ## [v0.0.14] - Not Released
 
-Under development using Godot 3.5.2.rc2.
+Under development using Godot 3.5.2.
 
 New develpment assets! Find link in core changelog [here](https://github.com/ivoyager/ivoyager/blob/master/CHANGELOG.md).
 
 ### Changed
-* Modified and added to the 'example' GUI to interact with new systems and assets (spacecraft and visited asteroids) in core.
+* Updated 'example' GUI to interact with new systems and assets in core.
 
 ## [v0.0.13] - 2022-09-28
 
