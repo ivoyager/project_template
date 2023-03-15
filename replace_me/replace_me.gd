@@ -28,8 +28,8 @@
 const EXTENSION_NAME := "Replace Me!"
 const EXTENSION_VERSION := "0.0.14"
 const EXTENSION_BUILD := "" # hotfix or debug build
-const EXTENSION_STATE := "dev" # 'dev', 'alpha', 'beta', 'rc', ''
-const EXTENSION_YMD := 20230304 # int allows easy >= tests
+const EXTENSION_STATE := "" # 'dev', 'alpha', 'beta', 'rc', ''
+const EXTENSION_YMD := 20230315 # int allows easy >= tests
 
 const USE_THREADS := true # false can help threaded code debugging (e.g., I/O)
 
@@ -53,7 +53,6 @@ func _extension_init() -> void:
 	IVGlobal.skip_splash_screen = false
 	IVGlobal.save_file_extension = "MyProjectSave"
 	IVGlobal.save_file_extension_name = "My Project Save"
-	IVGlobal.start_body_name = "PLANET_MARS"
 	IVGlobal.start_time = 21.12135 * IVUnits.YEAR # from J2000 epoch
 	IVGlobal.use_threads = USE_THREADS
 	

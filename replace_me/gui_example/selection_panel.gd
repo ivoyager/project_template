@@ -22,6 +22,17 @@
 
 extends PanelContainer
 
+
+var default_view_name := "LABEL_VIEW1" # will increment if taken
+var set_name := "SP"
+var is_cached := false # if false, persisted via gamesave
+var view_flags := IVView.ALL
+var init_flags := IVView.ALL_CAMERA
+var reserved_view_names := [tr("BUTTON_HOME")]
+
+
+
 func _ready() -> void:
-	# Modify widgets here
-	pass
+	$"%ViewSaveFlow".init($"%ViewSaveButton", default_view_name, set_name, is_cached,
+			view_flags, init_flags, reserved_view_names)
+
