@@ -33,6 +33,10 @@ var reserved_view_names := [tr("BUTTON_HOME")]
 
 
 func _ready() -> void:
+	$ControlMod.init_min_size(IVEnums.GUISize.GUI_SMALL, Vector2(435.0, 291.0))
+	$ControlMod.init_min_size(IVEnums.GUISize.GUI_MEDIUM, Vector2(575.0, 354.0))
+	$ControlMod.init_min_size(IVEnums.GUISize.GUI_LARGE, Vector2(712.0, 421.0))
+	
 	$"%ViewSaveFlow".init($"%ViewSaveButton", default_view_name, set_name, is_cached,
 			view_flags, init_flags, reserved_view_names)
 

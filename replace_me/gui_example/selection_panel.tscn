@@ -213,4 +213,4 @@ margin_top = 2.0
 margin_right = 988.0
 margin_bottom = 22.0
 
-[node name="ControlSized" parent="." instance=ExtResource( 3 )]
+[node name="ControlMod" parent="." instance=ExtResource( 3 )]
