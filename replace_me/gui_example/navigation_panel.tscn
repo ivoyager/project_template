@@ -117,4 +117,4 @@ margin_right = 434.0
 margin_bottom = 36.0
 size_flags_vertical = 3
 
-[node name="ControlSized" parent="." instance=ExtResource( 3 )]
+[node name="ControlMod" parent="." instance=ExtResource( 3 )]
