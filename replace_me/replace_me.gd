@@ -28,8 +28,8 @@
 const EXTENSION_NAME := "Replace Me!"
 const EXTENSION_VERSION := "0.0.15"
 const EXTENSION_BUILD := "" # hotfix or debug build
-const EXTENSION_STATE := "dev" # 'dev', 'alpha', 'beta', 'rc', ''
-const EXTENSION_YMD := 20230411 # int allows easy >= tests
+const EXTENSION_STATE := "" # 'dev', 'alpha', 'beta', 'rc', ''
+const EXTENSION_YMD := 20230724 # int allows easy >= tests
 
 const USE_THREADS := true # false can help threaded code debugging (e.g., I/O)
 
