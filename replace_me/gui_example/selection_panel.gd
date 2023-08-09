@@ -17,26 +17,24 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # *****************************************************************************
-#
-# THIS IS AN EXAMPLE GUI SCENE! You can modify it or replace it.
-
 extends PanelContainer
 
+# THIS IS AN EXAMPLE GUI SCENE! You can modify it or replace it.
 
 var default_view_name := "LABEL_VIEW1" # will increment if taken
-var set_name := "SP"
+var group_name := "SP"
 var is_cached := false # if false, persisted via gamesave
 var view_flags := IVView.ALL
 var init_flags := IVView.ALL_CAMERA
-var reserved_view_names := [tr("BUTTON_HOME")]
-
+var reserved_view_names: Array[String] = [tr("BUTTON_HOME")]
 
 
 func _ready() -> void:
-	$ControlMod.init_min_size(IVEnums.GUISize.GUI_SMALL, Vector2(435.0, 291.0))
-	$ControlMod.init_min_size(IVEnums.GUISize.GUI_MEDIUM, Vector2(575.0, 354.0))
-	$ControlMod.init_min_size(IVEnums.GUISize.GUI_LARGE, Vector2(712.0, 421.0))
+	var mod: IVControlSized = $ControlMod
+	mod.init_min_size(IVEnums.GUISize.GUI_SMALL, Vector2(435.0, 291.0))
+	mod.init_min_size(IVEnums.GUISize.GUI_MEDIUM, Vector2(575.0, 354.0))
+	mod.init_min_size(IVEnums.GUISize.GUI_LARGE, Vector2(712.0, 421.0))
 	
-	$"%ViewSaveFlow".init($"%ViewSaveButton", default_view_name, set_name, is_cached,
-			view_flags, init_flags, reserved_view_names)
+	($"%ViewSaveFlow" as IVViewSaveFlow).init($"%ViewSaveButton", default_view_name, group_name,
+			is_cached, view_flags, init_flags, reserved_view_names)
 
