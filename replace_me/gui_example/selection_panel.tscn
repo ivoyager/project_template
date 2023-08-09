@@ -20,73 +20,73 @@
 [node name="SelectionPanel" type="PanelContainer"]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = -354.0
-margin_right = 893.0
+offset_top = -354.0
+offset_right = 893.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBox" type="VBoxContainer" parent="."]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 995.0
-margin_bottom = 347.0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 995.0
+offset_bottom = 347.0
 mouse_filter = 2
 
 [node name="MainHBox" type="HBoxContainer" parent="VBox"]
-margin_right = 988.0
-margin_bottom = 304.0
+offset_right = 988.0
+offset_bottom = 304.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_constants/separation = 10
+theme_override_constants/separation = 10
 
 [node name="LeftVBox" type="VBoxContainer" parent="VBox/MainHBox"]
-margin_right = 489.0
-margin_bottom = 304.0
+offset_right = 489.0
+offset_bottom = 304.0
 mouse_filter = 2
 size_flags_horizontal = 3
 alignment = 1
 
 [node name="HBox" type="HBoxContainer" parent="VBox/MainHBox/LeftVBox"]
-margin_right = 489.0
-margin_bottom = 20.0
+offset_right = 489.0
+offset_bottom = 20.0
 mouse_filter = 2
 
 [node name="SelectionButtons" parent="VBox/MainHBox/LeftVBox/HBox" instance=ExtResource( 2 )]
-margin_right = 67.0
-margin_bottom = 20.0
+offset_right = 67.0
+offset_bottom = 20.0
 size_flags_horizontal = 2
 
 [node name="SelectionLabel" parent="VBox/MainHBox/LeftVBox/HBox" instance=ExtResource( 10 )]
-margin_left = 228.0
-margin_top = 3.0
-margin_right = 260.0
-margin_bottom = 17.0
+offset_left = 228.0
+offset_top = 3.0
+offset_right = 260.0
+offset_bottom = 17.0
 align = 1
 
 [node name="Spacer" type="Control" parent="VBox/MainHBox/LeftVBox/HBox"]
-margin_left = 264.0
-margin_right = 489.0
-margin_bottom = 20.0
+offset_left = 264.0
+offset_right = 489.0
+offset_bottom = 20.0
 mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="HBox2" type="HBoxContainer" parent="VBox/MainHBox/LeftVBox"]
-margin_top = 24.0
-margin_right = 489.0
-margin_bottom = 38.0
+offset_top = 24.0
+offset_right = 489.0
+offset_bottom = 38.0
 mouse_filter = 2
 
 [node name="RangeLabel" parent="VBox/MainHBox/LeftVBox/HBox2" instance=ExtResource( 4 )]
-margin_right = 242.0
+offset_right = 242.0
 size_flags_horizontal = 3
 align = 1
 
 [node name="LatLongLabel" parent="VBox/MainHBox/LeftVBox/HBox2" instance=ExtResource( 5 )]
-margin_left = 246.0
-margin_right = 489.0
+offset_left = 246.0
+offset_right = 489.0
 size_flags_horizontal = 3
 text = "0.0 N 0.0 W"
 
@@ -95,122 +95,122 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 42.0
-margin_right = 489.0
-margin_bottom = 304.0
+offset_left = 0.0
+offset_top = 42.0
+offset_right = 489.0
+offset_bottom = 304.0
 stretch_mode = 6
 
 [node name="RightVBox" type="VBoxContainer" parent="VBox/MainHBox"]
-margin_left = 499.0
-margin_right = 988.0
-margin_bottom = 304.0
+offset_left = 499.0
+offset_right = 988.0
+offset_bottom = 304.0
 mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="ViewSaveFlow" parent="VBox/MainHBox/RightVBox" instance=ExtResource( 11 )]
 unique_name_in_owner = true
-margin_top = 0.0
-margin_right = 489.0
-margin_bottom = 20.0
+offset_top = 0.0
+offset_right = 489.0
+offset_bottom = 20.0
 
 [node name="HUDsPopupButton" parent="VBox/MainHBox/RightVBox/ViewSaveFlow" instance=ExtResource( 16 )]
-margin_right = 109.0
+offset_right = 109.0
 
 [node name="ViewSaveButton" parent="VBox/MainHBox/RightVBox/ViewSaveFlow" instance=ExtResource( 15 )]
 unique_name_in_owner = true
-margin_left = 113.0
-margin_right = 216.0
-margin_bottom = 20.0
+offset_left = 113.0
+offset_right = 216.0
+offset_bottom = 20.0
 
 [node name="Home" parent="VBox/MainHBox/RightVBox/ViewSaveFlow" instance=ExtResource( 7 )]
-margin_left = 220.0
-margin_right = 332.0
+offset_left = 220.0
+offset_right = 332.0
 text = "BUTTON_HOME"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBox/MainHBox/RightVBox"]
-margin_top = 24.0
-margin_right = 489.0
-margin_bottom = 304.0
+offset_top = 24.0
+offset_right = 489.0
+offset_bottom = 304.0
 mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 3
 scroll_horizontal_enabled = false
 
 [node name="SelectionData" parent="VBox/MainHBox/RightVBox/ScrollContainer" instance=ExtResource( 12 )]
-margin_right = 489.0
-margin_bottom = 0.0
+offset_right = 489.0
+offset_bottom = 0.0
 
 [node name="VSpacer" type="Control" parent="VBox"]
-margin_top = 308.0
-margin_right = 988.0
-margin_bottom = 312.0
-rect_min_size = Vector2( 0, 4 )
+offset_top = 308.0
+offset_right = 988.0
+offset_bottom = 312.0
+custom_minimum_size = Vector2( 0, 4 )
 mouse_filter = 2
 
 [node name="BottomHBox" type="HBoxContainer" parent="VBox"]
-margin_top = 316.0
-margin_right = 988.0
-margin_bottom = 340.0
+offset_top = 316.0
+offset_right = 988.0
+offset_bottom = 340.0
 mouse_filter = 2
 
 [node name="Zoom" parent="VBox/BottomHBox" instance=ExtResource( 7 )]
-margin_right = 114.0
-margin_bottom = 24.0
+offset_right = 114.0
+offset_bottom = 24.0
 text = "BUTTON_ZOOM"
 
 [node name="Fortyfive" parent="VBox/BottomHBox" instance=ExtResource( 7 )]
-margin_left = 118.0
-margin_right = 239.0
-margin_bottom = 24.0
+offset_left = 118.0
+offset_right = 239.0
+offset_bottom = 24.0
 text = "BUTTON_45_DEG"
 
 [node name="Top" parent="VBox/BottomHBox" instance=ExtResource( 7 )]
-margin_left = 243.0
-margin_right = 341.0
-margin_bottom = 24.0
+offset_left = 243.0
+offset_right = 341.0
+offset_bottom = 24.0
 text = "BUTTON_TOP"
 
 [node name="Spacer1" type="Control" parent="VBox/BottomHBox"]
-margin_left = 345.0
-margin_right = 345.0
-margin_bottom = 24.0
+offset_left = 345.0
+offset_right = 345.0
+offset_bottom = 24.0
 mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="UpLockCkbx" parent="VBox/BottomHBox" instance=ExtResource( 14 )]
-margin_left = 349.0
-margin_right = 455.0
+offset_left = 349.0
+offset_right = 455.0
 
 [node name="Spacer2" type="Control" parent="VBox/BottomHBox"]
-margin_left = 459.0
-margin_right = 459.0
-margin_bottom = 24.0
+offset_left = 459.0
+offset_right = 459.0
+offset_bottom = 24.0
 mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="TrackCkbxs" parent="VBox/BottomHBox" instance=ExtResource( 8 )]
-margin_left = 463.0
-margin_right = 889.0
-margin_bottom = 24.0
+offset_left = 463.0
+offset_right = 889.0
+offset_bottom = 24.0
 
 [node name="Spacer3" type="Control" parent="VBox/BottomHBox"]
-margin_left = 893.0
-margin_right = 893.0
-margin_bottom = 24.0
+offset_left = 893.0
+offset_right = 893.0
+offset_bottom = 24.0
 mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="FocalLengthLabel" parent="VBox/BottomHBox" instance=ExtResource( 13 )]
-margin_left = 897.0
-margin_top = 5.0
-margin_right = 943.0
-margin_bottom = 19.0
+offset_left = 897.0
+offset_top = 5.0
+offset_right = 943.0
+offset_bottom = 19.0
 
 [node name="FocalLengthButtons" parent="VBox/BottomHBox" instance=ExtResource( 9 )]
-margin_left = 947.0
-margin_top = 2.0
-margin_right = 988.0
-margin_bottom = 22.0
+offset_left = 947.0
+offset_top = 2.0
+offset_right = 988.0
+offset_bottom = 22.0
 
 [node name="ControlMod" parent="." instance=ExtResource( 3 )]

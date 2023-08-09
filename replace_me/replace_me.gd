@@ -40,9 +40,9 @@ func _extension_init() -> void:
 			str(EXTENSION_YMD)])
 	
 	print("Use threads = ", USE_THREADS)
-	IVGlobal.connect("project_objects_instantiated", self, "_on_project_objects_instantiated")
-	IVGlobal.connect("project_nodes_added", self, "_on_project_nodes_added")
-	IVGlobal.connect("system_tree_ready", self, "_on_system_tree_ready")
+	IVGlobal.connect("project_objects_instantiated", Callable(self, "_on_project_objects_instantiated"))
+	IVGlobal.connect("project_nodes_added", Callable(self, "_on_project_nodes_added"))
+	IVGlobal.connect("system_tree_ready", Callable(self, "_on_system_tree_ready"))
 	
 	# change global init values
 	IVGlobal.project_name = EXTENSION_NAME

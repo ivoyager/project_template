@@ -15,8 +15,8 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -14.0
-margin_top = -14.0
+offset_left = -14.0
+offset_top = -14.0
 grow_horizontal = 0
 grow_vertical = 0
 script = ExtResource( 9 )
@@ -25,96 +25,96 @@ __meta__ = {
 }
 
 [node name="HBox" type="HBoxContainer" parent="."]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 457.0
-margin_bottom = 43.0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 457.0
+offset_bottom = 43.0
 mouse_filter = 2
 
 [node name="SunSliceButton" parent="HBox" instance=ExtResource( 5 )]
-margin_right = 12.0
-margin_bottom = 36.0
+offset_right = 12.0
+offset_bottom = 36.0
 size_flags_horizontal = 3
 
 [node name="RightSideContent" type="MarginContainer" parent="HBox"]
-margin_left = 16.0
-margin_right = 450.0
-margin_bottom = 36.0
+offset_left = 16.0
+offset_right = 450.0
+offset_bottom = 36.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 9.0
-custom_constants/margin_right = 0
-custom_constants/margin_top = 0
-custom_constants/margin_left = 0
-custom_constants/margin_bottom = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_bottom = 0
 
 [node name="TopVBox" type="VBoxContainer" parent="HBox/RightSideContent"]
-margin_right = 434.0
-margin_bottom = 36.0
+offset_right = 434.0
+offset_bottom = 36.0
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TopHBox" type="HBoxContainer" parent="HBox/RightSideContent/TopVBox"]
-margin_right = 434.0
-margin_bottom = 24.0
+offset_right = 434.0
+offset_bottom = 24.0
 mouse_filter = 2
 size_flags_vertical = 0
 
 [node name="CameraLockCkbx" parent="HBox/RightSideContent/TopVBox/TopHBox" instance=ExtResource( 7 )]
-margin_right = 160.0
+offset_right = 160.0
 
 [node name="Spacer1" type="Control" parent="HBox/RightSideContent/TopVBox/TopHBox"]
-margin_left = 164.0
-margin_right = 164.0
-margin_bottom = 24.0
+offset_left = 164.0
+offset_right = 164.0
+offset_bottom = 24.0
 mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="DateTimeLabel" parent="HBox/RightSideContent/TopVBox/TopHBox" instance=ExtResource( 2 )]
-margin_left = 168.0
-margin_top = 5.0
-margin_right = 302.0
-margin_bottom = 19.0
+offset_left = 168.0
+offset_top = 5.0
+offset_right = 302.0
+offset_bottom = 19.0
 
 [node name="Spacer2" type="Control" parent="HBox/RightSideContent/TopVBox/TopHBox"]
-margin_left = 306.0
-margin_right = 306.0
-margin_bottom = 24.0
+offset_left = 306.0
+offset_right = 306.0
+offset_bottom = 24.0
 mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="SpeedLabel" parent="HBox/RightSideContent/TopVBox/TopHBox" instance=ExtResource( 6 )]
-margin_left = 310.0
-margin_top = 5.0
-margin_right = 335.0
-margin_bottom = 19.0
+offset_left = 310.0
+offset_top = 5.0
+offset_right = 335.0
+offset_bottom = 19.0
 
 [node name="SpeedButtons" parent="HBox/RightSideContent/TopVBox/TopHBox" instance=ExtResource( 8 )]
-margin_left = 339.0
-margin_top = 2.0
-margin_right = 434.0
-margin_bottom = 22.0
+offset_left = 339.0
+offset_top = 2.0
+offset_right = 434.0
+offset_bottom = 22.0
 
 [node name="PlanetMoonButtons" parent="HBox/RightSideContent/TopVBox" instance=ExtResource( 4 )]
-margin_top = 28.0
-margin_right = 434.0
-margin_bottom = 28.0
+offset_top = 28.0
+offset_right = 434.0
+offset_bottom = 28.0
 size_flags_horizontal = 3
 
 [node name="AsteroidsHScroll" parent="HBox/RightSideContent/TopVBox" instance=ExtResource( 1 )]
 unique_name_in_owner = true
-margin_top = 32.0
-margin_right = 434.0
-margin_bottom = 32.0
+offset_top = 32.0
+offset_right = 434.0
+offset_bottom = 32.0
 size_flags_vertical = 3
 
 [node name="SpacecraftHScroll" parent="HBox/RightSideContent/TopVBox" instance=ExtResource( 1 )]
 unique_name_in_owner = true
-margin_top = 36.0
-margin_right = 434.0
-margin_bottom = 36.0
+offset_top = 36.0
+offset_right = 434.0
+offset_bottom = 36.0
 size_flags_vertical = 3
 
 [node name="ControlMod" parent="." instance=ExtResource( 3 )]
