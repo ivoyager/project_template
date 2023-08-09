@@ -28,8 +28,8 @@ var _settings: Dictionary = IVGlobal.settings
 
 
 func _ready() -> void:
-	IVGlobal.connect("update_gui_requested", self, "_resize")
-	IVGlobal.connect("setting_changed", self, "_settings_listener")
+	IVGlobal.connect("update_gui_requested", Callable(self, "_resize"))
+	IVGlobal.connect("setting_changed", Callable(self, "_settings_listener"))
 	$ControlMod.init_min_size(IVEnums.GUISize.GUI_SMALL, Vector2(435.0, 291.0))
 	$ControlMod.init_min_size(IVEnums.GUISize.GUI_MEDIUM, Vector2(575.0, 354.0))
 	$ControlMod.init_min_size(IVEnums.GUISize.GUI_LARGE, Vector2(712.0, 421.0))

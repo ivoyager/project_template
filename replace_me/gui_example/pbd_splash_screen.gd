@@ -28,17 +28,17 @@ var _settings: Dictionary = IVGlobal.settings
 var _settings_manager: IVSettingsManager
 
 func _project_init():
-	IVGlobal.connect("simulator_started", self, "hide")
-	IVGlobal.connect("simulator_exited", self, "show")
+	IVGlobal.connect("simulator_started", Callable(self, "hide"))
+	IVGlobal.connect("simulator_exited", Callable(self, "show"))
 	_settings_manager = IVGlobal.program.SettingsManager
 
 func _ready():
 	theme = IVGlobal.themes.splash_screen
 	$"%MainMenu".is_splash_config = true
-	$"%PBDCaption".connect("mouse_entered", self, "_pbd_mouse_entered")
-	$"%PBDCaption".connect("mouse_exited", self, "_pbd_mouse_exited")
-	$"%PBDCaption".connect("gui_input", self, "_pbd_caption_input")
-	$"%PBDCaption".set("custom_colors/font_color", Color.lightblue)
+	$"%PBDCaption".connect("mouse_entered", Callable(self, "_pbd_mouse_entered"))
+	$"%PBDCaption".connect("mouse_exited", Callable(self, "_pbd_mouse_exited"))
+	$"%PBDCaption".connect("gui_input", Callable(self, "_pbd_caption_input"))
+	$"%PBDCaption".set("theme_override_colors/font_color", Color.LIGHT_BLUE)
 	if _settings.pbd_splash_caption_open:
 		$"%PBDCaption".text = "TXT_PBD_LONG"
 	else:
@@ -47,10 +47,10 @@ func _ready():
 		hide()
 
 func _pbd_mouse_entered() -> void:
-	$"%PBDCaption".set("custom_colors/font_color", Color.white)
+	$"%PBDCaption".set("theme_override_colors/font_color", Color.WHITE)
 	
 func _pbd_mouse_exited() -> void:
-	$"%PBDCaption".set("custom_colors/font_color", Color.lightskyblue)
+	$"%PBDCaption".set("theme_override_colors/font_color", Color.LIGHT_SKY_BLUE)
 
 func _pbd_caption_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_pressed():
