@@ -29,16 +29,16 @@ const SCENE := "res://replace_me/gui_example/game_gui.tscn"
 
 # '_project_init()' is a pseudo-virtual function called by IVProjectBuilder.
 func _project_init() -> void:
-	IVGlobal.connect("project_builder_finished", Callable(self, "_on_project_builder_finished"))
+	IVGlobal.project_builder_finished.connect(_on_project_builder_finished)
 	
 	# We have some hide/show calls to hide away unfinished GUI
-	IVGlobal.connect("simulator_started", Callable(self, "show"))
-	IVGlobal.connect("about_to_free_procedural_nodes", Callable(self, "hide")) # on exit or game load
+	IVGlobal.simulator_started.connect(show)
+	IVGlobal.about_to_free_procedural_nodes.connect(hide) # on exit or game load
 	hide()
 
 
 func _ready():
-	IVGlobal.connect("show_hide_gui_requested", Callable(self, "show_hide_gui"))
+	IVGlobal.show_hide_gui_requested.connect(show_hide_gui)
 
 
 func _on_project_builder_finished() -> void:
@@ -58,3 +58,4 @@ func show_hide_gui(is_toggle := true, is_show := true) -> void:
 	if !IVGlobal.state.is_system_built:
 		return
 	visible = !visible if is_toggle else is_show
+

@@ -27,33 +27,41 @@ const SCENE := "res://replace_me/gui_example/pbd_splash_screen.tscn"
 var _settings: Dictionary = IVGlobal.settings
 var _settings_manager: IVSettingsManager
 
+@onready var _pbd_caption: Label = %PBDCaption
+
+
 func _project_init():
-	IVGlobal.connect("simulator_started", Callable(self, "hide"))
-	IVGlobal.connect("simulator_exited", Callable(self, "show"))
+	IVGlobal.simulator_started.connect(hide)
+	IVGlobal.simulator_exited.connect(show)
 	_settings_manager = IVGlobal.program.SettingsManager
+
 
 func _ready():
 	theme = IVGlobal.themes.splash_screen
-	$"%MainMenu".is_splash_config = true
-	$"%PBDCaption".connect("mouse_entered", Callable(self, "_pbd_mouse_entered"))
-	$"%PBDCaption".connect("mouse_exited", Callable(self, "_pbd_mouse_exited"))
-	$"%PBDCaption".connect("gui_input", Callable(self, "_pbd_caption_input"))
-	$"%PBDCaption".set("theme_override_colors/font_color", Color.LIGHT_BLUE)
+	($"%MainMenu" as IVMainMenu).is_splash_config = true
+	_pbd_caption.mouse_entered.connect(_pbd_mouse_entered)
+	_pbd_caption.mouse_exited.connect(_pbd_mouse_exited)
+	_pbd_caption.gui_input.connect(_pbd_caption_input)
+	_pbd_caption.set("theme_override_colors/font_color", Color.LIGHT_BLUE)
 	if _settings.pbd_splash_caption_open:
-		$"%PBDCaption".text = "TXT_PBD_LONG"
+		_pbd_caption.text = "TXT_PBD_LONG"
 	else:
-		$"%PBDCaption".text = "TXT_PBD_SHORT"
+		_pbd_caption.text = "TXT_PBD_SHORT"
 	if IVGlobal.skip_splash_screen:
 		hide()
 
+
 func _pbd_mouse_entered() -> void:
-	$"%PBDCaption".set("theme_override_colors/font_color", Color.WHITE)
-	
+	_pbd_caption.set("theme_override_colors/font_color", Color.WHITE)
+
+
 func _pbd_mouse_exited() -> void:
-	$"%PBDCaption".set("theme_override_colors/font_color", Color.LIGHT_SKY_BLUE)
+	_pbd_caption.set("theme_override_colors/font_color", Color.LIGHT_SKY_BLUE)
+
 
 func _pbd_caption_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_pressed():
 		var is_open: bool = !_settings.pbd_splash_caption_open
 		_settings_manager.change_current("pbd_splash_caption_open", is_open)
-		$"%PBDCaption".text = "TXT_PBD_LONG" if is_open else "TXT_PBD_SHORT"
+		_pbd_caption.text = "TXT_PBD_LONG" if is_open else "TXT_PBD_SHORT"
+
