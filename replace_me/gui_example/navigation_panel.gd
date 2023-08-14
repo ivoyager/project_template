@@ -17,26 +17,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # *****************************************************************************
-#
-# THIS IS AN EXAMPLE GUI SCENE! You can modify it or replace it.
-#
-
-
 extends PanelContainer
 
-var _settings: Dictionary = IVGlobal.settings
+# THIS IS AN EXAMPLE GUI SCENE! You can modify it or replace it.
 
 
 func _ready() -> void:
-	IVGlobal.connect("update_gui_requested", self, "_resize")
-	IVGlobal.connect("setting_changed", self, "_settings_listener")
-	$ControlMod.init_min_size(IVEnums.GUISize.GUI_SMALL, Vector2(435.0, 291.0))
-	$ControlMod.init_min_size(IVEnums.GUISize.GUI_MEDIUM, Vector2(575.0, 354.0))
-	$ControlMod.init_min_size(IVEnums.GUISize.GUI_LARGE, Vector2(712.0, 421.0))
+	IVGlobal.connect("update_gui_requested", Callable(self, "_resize"))
+	IVGlobal.connect("setting_changed", Callable(self, "_settings_listener"))
+	
+	var mod: IVControlSized = $ControlMod
+	mod.init_min_size(IVEnums.GUISize.GUI_SMALL, Vector2(435.0, 291.0))
+	mod.init_min_size(IVEnums.GUISize.GUI_MEDIUM, Vector2(575.0, 354.0))
+	mod.init_min_size(IVEnums.GUISize.GUI_LARGE, Vector2(712.0, 421.0))
 	
 	# widgets
-	$"%AsteroidsHScroll".add_bodies_from_table("asteroids")
-	$"%SpacecraftHScroll".add_bodies_from_table("spacecrafts")
+	($"%AsteroidsHScroll" as IVBodyHScroll).add_bodies_from_table("asteroids")
+	($"%SpacecraftHScroll" as IVBodyHScroll).add_bodies_from_table("spacecrafts")
 
 
 func _resize() -> void:

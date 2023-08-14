@@ -1,216 +1,154 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=17 format=3 uid="uid://ci63agucrjxcr"]
 
-[ext_resource path="res://replace_me/gui_example/selection_panel.gd" type="Script" id=1]
-[ext_resource path="res://ivoyager/gui_widgets/selection_buttons.tscn" type="PackedScene" id=2]
-[ext_resource path="res://ivoyager/gui_mods/control_sized.tscn" type="PackedScene" id=3]
-[ext_resource path="res://ivoyager/gui_widgets/range_label.tscn" type="PackedScene" id=4]
-[ext_resource path="res://ivoyager/gui_widgets/lat_long_label.tscn" type="PackedScene" id=5]
-[ext_resource path="res://ivoyager/gui_widgets/selection_image.tscn" type="PackedScene" id=6]
-[ext_resource path="res://ivoyager/gui_widgets/view_button.tscn" type="PackedScene" id=7]
-[ext_resource path="res://ivoyager/gui_widgets/track_ckbxs.tscn" type="PackedScene" id=8]
-[ext_resource path="res://ivoyager/gui_widgets/focal_length_buttons.tscn" type="PackedScene" id=9]
-[ext_resource path="res://ivoyager/gui_widgets/selection_label.tscn" type="PackedScene" id=10]
-[ext_resource path="res://ivoyager/gui_widgets/view_save_flow.tscn" type="PackedScene" id=11]
-[ext_resource path="res://ivoyager/gui_widgets/selection_data.tscn" type="PackedScene" id=12]
-[ext_resource path="res://ivoyager/gui_widgets/focal_length_label.tscn" type="PackedScene" id=13]
-[ext_resource path="res://ivoyager/gui_widgets/up_lock_ckbx.tscn" type="PackedScene" id=14]
-[ext_resource path="res://ivoyager/gui_widgets/view_save_button.tscn" type="PackedScene" id=15]
-[ext_resource path="res://ivoyager/gui_widgets/huds_popup_button.tscn" type="PackedScene" id=16]
+[ext_resource type="Script" path="res://replace_me/gui_example/selection_panel.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://bk1wcjtaqcyyd" path="res://ivoyager/gui_widgets/selection_buttons.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://ivoyager/gui_mods/control_sized.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://b5k2m7jen3jwm" path="res://ivoyager/gui_widgets/range_label.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://welwpw4boyv8" path="res://ivoyager/gui_widgets/lat_long_label.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://pukogbpgya48" path="res://ivoyager/gui_widgets/selection_image.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://bcl70ysl6yces" path="res://ivoyager/gui_widgets/view_button.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://b1mkm7ajlvvm0" path="res://ivoyager/gui_widgets/track_ckbxs.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://ivoyager/gui_widgets/focal_length_buttons.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://c71yn7f8ovhrl" path="res://ivoyager/gui_widgets/selection_label.tscn" id="10"]
+[ext_resource type="PackedScene" uid="uid://bvs2mb8bj8gfn" path="res://ivoyager/gui_widgets/view_save_flow.tscn" id="11"]
+[ext_resource type="PackedScene" uid="uid://b58glkdlp7x1i" path="res://ivoyager/gui_widgets/selection_data.tscn" id="12"]
+[ext_resource type="PackedScene" uid="uid://d20srsljisybk" path="res://ivoyager/gui_widgets/focal_length_label.tscn" id="13"]
+[ext_resource type="PackedScene" uid="uid://cwnvxi44ijkr4" path="res://ivoyager/gui_widgets/up_lock_ckbx.tscn" id="14"]
+[ext_resource type="PackedScene" uid="uid://do2jvg01jte0i" path="res://ivoyager/gui_widgets/view_save_button.tscn" id="15"]
+[ext_resource type="PackedScene" uid="uid://b02brsb71lrev" path="res://ivoyager/gui_widgets/huds_popup_button.tscn" id="16"]
 
 [node name="SelectionPanel" type="PanelContainer"]
+anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = -354.0
-margin_right = 893.0
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+offset_top = -354.0
+offset_right = 893.0
+script = ExtResource("1")
 
 [node name="VBox" type="VBoxContainer" parent="."]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 995.0
-margin_bottom = 347.0
+layout_mode = 2
 mouse_filter = 2
 
 [node name="MainHBox" type="HBoxContainer" parent="VBox"]
-margin_right = 988.0
-margin_bottom = 304.0
-mouse_filter = 2
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_constants/separation = 10
+mouse_filter = 2
+theme_override_constants/separation = 10
 
 [node name="LeftVBox" type="VBoxContainer" parent="VBox/MainHBox"]
-margin_right = 489.0
-margin_bottom = 304.0
-mouse_filter = 2
+layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 alignment = 1
 
 [node name="HBox" type="HBoxContainer" parent="VBox/MainHBox/LeftVBox"]
-margin_right = 489.0
-margin_bottom = 20.0
+layout_mode = 2
 mouse_filter = 2
 
-[node name="SelectionButtons" parent="VBox/MainHBox/LeftVBox/HBox" instance=ExtResource( 2 )]
-margin_right = 67.0
-margin_bottom = 20.0
+[node name="SelectionButtons" parent="VBox/MainHBox/LeftVBox/HBox" instance=ExtResource("2")]
+layout_mode = 2
 size_flags_horizontal = 2
 
-[node name="SelectionLabel" parent="VBox/MainHBox/LeftVBox/HBox" instance=ExtResource( 10 )]
-margin_left = 228.0
-margin_top = 3.0
-margin_right = 260.0
-margin_bottom = 17.0
-align = 1
+[node name="SelectionLabel" parent="VBox/MainHBox/LeftVBox/HBox" instance=ExtResource("10")]
+layout_mode = 2
 
 [node name="Spacer" type="Control" parent="VBox/MainHBox/LeftVBox/HBox"]
-margin_left = 264.0
-margin_right = 489.0
-margin_bottom = 20.0
-mouse_filter = 2
+layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 
 [node name="HBox2" type="HBoxContainer" parent="VBox/MainHBox/LeftVBox"]
-margin_top = 24.0
-margin_right = 489.0
-margin_bottom = 38.0
+layout_mode = 2
 mouse_filter = 2
 
-[node name="RangeLabel" parent="VBox/MainHBox/LeftVBox/HBox2" instance=ExtResource( 4 )]
-margin_right = 242.0
+[node name="RangeLabel" parent="VBox/MainHBox/LeftVBox/HBox2" instance=ExtResource("4")]
+layout_mode = 2
 size_flags_horizontal = 3
-align = 1
 
-[node name="LatLongLabel" parent="VBox/MainHBox/LeftVBox/HBox2" instance=ExtResource( 5 )]
-margin_left = 246.0
-margin_right = 489.0
+[node name="LatLongLabel" parent="VBox/MainHBox/LeftVBox/HBox2" instance=ExtResource("5")]
+layout_mode = 2
 size_flags_horizontal = 3
 text = "0.0 N 0.0 W"
 
-[node name="SelectionImage" parent="VBox/MainHBox/LeftVBox" instance=ExtResource( 6 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 42.0
-margin_right = 489.0
-margin_bottom = 304.0
+[node name="SelectionImage" parent="VBox/MainHBox/LeftVBox" instance=ExtResource("6")]
+layout_mode = 2
 stretch_mode = 6
 
 [node name="RightVBox" type="VBoxContainer" parent="VBox/MainHBox"]
-margin_left = 499.0
-margin_right = 988.0
-margin_bottom = 304.0
-mouse_filter = 2
+layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 
-[node name="ViewSaveFlow" parent="VBox/MainHBox/RightVBox" instance=ExtResource( 11 )]
+[node name="ViewSaveFlow" parent="VBox/MainHBox/RightVBox" instance=ExtResource("11")]
 unique_name_in_owner = true
-margin_top = 0.0
-margin_right = 489.0
-margin_bottom = 20.0
+layout_mode = 2
 
-[node name="HUDsPopupButton" parent="VBox/MainHBox/RightVBox/ViewSaveFlow" instance=ExtResource( 16 )]
-margin_right = 109.0
+[node name="HUDsPopupButton" parent="VBox/MainHBox/RightVBox/ViewSaveFlow" instance=ExtResource("16")]
+layout_mode = 2
 
-[node name="ViewSaveButton" parent="VBox/MainHBox/RightVBox/ViewSaveFlow" instance=ExtResource( 15 )]
+[node name="ViewSaveButton" parent="VBox/MainHBox/RightVBox/ViewSaveFlow" instance=ExtResource("15")]
 unique_name_in_owner = true
-margin_left = 113.0
-margin_right = 216.0
-margin_bottom = 20.0
+layout_mode = 2
 
-[node name="Home" parent="VBox/MainHBox/RightVBox/ViewSaveFlow" instance=ExtResource( 7 )]
-margin_left = 220.0
-margin_right = 332.0
+[node name="Home" parent="VBox/MainHBox/RightVBox/ViewSaveFlow" instance=ExtResource("7")]
+layout_mode = 2
 text = "BUTTON_HOME"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBox/MainHBox/RightVBox"]
-margin_top = 24.0
-margin_right = 489.0
-margin_bottom = 304.0
-mouse_filter = 1
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-scroll_horizontal_enabled = false
 
-[node name="SelectionData" parent="VBox/MainHBox/RightVBox/ScrollContainer" instance=ExtResource( 12 )]
-margin_right = 489.0
-margin_bottom = 0.0
+[node name="SelectionData" parent="VBox/MainHBox/RightVBox/ScrollContainer" instance=ExtResource("12")]
+layout_mode = 2
 
 [node name="VSpacer" type="Control" parent="VBox"]
-margin_top = 308.0
-margin_right = 988.0
-margin_bottom = 312.0
-rect_min_size = Vector2( 0, 4 )
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
 mouse_filter = 2
 
 [node name="BottomHBox" type="HBoxContainer" parent="VBox"]
-margin_top = 316.0
-margin_right = 988.0
-margin_bottom = 340.0
+layout_mode = 2
 mouse_filter = 2
 
-[node name="Zoom" parent="VBox/BottomHBox" instance=ExtResource( 7 )]
-margin_right = 114.0
-margin_bottom = 24.0
+[node name="Zoom" parent="VBox/BottomHBox" instance=ExtResource("7")]
+layout_mode = 2
 text = "BUTTON_ZOOM"
 
-[node name="Fortyfive" parent="VBox/BottomHBox" instance=ExtResource( 7 )]
-margin_left = 118.0
-margin_right = 239.0
-margin_bottom = 24.0
+[node name="Fortyfive" parent="VBox/BottomHBox" instance=ExtResource("7")]
+layout_mode = 2
 text = "BUTTON_45_DEG"
 
-[node name="Top" parent="VBox/BottomHBox" instance=ExtResource( 7 )]
-margin_left = 243.0
-margin_right = 341.0
-margin_bottom = 24.0
+[node name="Top" parent="VBox/BottomHBox" instance=ExtResource("7")]
+layout_mode = 2
 text = "BUTTON_TOP"
 
 [node name="Spacer1" type="Control" parent="VBox/BottomHBox"]
-margin_left = 345.0
-margin_right = 345.0
-margin_bottom = 24.0
-mouse_filter = 2
+layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 
-[node name="UpLockCkbx" parent="VBox/BottomHBox" instance=ExtResource( 14 )]
-margin_left = 349.0
-margin_right = 455.0
+[node name="UpLockCkbx" parent="VBox/BottomHBox" instance=ExtResource("14")]
+layout_mode = 2
 
 [node name="Spacer2" type="Control" parent="VBox/BottomHBox"]
-margin_left = 459.0
-margin_right = 459.0
-margin_bottom = 24.0
-mouse_filter = 2
+layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 
-[node name="TrackCkbxs" parent="VBox/BottomHBox" instance=ExtResource( 8 )]
-margin_left = 463.0
-margin_right = 889.0
-margin_bottom = 24.0
+[node name="TrackCkbxs" parent="VBox/BottomHBox" instance=ExtResource("8")]
+layout_mode = 2
 
 [node name="Spacer3" type="Control" parent="VBox/BottomHBox"]
-margin_left = 893.0
-margin_right = 893.0
-margin_bottom = 24.0
-mouse_filter = 2
+layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 
-[node name="FocalLengthLabel" parent="VBox/BottomHBox" instance=ExtResource( 13 )]
-margin_left = 897.0
-margin_top = 5.0
-margin_right = 943.0
-margin_bottom = 19.0
+[node name="FocalLengthLabel" parent="VBox/BottomHBox" instance=ExtResource("13")]
+layout_mode = 2
 
-[node name="FocalLengthButtons" parent="VBox/BottomHBox" instance=ExtResource( 9 )]
-margin_left = 947.0
-margin_top = 2.0
-margin_right = 988.0
-margin_bottom = 22.0
+[node name="FocalLengthButtons" parent="VBox/BottomHBox" instance=ExtResource("9")]
+layout_mode = 2
 
-[node name="ControlMod" parent="." instance=ExtResource( 3 )]
+[node name="ControlMod" parent="." instance=ExtResource("3")]

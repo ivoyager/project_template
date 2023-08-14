@@ -26,23 +26,29 @@
 #    3. Must have function "_extension_init"
 
 const EXTENSION_NAME := "Replace Me!"
-const EXTENSION_VERSION := "0.0.15"
+const EXTENSION_VERSION := "0.0.16"
 const EXTENSION_BUILD := "" # hotfix or debug build
-const EXTENSION_STATE := "" # 'dev', 'alpha', 'beta', 'rc', ''
-const EXTENSION_YMD := 20230724 # int allows easy >= tests
+const EXTENSION_STATE := "dev" # 'dev', 'alpha', 'beta', 'rc', ''
+const EXTENSION_YMD := 20230814 # int allows easy >= tests
 
-const USE_THREADS := true # false can help threaded code debugging (e.g., I/O)
+const USE_THREADS := false # false can help threaded code debugging (e.g., I/O)
 
+const VERBOSE_GLOBAL_SIGNALS := true
+const VERBOSE_STATEMANAGER_SIGNALS := true
 
 func _extension_init() -> void:
 	
 	print("%s %s%s-%s %s" % [EXTENSION_NAME, EXTENSION_VERSION, EXTENSION_BUILD, EXTENSION_STATE,
 			str(EXTENSION_YMD)])
 	
+	# debug
+	if OS.is_debug_build and VERBOSE_GLOBAL_SIGNALS:
+		IVDebug.signal_verbosely_all(IVGlobal, "Global") # print all IVGlobal signal emits
+	
 	print("Use threads = ", USE_THREADS)
-	IVGlobal.connect("project_objects_instantiated", self, "_on_project_objects_instantiated")
-	IVGlobal.connect("project_nodes_added", self, "_on_project_nodes_added")
-	IVGlobal.connect("system_tree_ready", self, "_on_system_tree_ready")
+	IVGlobal.connect("project_objects_instantiated", Callable(self, "_on_project_objects_instantiated"))
+	IVGlobal.connect("project_nodes_added", Callable(self, "_on_project_nodes_added"))
+	IVGlobal.connect("system_tree_ready", Callable(self, "_on_system_tree_ready"))
 	
 	# change global init values
 	IVGlobal.project_name = EXTENSION_NAME
@@ -62,8 +68,15 @@ func _extension_init() -> void:
 
 
 func _on_project_objects_instantiated() -> void:
-	# Here you can access and change init values for program nodes and
-	# program references (for nodes, before they are added to the tree).
+	# Here you can access and change init values for program Nodes and
+	# program RefCounteds before they are used (for Nodes, before they are
+	# added to the tree).
+	
+	# debug
+	if OS.is_debug_build and VERBOSE_STATEMANAGER_SIGNALS:
+		var state_manager: IVStateManager = IVGlobal.program.StateManager
+		IVDebug.signal_verbosely_all(state_manager, "StateManager") # print all StateManager signal emits
+		
 	var timekeeper: IVTimekeeper = IVGlobal.program.Timekeeper
 	timekeeper.start_speed = 1
 	var settings_manager: IVSettingsManager = IVGlobal.program.SettingsManager
@@ -72,7 +85,6 @@ func _on_project_objects_instantiated() -> void:
 
 func _on_project_nodes_added() -> void:
 	IVProjectBuilder.move_top_gui_child_to_sibling("GameGUI", "SplashScreen", true)
-	
 
 
 func _on_system_tree_ready(_is_new_game: bool) -> void:
