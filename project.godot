@@ -22,9 +22,9 @@ icon="res://jupiter-icon-128.png"
 
 [autoload]
 
-IVTableData="*res://ivoyager/tables_temp/table_data.gd"
 IVGlobal="*res://ivoyager/singletons/global.gd"
 IVProjectBuilder="*res://ivoyager/singletons/project_builder.gd"
+IVTableData="*res://addons/ivoyager_table_importer/table_data.gd"
 
 [debug]
 
@@ -40,6 +40,10 @@ gdscript/warnings/static_called_on_instance=0
 
 window/size/viewport_width=1800
 window/size/viewport_height=945
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/ivoyager_table_importer/plugin.cfg")
 
 [filesystem]
 
