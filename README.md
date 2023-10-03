@@ -4,7 +4,7 @@ Use this template to create a new game or app set in a realistic solar system.
 
 [Homepage](https://www.ivoyager.dev)  
 [Forum](https://www.ivoyager.dev/forum)  
-[Issues](https://github.com/ivoyager/ivoyager_core/issues)
+[Issues](https://github.com/ivoyager/ivoyager_core/issues)  
 [Changelog](https://github.com/ivoyager/project_template/blob/master/CHANGELOG.md)
 
 ### Installation
