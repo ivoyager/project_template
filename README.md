@@ -1,5 +1,9 @@
 # Project Template
 
+This repository uses submodules! To clone using git:
+
+`git clone --recursive git://github.com/ivoyager/project_template.git`
+
 This file is a placeholder. You should replace it with your project README.md.
 
 Quick note: "Use this template" will clone the "parent project" including .gitmodules file, but will not clone the ivoyager submodule. You will need to fork & clone that yourself, and init the submodule in your project. (After that you can pull ivoyager changes or submit pull requests based on your improvements.) 
