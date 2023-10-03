@@ -1,18 +1,18 @@
 # Project Template
 
-This repository uses submodules! To clone using git:
+To use this template, click the big green "Use this template" button from the GitHub repository (https://github.com/ivoyager/project_template). You can then rename it to whatever you want.
 
-`git clone --recursive git://github.com/ivoyager/project_template.git`
+Your new repository uses submodules! To clone using git:
+
+`git clone --recursive git://github.com/your_account/your_new_project.git`
 
 This file is a placeholder. You should replace it with your project README.md.
 
-Quick note: "Use this template" will clone the "parent project" including .gitmodules file, but will not clone the ivoyager submodule. You will need to fork & clone that yourself, and init the submodule in your project. (After that you can pull ivoyager changes or submit pull requests based on your improvements.) 
-
-For help with the Project Template, see this [tutorial](https://www.ivoyager.dev/forum/index.php?p=/discussion/20/how-to-make-a-new-project-from-the-project-template#latest) or ask questions on [our forum](https://www.ivoyager.dev/forum/).
+For help, please ask questions at [our forum!](https://www.ivoyager.dev/forum/)
 
 [Homepage](https://www.ivoyager.dev)  
 [Forum](https://www.ivoyager.dev/forum)  
-[Issues](https://github.com/ivoyager/ivoyager/issues)
+[Issues](https://github.com/ivoyager/ivoyager_core/issues)
 
 ### What is I, Voyager?
 I, Voyager is

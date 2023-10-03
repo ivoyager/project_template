@@ -1,4 +1,4 @@
-# initializer.gd
+# preinitializer.gd
 # This file is part of I, Voyager
 # https://ivoyager.dev
 # *****************************************************************************
@@ -19,7 +19,7 @@
 # *****************************************************************************
 extends RefCounted
 
-# This file is specified as a 'preinitializer' in res://ivoyager_override.cfg.
+# This file is specified for instantiation in res://ivoyager_override.cfg.
 # We can use this file to modify base IVCoreSettings, IVCoreInitializer, and
 # instantiated program objects. (As an alternative, all IVCoreSettings and
 # IVCoreInitializer changes could be done in res://ivoyager_override.cfg.)

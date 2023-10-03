@@ -20,13 +20,6 @@ main_scene="res://addons/ivoyager_core/tree_nodes/universe.tscn"
 name="I, Voyager - Project Template"
 icon="res://jupiter-icon-128.png"
 
-[autoload]
-
-IVUnits="*res://addons/ivoyager_table_importer/editor_plugin/../singletons/units.gd"
-IVQConvert="*res://addons/ivoyager_table_importer/editor_plugin/../singletons/qconvert.gd"
-IVQFormat="*res://addons/ivoyager_table_importer/editor_plugin/../singletons/qformat.gd"
-IVTableData="*res://addons/ivoyager_table_importer/editor_plugin/../singletons/table_data.gd"
-
 [debug]
 
 file_logging/enable_file_logging=true
