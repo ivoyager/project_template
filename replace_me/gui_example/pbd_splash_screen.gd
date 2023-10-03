@@ -30,7 +30,7 @@ var _settings_manager: IVSettingsManager
 @onready var _pbd_caption: Label = %PBDCaption
 
 
-func _project_init():
+func _ivcore_init():
 	IVGlobal.simulator_started.connect(hide)
 	IVGlobal.simulator_exited.connect(show)
 	_settings_manager = IVGlobal.program.SettingsManager
@@ -47,7 +47,7 @@ func _ready():
 		_pbd_caption.text = "TXT_PBD_LONG"
 	else:
 		_pbd_caption.text = "TXT_PBD_SHORT"
-	if IVGlobal.skip_splash_screen:
+	if IVCoreSettings.skip_splash_screen:
 		hide()
 
 

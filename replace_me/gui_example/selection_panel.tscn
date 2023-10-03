@@ -61,19 +61,21 @@ mouse_filter = 2
 [node name="HBox2" type="HBoxContainer" parent="VBox/MainHBox/LeftVBox"]
 layout_mode = 2
 mouse_filter = 2
+alignment = 1
 
 [node name="RangeLabel" parent="VBox/MainHBox/LeftVBox/HBox2" instance=ExtResource("4")]
 layout_mode = 2
 size_flags_horizontal = 3
+horizontal_alignment = 1
 
 [node name="LatLongLabel" parent="VBox/MainHBox/LeftVBox/HBox2" instance=ExtResource("5")]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0.0 N 0.0 W"
+horizontal_alignment = 1
 
 [node name="SelectionImage" parent="VBox/MainHBox/LeftVBox" instance=ExtResource("6")]
 layout_mode = 2
-stretch_mode = 6
 
 [node name="RightVBox" type="VBoxContainer" parent="VBox/MainHBox"]
 layout_mode = 2

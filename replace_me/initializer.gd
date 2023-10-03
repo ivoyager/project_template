@@ -1,4 +1,4 @@
-# replace_me.gd
+# initializer.gd
 # This file is part of I, Voyager
 # https://ivoyager.dev
 # *****************************************************************************
@@ -17,54 +17,46 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # *****************************************************************************
-# This is an example "extension" file that changes some init values. See
-# https://github.com/ivoyager/planetarium for a much more complex example.
-#
-# Requirements:
-#    1. This file must have the same name as its directory + ".gd"
-#    2. Must have the 3 constants below
-#    3. Must have function "_extension_init"
+extends RefCounted
 
-const EXTENSION_NAME := "Replace Me!"
-const EXTENSION_VERSION := "0.0.16"
-const EXTENSION_BUILD := "" # hotfix or debug build
-const EXTENSION_STATE := "dev" # 'dev', 'alpha', 'beta', 'rc', ''
-const EXTENSION_YMD := 20230925 # int allows easy >= tests
+# This file is specified as a 'preinitializer' in res://ivoyager_override.cfg.
+# We can use this file to modify base IVCoreSettings, IVCoreInitializer, and
+# instantiated program objects. (As an alternative, all IVCoreSettings and
+# IVCoreInitializer changes could be done in res://ivoyager_override.cfg.)
+
+const PROJECT_NAME := "Project Template (Replace Me!)"
+const PROJECT_VERSION := "v0.0.17-dev"
 
 const USE_THREADS := true # false can help threaded code debugging (e.g., I/O)
 
 const VERBOSE_GLOBAL_SIGNALS := false
 const VERBOSE_STATEMANAGER_SIGNALS := false
 
-func _extension_init() -> void:
+func _init() -> void:
 	
-	print("%s %s%s-%s %s" % [EXTENSION_NAME, EXTENSION_VERSION, EXTENSION_BUILD, EXTENSION_STATE,
-			str(EXTENSION_YMD)])
+	print("%s %s" % [PROJECT_NAME, PROJECT_VERSION])
 	
 	# debug
 	if OS.is_debug_build and VERBOSE_GLOBAL_SIGNALS:
 		IVDebug.signal_verbosely_all(IVGlobal, "Global") # print all IVGlobal signal emits
 	
 	print("Use threads = ", USE_THREADS)
-	IVGlobal.connect("project_objects_instantiated", Callable(self, "_on_project_objects_instantiated"))
-	IVGlobal.connect("project_nodes_added", Callable(self, "_on_project_nodes_added"))
-	IVGlobal.connect("system_tree_ready", Callable(self, "_on_system_tree_ready"))
+	IVGlobal.project_objects_instantiated.connect(_on_project_objects_instantiated)
+	IVGlobal.project_nodes_added.connect(_on_project_nodes_added)
+	IVGlobal.system_tree_ready.connect(_on_system_tree_ready)
 	
 	# change global init values
-	IVGlobal.project_name = EXTENSION_NAME
-	IVGlobal.project_version = EXTENSION_VERSION # helps load file debug
-	IVGlobal.project_build = EXTENSION_BUILD
-	IVGlobal.project_state = EXTENSION_STATE
-	IVGlobal.project_ymd = EXTENSION_YMD # helps load file debug
-	IVGlobal.skip_splash_screen = false
-	IVGlobal.save_file_extension = "MyProjectSave"
-	IVGlobal.save_file_extension_name = "My Project Save"
-	IVGlobal.start_time = 21.12135 * IVUnits.YEAR # from J2000 epoch
-	IVGlobal.use_threads = USE_THREADS
+	IVCoreSettings.project_name = PROJECT_NAME
+	IVCoreSettings.project_version = PROJECT_VERSION # helps load file debug
+	IVCoreSettings.use_threads = USE_THREADS
+	IVCoreSettings.skip_splash_screen = false
+	IVCoreSettings.save_file_extension = "MyProjectSave"
+	IVCoreSettings.save_file_extension_name = "My Project Save"
+	IVCoreSettings.start_time = 25.0 * IVUnits.YEAR # from J2000 epoch
 	
 	# modify classes
-	IVProjectBuilder.gui_nodes._SplashScreen_ = PBDSplashScreen
-	IVProjectBuilder.gui_nodes._GameGUI_ = GameGUI
+	IVCoreInitializer.gui_nodes[&"SplashScreen"] = PBDSplashScreen
+	IVCoreInitializer.gui_nodes[&"GameGUI"] = GameGUI
 
 
 func _on_project_objects_instantiated() -> void:
@@ -84,7 +76,7 @@ func _on_project_objects_instantiated() -> void:
 
 
 func _on_project_nodes_added() -> void:
-	IVProjectBuilder.move_top_gui_child_to_sibling("GameGUI", "SplashScreen", true)
+	IVCoreInitializer.move_top_gui_child_to_sibling("GameGUI", "SplashScreen", true)
 
 
 func _on_system_tree_ready(_is_new_game: bool) -> void:

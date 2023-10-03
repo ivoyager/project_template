@@ -27,8 +27,8 @@ const SCENE := "res://replace_me/gui_example/game_gui.tscn"
 # scene (otherwise, it will load as a bare Control instance w/ this script).
 
 
-# '_project_init()' is a pseudo-virtual function called by IVProjectBuilder.
-func _project_init() -> void:
+# '_ivcore_init()' is a pseudo-virtual function called by IVCoreInitializer.
+func _ivcore_init() -> void:
 	IVGlobal.project_builder_finished.connect(_on_project_builder_finished)
 	
 	# We have some hide/show calls to hide away unfinished GUI
