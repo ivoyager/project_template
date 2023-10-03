@@ -1,18 +1,27 @@
 # Project Template
 
+Use this template to create a new game or app set in a realistic solar system.
+
+[Homepage](https://www.ivoyager.dev)  
+[Forum](https://www.ivoyager.dev/forum)  
+[Issues](https://github.com/ivoyager/ivoyager_core/issues)
+[Changelog](https://github.com/ivoyager/project_template/blob/master/CHANGELOG.md)
+
+### Installation
+
 To use this template, click the big green "Use this template" button from the GitHub repository (https://github.com/ivoyager/project_template). You can then rename it to whatever you want.
 
 Your new repository uses submodules! To clone using git:
 
 `git clone --recursive git://github.com/your_account/your_new_project.git`
 
-This file is a placeholder. You should replace it with your project README.md.
+Assets are not Git-tracked and must be downloaded and added manually. Find the latest `ivoyager_assets` release with ivoyager_core releases [here](https://github.com/ivoyager/ivoyager_core/releases). Add this to your addons directory.
+
+After above steps, your addons directory will contain three subdirectories: `ivoyager_assets`, `ivoyager_core`, and `ivoyager_table_importer`.
+
+See also our [Developer page](https://www.ivoyager.dev/developers/).
 
 For help, please ask questions at [our forum!](https://www.ivoyager.dev/forum/)
-
-[Homepage](https://www.ivoyager.dev)  
-[Forum](https://www.ivoyager.dev/forum)  
-[Issues](https://github.com/ivoyager/ivoyager_core/issues)
 
 ### What is I, Voyager?
 I, Voyager is
