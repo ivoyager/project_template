@@ -11,28 +11,24 @@ config_version=5
 [application]
 
 config/name="I, Voyager - Project Template"
-run/main_scene="res://ivoyager/tree_nodes/universe.tscn"
+run/main_scene="res://addons/ivoyager_core/tree_nodes/universe.tscn"
 config/features=PackedStringArray("4.1")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/image="res://replace_me/gui_example/pale_blue_dot.png"
 config/icon="res://replace_me/jupiter-icon-128.png"
-main_scene="res://universe.tscn"
+main_scene="res://addons/ivoyager_core/tree_nodes/universe.tscn"
 name="I, Voyager - Project Template"
 icon="res://jupiter-icon-128.png"
 
-[autoload]
-
-IVGlobal="*res://ivoyager/singletons/global.gd"
-IVProjectBuilder="*res://ivoyager/singletons/project_builder.gd"
-IVTableData="*res://addons/ivoyager_table_importer/table_data.gd"
-
 [debug]
 
+file_logging/enable_file_logging=true
+gdscript/warnings/exclude_addons=false
 gdscript/warnings/unused_signal=false
 gdscript/warnings/unsafe_property_access=1
 gdscript/warnings/unsafe_method_access=1
 gdscript/warnings/unsafe_cast=1
-gdscript/warnings/unsafe_call_argument=1
+gdscript/warnings/unsafe_call_argument=true
 gdscript/warnings/return_value_discarded=false
 gdscript/warnings/static_called_on_instance=0
 
@@ -43,7 +39,7 @@ window/size/viewport_height=945
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/ivoyager_table_importer/plugin.cfg")
+enabled=PackedStringArray("res://addons/ivoyager_core/plugin.cfg", "res://addons/ivoyager_table_importer/plugin.cfg")
 
 [filesystem]
 
@@ -107,7 +103,7 @@ ui_down={
 [locale]
 
 test="en"
-translations=PackedStringArray("res://ivoyager/data/text/entities_text.en.translation", "res://ivoyager/data/text/gui_text.en.translation", "res://ivoyager/data/text/long_text.en.translation")
+translations=PackedStringArray("res://addons/ivoyager_core/data/text/entities_text.en.translation", "res://addons/ivoyager_core/data/text/gui_text.en.translation", "res://addons/ivoyager_core/data/text/long_text.en.translation")
 
 [logging]
 
@@ -120,22 +116,3 @@ motion_fix_enabled=true
 [rendering]
 
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
-
-[shader_globals]
-
-iv_time={
-"type": "float",
-"value": 0.0
-}
-iv_mouse_fragcoord={
-"type": "vec2",
-"value": Vector2(0, 0)
-}
-iv_fragment_id_cycler={
-"type": "float",
-"value": 0.0
-}
-iv_fragment_id_range={
-"type": "float",
-"value": 0.0
-}

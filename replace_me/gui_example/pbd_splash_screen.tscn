@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://replace_me/gui_example/pbd_splash_screen.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://50qe34hvmkk7" path="res://replace_me/gui_example/pale_blue_dot.png" id="2"]
-[ext_resource type="PackedScene" uid="uid://dl2ymdlh1ak58" path="res://ivoyager/gui_widgets/main_menu.tscn" id="3"]
-[ext_resource type="PackedScene" uid="uid://bkokwngymmnyk" path="res://ivoyager/gui_widgets/version_label.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://dl2ymdlh1ak58" path="res://addons/ivoyager_core/gui_widgets/main_menu.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://bkokwngymmnyk" path="res://addons/ivoyager_core/gui_widgets/version_label.tscn" id="4"]
 
 [node name="PBDSplashScreen" type="ColorRect"]
 process_mode = 3
