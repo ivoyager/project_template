@@ -9,6 +9,8 @@ Use this template to create a new game or app set in a realistic solar system.
 
 ### Installation
 
+Find more detailed instructions at our [Developers Page](https://www.ivoyager.dev/developers/).
+
 To use this template, click the big green "Use this template" button from the GitHub repository (https://github.com/ivoyager/project_template). You can then rename it to whatever you want.
 
 Your new repository uses submodules! To clone using git:
