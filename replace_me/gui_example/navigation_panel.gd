@@ -23,8 +23,8 @@ extends PanelContainer
 
 
 func _ready() -> void:
-	IVGlobal.connect("update_gui_requested", Callable(self, "_resize"))
-	IVGlobal.connect("setting_changed", Callable(self, "_settings_listener"))
+	IVGlobal.update_gui_requested.connect(_resize)
+	IVGlobal.setting_changed.connect(_settings_listener)
 	
 	var mod: IVControlSized = $ControlMod
 	mod.init_min_size(IVEnums.GUISize.GUI_SMALL, Vector2(435.0, 291.0))
