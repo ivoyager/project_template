@@ -25,7 +25,7 @@ extends RefCounted
 # IVCoreInitializer changes could be done in res://ivoyager_override.cfg.)
 
 const PROJECT_NAME := "Project Template (Replace Me!)"
-const PROJECT_VERSION := "v0.0.18-dev"
+const PROJECT_VERSION := "v0.0.18.dev"
 
 const USE_THREADS := true # false can help threaded code debugging (e.g., I/O)
 
