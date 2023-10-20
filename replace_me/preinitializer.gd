@@ -25,7 +25,6 @@ extends RefCounted
 # IVCoreInitializer changes could be done in res://ivoyager_override.cfg.)
 
 const PROJECT_NAME := "Project Template (Replace Me!)"
-const PROJECT_VERSION := "v0.0.18.dev"
 
 const USE_THREADS := true # false can help threaded code debugging (e.g., I/O)
 
@@ -34,7 +33,8 @@ const VERBOSE_STATEMANAGER_SIGNALS := false
 
 func _init() -> void:
 	
-	print("%s %s" % [PROJECT_NAME, PROJECT_VERSION])
+	var version: String = ProjectSettings.get_setting("application/config/version")
+	print("%s %s" % [PROJECT_NAME, version])
 	
 	# debug
 	if OS.is_debug_build and VERBOSE_GLOBAL_SIGNALS:
@@ -47,7 +47,7 @@ func _init() -> void:
 	
 	# change global init values
 	IVCoreSettings.project_name = PROJECT_NAME
-	IVCoreSettings.project_version = PROJECT_VERSION # helps load file debug
+	IVCoreSettings.project_version = version # helps load file debug
 	IVCoreSettings.use_threads = USE_THREADS
 	IVCoreSettings.skip_splash_screen = false
 	IVCoreSettings.save_file_extension = "MyProjectSave"
