@@ -37,7 +37,7 @@ func _ivcore_init() -> void:
 	hide()
 
 
-func _ready():
+func _ready() -> void:
 	IVGlobal.show_hide_gui_requested.connect(show_hide_gui)
 
 

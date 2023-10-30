@@ -41,6 +41,6 @@ func _resize() -> void:
 #	never mind...
 
 
-func _settings_listener(setting: String, _value) -> void:
+func _settings_listener(setting: String, _value: Variant) -> void:
 	if setting == "gui_size":
 		_resize()
