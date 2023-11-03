@@ -30,13 +30,13 @@ var _settings_manager: IVSettingsManager
 @onready var _pbd_caption: Label = %PBDCaption
 
 
-func _ivcore_init():
+func _ivcore_init() -> void:
 	IVGlobal.simulator_started.connect(hide)
 	IVGlobal.simulator_exited.connect(show)
 	_settings_manager = IVGlobal.program.SettingsManager
 
 
-func _ready():
+func _ready() -> void:
 	theme = IVGlobal.themes.splash_screen
 	($"%MainMenu" as IVMainMenu).is_splash_config = true
 	_pbd_caption.mouse_entered.connect(_pbd_mouse_entered)
