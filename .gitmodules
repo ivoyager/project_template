@@ -4,3 +4,6 @@
 [submodule "addons/ivoyager_core"]
 	path = addons/ivoyager_core
 	url = https://github.com/ivoyager/ivoyager_core
+[submodule "addons/ivoyager_tree_saver"]
+	path = addons/ivoyager_tree_saver
+	url = https://github.com/ivoyager/ivoyager_tree_saver
