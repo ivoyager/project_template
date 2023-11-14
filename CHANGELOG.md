@@ -8,9 +8,12 @@ See cloning and downloading instructions [here](https://www.ivoyager.dev/develop
 
 ## [v0.0.18] - Not Released
 
-Under development using Godot 4.2.beta4. _Has backward breaking changes!_
+Under development using Godot 4.2.beta6. _Has backward breaking changes!_
 
 **NEW!** ivoyager_core editor plugin will download and add (or replace) assets for you. Just press 'Download' if prompted.
+
+### Added
+* ivoyager_tree_saver plugin (functionality moved out of ivoyager_core)
 
 ### Changed
 * Gets project version from project.godot.
