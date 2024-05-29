@@ -25,20 +25,17 @@ class_name PBDSplashScreen
 const SCENE := "res://replace_me/gui_example/pbd_splash_screen.tscn"
 
 var _settings: Dictionary = IVGlobal.settings
-var _settings_manager: IVSettingsManager
+var _settings_manager: IVSettingsManager = IVGlobal.program[&"SettingsManager"]
 
 @onready var _pbd_caption: Label = %PBDCaption
 
 
-func _ivcore_init() -> void:
-	IVGlobal.simulator_started.connect(hide)
-	IVGlobal.simulator_exited.connect(show)
-	_settings_manager = IVGlobal.program.SettingsManager
-
 
 func _ready() -> void:
+	IVGlobal.simulator_started.connect(hide)
+	IVGlobal.simulator_exited.connect(show)
 	theme = IVGlobal.themes.splash_screen
-	($"%MainMenu" as IVMainMenu).is_splash_config = true
+	(%MenuVBox as VBoxContainer).theme = IVGlobal.themes.main_menu
 	_pbd_caption.mouse_entered.connect(_pbd_mouse_entered)
 	_pbd_caption.mouse_exited.connect(_pbd_mouse_exited)
 	_pbd_caption.gui_input.connect(_pbd_caption_input)

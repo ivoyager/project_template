@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://ctyu72cpcsa2k"]
+[gd_scene load_steps=9 format=3 uid="uid://ctyu72cpcsa2k"]
 
 [ext_resource type="Script" path="res://replace_me/gui_example/pbd_splash_screen.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://50qe34hvmkk7" path="res://replace_me/gui_example/pale_blue_dot.png" id="2"]
-[ext_resource type="PackedScene" uid="uid://dl2ymdlh1ak58" path="res://addons/ivoyager_core/gui_widgets/main_menu.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://2yd54bjfmbri" path="res://addons/ivoyager_core/gui_widgets/start_button.tscn" id="3_k0wno"]
 [ext_resource type="PackedScene" uid="uid://bkokwngymmnyk" path="res://addons/ivoyager_core/gui_widgets/version_label.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://dutosuhbt5g8l" path="res://addons/ivoyager_core/gui_widgets/load_button.tscn" id="4_go2an"]
+[ext_resource type="PackedScene" uid="uid://boc2r4d0eomdr" path="res://addons/ivoyager_core/gui_widgets/options_button.tscn" id="5_fj2ko"]
+[ext_resource type="PackedScene" uid="uid://pjw4ki1qswq0" path="res://addons/ivoyager_core/gui_widgets/hotkeys_button.tscn" id="6_e17mv"]
+[ext_resource type="PackedScene" uid="uid://dcw1843unaohr" path="res://addons/ivoyager_core/gui_widgets/quit_button.tscn" id="7_uo13d"]
 
 [node name="PBDSplashScreen" type="ColorRect"]
 process_mode = 3
@@ -37,11 +41,26 @@ offset_top = 13.145
 offset_right = -14.1888
 offset_bottom = -0.0800781
 
-[node name="MainMenu" parent="AspectRatioContainer/TextureRect/VBox" instance=ExtResource("3")]
+[node name="MenuVBox" type="VBoxContainer" parent="AspectRatioContainer/TextureRect/VBox"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 0
-size_flags_vertical = 0
+
+[node name="StartButton" parent="AspectRatioContainer/TextureRect/VBox/MenuVBox" instance=ExtResource("3_k0wno")]
+layout_mode = 2
+
+[node name="LoadButton" parent="AspectRatioContainer/TextureRect/VBox/MenuVBox" instance=ExtResource("4_go2an")]
+layout_mode = 2
+
+[node name="OptionsButton" parent="AspectRatioContainer/TextureRect/VBox/MenuVBox" instance=ExtResource("5_fj2ko")]
+layout_mode = 2
+
+[node name="HotkeysButton" parent="AspectRatioContainer/TextureRect/VBox/MenuVBox" instance=ExtResource("6_e17mv")]
+layout_mode = 2
+
+[node name="QuitButton" parent="AspectRatioContainer/TextureRect/VBox/MenuVBox" instance=ExtResource("7_uo13d")]
+layout_mode = 2
+force_quit = true
 
 [node name="ProjectTemplateLabel" type="Label" parent="AspectRatioContainer/TextureRect/VBox"]
 layout_mode = 2
