@@ -55,8 +55,9 @@ func _init() -> void:
 	IVCoreSettings.start_time = 25.0 * IVUnits.YEAR # from J2000 epoch
 	
 	# modify classes
-	IVCoreInitializer.gui_nodes[&"SplashScreen"] = PBDSplashScreen
 	IVCoreInitializer.gui_nodes[&"GameGUI"] = GameGUI
+	IVCoreInitializer.gui_nodes[&"SplashScreen"] = PBDSplashScreen
+	IVCoreInitializer.gui_nodes[&"AdminPopups"] = AdminPopups
 
 
 func _on_project_objects_instantiated() -> void:
@@ -76,7 +77,7 @@ func _on_project_objects_instantiated() -> void:
 
 
 func _on_project_nodes_added() -> void:
-	IVCoreInitializer.move_top_gui_child_to_sibling("GameGUI", "SplashScreen", true)
+	pass
 
 
 func _on_system_tree_ready(_is_new_game: bool) -> void:

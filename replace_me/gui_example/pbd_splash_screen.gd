@@ -38,7 +38,7 @@ func _ivcore_init() -> void:
 
 func _ready() -> void:
 	theme = IVGlobal.themes.splash_screen
-	($"%MainMenu" as IVMainMenu).is_splash_config = true
+	(%MenuVBox as VBoxContainer).theme = IVGlobal.themes.main_menu
 	_pbd_caption.mouse_entered.connect(_pbd_mouse_entered)
 	_pbd_caption.mouse_exited.connect(_pbd_mouse_exited)
 	_pbd_caption.gui_input.connect(_pbd_caption_input)

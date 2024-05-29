@@ -1,0 +1,75 @@
+[gd_scene load_steps=15 format=3 uid="uid://cpws8iuc5ghi5"]
+
+[ext_resource type="Script" path="res://replace_me/gui_example/admin_popups.gd" id="1_53td3"]
+[ext_resource type="PackedScene" uid="uid://csvlw3mc4uvoc" path="res://addons/ivoyager_core/gui_popups/main_menu_base_popup.tscn" id="2_pgyn1"]
+[ext_resource type="PackedScene" uid="uid://8vqmd07h6kmk" path="res://addons/ivoyager_core/gui_popups/load_dialog.tscn" id="3_7xo7u"]
+[ext_resource type="PackedScene" uid="uid://bf1jfea7jqjjf" path="res://addons/ivoyager_core/gui_widgets/save_button.tscn" id="3_rgo1g"]
+[ext_resource type="PackedScene" uid="uid://c5afahau0g63j" path="res://addons/ivoyager_core/gui_popups/save_dialog.tscn" id="4_la5f3"]
+[ext_resource type="PackedScene" uid="uid://dutosuhbt5g8l" path="res://addons/ivoyager_core/gui_widgets/load_button.tscn" id="4_swbp7"]
+[ext_resource type="PackedScene" uid="uid://boc2r4d0eomdr" path="res://addons/ivoyager_core/gui_widgets/options_button.tscn" id="5_ce4q4"]
+[ext_resource type="PackedScene" uid="uid://c87vdfooqojd1" path="res://addons/ivoyager_core/gui_popups/confirmation.tscn" id="5_eemtw"]
+[ext_resource type="PackedScene" uid="uid://do6i0el4c00jr" path="res://addons/ivoyager_core/gui_popups/options_popup.tscn" id="5_xwg04"]
+[ext_resource type="PackedScene" uid="uid://pjw4ki1qswq0" path="res://addons/ivoyager_core/gui_widgets/hotkeys_button.tscn" id="6_8p3vk"]
+[ext_resource type="PackedScene" uid="uid://b2fdgq3tjd8wq" path="res://addons/ivoyager_core/gui_popups/hotkeys_popup.tscn" id="6_dc8ao"]
+[ext_resource type="PackedScene" uid="uid://bwhxsdlg1kpbh" path="res://addons/ivoyager_core/gui_widgets/exit_button.tscn" id="7_64fcv"]
+[ext_resource type="PackedScene" uid="uid://dcw1843unaohr" path="res://addons/ivoyager_core/gui_widgets/quit_button.tscn" id="8_jhy6r"]
+[ext_resource type="PackedScene" uid="uid://4wg2jxr7g6t2" path="res://addons/ivoyager_core/gui_widgets/resume_button.tscn" id="9_o3o8q"]
+
+[node name="AdminPopups" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_53td3")
+
+[node name="MainMenuBasePopup" parent="." instance=ExtResource("2_pgyn1")]
+
+[node name="MarginContainer" type="MarginContainer" parent="MainMenuBasePopup"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 186.0
+offset_bottom = 275.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="MenuVBox" type="VBoxContainer" parent="MainMenuBasePopup/MarginContainer"]
+layout_mode = 2
+
+[node name="SaveButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("3_rgo1g")]
+layout_mode = 2
+
+[node name="LoadButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("4_swbp7")]
+layout_mode = 2
+
+[node name="OptionsButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("5_ce4q4")]
+layout_mode = 2
+
+[node name="HotkeysButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("6_8p3vk")]
+layout_mode = 2
+
+[node name="ExitButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("7_64fcv")]
+layout_mode = 2
+
+[node name="QuitButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("8_jhy6r")]
+layout_mode = 2
+
+[node name="ResumeButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("9_o3o8q")]
+layout_mode = 2
+
+[node name="LoadDialog" parent="." instance=ExtResource("3_7xo7u")]
+
+[node name="SaveDialog" parent="." instance=ExtResource("4_la5f3")]
+
+[node name="OptionsPopup" parent="." instance=ExtResource("5_xwg04")]
+visible = false
+
+[node name="HotkeysPopup" parent="." instance=ExtResource("6_dc8ao")]
+visible = false
+
+[node name="Confirmation" parent="." instance=ExtResource("5_eemtw")]
