@@ -84,4 +84,3 @@ func _on_system_tree_ready(_is_new_game: bool) -> void:
 	# The solar system has been built or loaded, but we haven't started the
 	# sim yet. See ivoyager/singletons/global.gd for more "state" signals.
 	pass
-

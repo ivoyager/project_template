@@ -61,4 +61,3 @@ func _pbd_caption_input(event: InputEvent) -> void:
 		var is_open: bool = !_settings.pbd_splash_caption_open
 		_settings_manager.change_current("pbd_splash_caption_open", is_open)
 		_pbd_caption.text = "TXT_PBD_LONG" if is_open else "TXT_PBD_SHORT"
-

@@ -38,4 +38,3 @@ func _ready() -> void:
 	($"%ViewSaveFlow" as IVViewSaveFlow).init(($"%ViewSaveButton" as IVViewSaveButton),
 			default_view_name, collection_name, is_cached, view_flags, init_flags,
 			reserved_view_names)
-
