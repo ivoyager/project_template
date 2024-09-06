@@ -54,4 +54,3 @@ func show_hide_gui(is_toggle := true, is_show := true) -> void:
 	if !IVGlobal.state.is_system_built:
 		return
 	visible = !visible if is_toggle else is_show
-
