@@ -7,14 +7,14 @@ File format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 See cloning and downloading instructions [here](https://www.ivoyager.dev/developers/).
 
 
-## [v0.0.19] - Not Released
+## [v0.0.19] - 2024-12-16
 
-Under development using Godot 4.3.
+Developed using Godot 4.3.
 
 ### Changed
-* Ongoing updates: plugin 'ivoyager_core' to v0.0.19.dev.
-* Ongoing updates: plugin 'ivoyager_table_importer' to v0.0.8.dev.
-* Ongoing updates: plugin 'ivoyager_tree_saver' to v0.0.2.dev.
+* Updated plugin 'ivoyager_core' to v0.0.19.
+* Updated plugin 'ivoyager_table_importer' to v0.0.8.
+* Updated plugin 'ivoyager_tree_saver' to v0.0.2.
 
 ## [v0.0.18] - 2024-03-15
 
@@ -120,7 +120,7 @@ Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases]
 * Updated submodule 'ivoyager' to v0.0.10.
 
 
-[v0.0.19]: https://github.com/ivoyager/project_template/compare/v0.0.18...HEAD
+[v0.0.19]: https://github.com/ivoyager/project_template/compare/v0.0.18...v0.0.19
 [v0.0.18]: https://github.com/ivoyager/project_template/compare/v0.0.17...v0.0.18
 [v0.0.17]: https://github.com/ivoyager/project_template/compare/v0.0.16...v0.0.17
 [v0.0.16]: https://github.com/ivoyager/project_template/compare/v0.0.15...v0.0.16
