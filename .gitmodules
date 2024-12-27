@@ -7,3 +7,9 @@
 [submodule "addons/ivoyager_tree_saver"]
 	path = addons/ivoyager_tree_saver
 	url = https://github.com/ivoyager/ivoyager_tree_saver
+[submodule "addons/ivoyager_tables"]
+	path = addons/ivoyager_tables
+	url = https://github.com/ivoyager/ivoyager_tables
+[submodule "addons/ivoyager_units"]
+	path = addons/ivoyager_units
+	url = https://github.com/ivoyager/ivoyager_units
