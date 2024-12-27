@@ -19,7 +19,7 @@ Your new repository uses submodules! To clone using git:
 
 **NEW!** As of v0.0.18, the editor plugin will manage assets download and version updates (assets are not Git-tracked). Just press 'Download' at the editor prompt.
 
-After above steps, your addons directory will contain three subdirectories: `ivoyager_assets`, `ivoyager_core`, `ivoyager_table_importer` and `ivoyager_tree_saver`.
+After above steps, your addons directory will contain three subdirectories: `ivoyager_assets`, `ivoyager_core`, `ivoyager_tables`, `ivoyager_tree_saver` and `ivoyager_units`.
 
 You can disable and remove the Tree Saver plugin if your application does not need game save functionality.
 
