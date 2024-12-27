@@ -74,7 +74,7 @@ layout_mode = 2
 [node name="CopyrightLabel" type="Label" parent="AspectRatioContainer/TextureRect/VBox"]
 layout_mode = 2
 text = "
-(c) 2017-2024
+(c) 2017-2025
 Charlie Whitfield"
 
 [node name="PBDCaption" type="Label" parent="AspectRatioContainer/TextureRect"]
