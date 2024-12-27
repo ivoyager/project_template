@@ -23,13 +23,13 @@ icon="res://jupiter-icon-128.png"
 
 [autoload]
 
-IVUnits="*res://addons/ivoyager_table_importer/editor_plugin/../singletons/units.gd"
-IVQConvert="*res://addons/ivoyager_table_importer/editor_plugin/../singletons/qconvert.gd"
-IVQFormat="*res://addons/ivoyager_table_importer/editor_plugin/../singletons/qformat.gd"
-IVTableData="*res://addons/ivoyager_table_importer/editor_plugin/../singletons/table_data.gd"
 IVGlobal="*res://addons/ivoyager_core/editor_plugin/../singletons/global.gd"
 IVCoreSettings="*res://addons/ivoyager_core/editor_plugin/../singletons/core_settings.gd"
 IVCoreInitializer="*res://addons/ivoyager_core/editor_plugin/../singletons/core_initializer.gd"
+IVUnits="*res://addons/ivoyager_units/units.gd"
+IVQConvert="*res://addons/ivoyager_units/qconvert.gd"
+IVQFormat="*res://addons/ivoyager_units/qformat.gd"
+IVTableData="*res://addons/ivoyager_tables/table_data.gd"
 
 [debug]
 
@@ -51,7 +51,7 @@ window/size/viewport_height=945
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/ivoyager_core/plugin.cfg", "res://addons/ivoyager_table_importer/plugin.cfg", "res://addons/ivoyager_tree_saver/plugin.cfg")
+enabled=PackedStringArray("res://addons/ivoyager_core/plugin.cfg", "res://addons/ivoyager_tables/plugin.cfg", "res://addons/ivoyager_tree_saver/plugin.cfg", "res://addons/ivoyager_units/plugin.cfg")
 
 [filesystem]
 
