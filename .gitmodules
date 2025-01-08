@@ -10,3 +10,6 @@
 [submodule "addons/ivoyager_units"]
 	path = addons/ivoyager_units
 	url = https://github.com/ivoyager/ivoyager_units
+[submodule "addons/ivoyager_save"]
+	path = addons/ivoyager_save
+	url = https://github.com/ivoyager/ivoyager_save
