@@ -51,7 +51,7 @@ window/size/viewport_height=945
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/ivoyager_core/plugin.cfg", "res://addons/ivoyager_tables/plugin.cfg", "res://addons/ivoyager_tree_saver/plugin.cfg", "res://addons/ivoyager_units/plugin.cfg")
+enabled=PackedStringArray("res://addons/ivoyager_core/plugin.cfg", "res://addons/ivoyager_save/plugin.cfg", "res://addons/ivoyager_tables/plugin.cfg", "res://addons/ivoyager_units/plugin.cfg")
 
 [filesystem]
 
