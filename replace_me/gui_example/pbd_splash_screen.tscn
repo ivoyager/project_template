@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://ctyu72cpcsa2k"]
+[gd_scene load_steps=10 format=3 uid="uid://ctyu72cpcsa2k"]
 
 [ext_resource type="Script" path="res://replace_me/gui_example/pbd_splash_screen.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://50qe34hvmkk7" path="res://replace_me/gui_example/pale_blue_dot.png" id="2"]
 [ext_resource type="PackedScene" uid="uid://2yd54bjfmbri" path="res://addons/ivoyager_core/gui_widgets/start_button.tscn" id="3_k0wno"]
 [ext_resource type="PackedScene" uid="uid://bkokwngymmnyk" path="res://addons/ivoyager_core/gui_widgets/version_label.tscn" id="4"]
-[ext_resource type="PackedScene" uid="uid://dutosuhbt5g8l" path="res://addons/ivoyager_core/gui_widgets/load_button.tscn" id="4_go2an"]
+[ext_resource type="PackedScene" uid="uid://dutosuhbt5g8l" path="res://addons/ivoyager_save/gui/load_button.tscn" id="4_go2an"]
+[ext_resource type="PackedScene" uid="uid://cfmljqrp3tuvp" path="res://addons/ivoyager_save/gui/quickload_button.tscn" id="4_k1j27"]
 [ext_resource type="PackedScene" uid="uid://boc2r4d0eomdr" path="res://addons/ivoyager_core/gui_widgets/options_button.tscn" id="5_fj2ko"]
 [ext_resource type="PackedScene" uid="uid://pjw4ki1qswq0" path="res://addons/ivoyager_core/gui_widgets/hotkeys_button.tscn" id="6_e17mv"]
 [ext_resource type="PackedScene" uid="uid://dcw1843unaohr" path="res://addons/ivoyager_core/gui_widgets/quit_button.tscn" id="7_uo13d"]
@@ -47,6 +48,9 @@ layout_mode = 2
 size_flags_horizontal = 0
 
 [node name="StartButton" parent="AspectRatioContainer/TextureRect/VBox/MenuVBox" instance=ExtResource("3_k0wno")]
+layout_mode = 2
+
+[node name="QuickloadButton" parent="AspectRatioContainer/TextureRect/VBox/MenuVBox" instance=ExtResource("4_k1j27")]
 layout_mode = 2
 
 [node name="LoadButton" parent="AspectRatioContainer/TextureRect/VBox/MenuVBox" instance=ExtResource("4_go2an")]

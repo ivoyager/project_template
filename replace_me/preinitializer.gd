@@ -50,9 +50,10 @@ func _init() -> void:
 	IVCoreSettings.project_version = version # helps load file debug
 	IVCoreSettings.use_threads = USE_THREADS
 	IVCoreSettings.skip_splash_screen = false
-	IVCoreSettings.save_file_extension = "MyProjectSave"
-	IVCoreSettings.save_file_extension_name = "My Project Save"
 	IVCoreSettings.start_time = 25.0 * IVUnits.YEAR # from J2000 epoch
+	
+	IVSave.file_extension = "MyProjectSave"
+	IVSave.file_description = "My Project Save"
 	
 	# modify classes
 	IVCoreInitializer.gui_nodes[&"GameGUI"] = GameGUI
