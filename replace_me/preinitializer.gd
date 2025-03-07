@@ -54,6 +54,8 @@ func _init() -> void:
 	
 	IVSave.file_extension = "MyProjectSave"
 	IVSave.file_description = "My Project Save"
+	IVSave.autosave_uses_suffix_generator = true
+	IVSave.quicksave_uses_suffix_generator = true
 	
 	# modify classes
 	IVCoreInitializer.gui_nodes[&"GameGUI"] = GameGUI
