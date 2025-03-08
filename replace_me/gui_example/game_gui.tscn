@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bsomxdam3kb7q" path="res://replace_me/gui_example/navigation_panel.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://ci63agucrjxcr" path="res://replace_me/gui_example/selection_panel.tscn" id="2"]
-[ext_resource type="Script" path="res://replace_me/gui_example/game_gui.gd" id="3"]
+[ext_resource type="Script" uid="uid://hvhxm5q1vqj4" path="res://replace_me/gui_example/game_gui.gd" id="3"]
 
 [node name="GameGUI" type="Control"]
 layout_mode = 3

@@ -1,8 +1,8 @@
 [gd_scene load_steps=16 format=3 uid="uid://ci63agucrjxcr"]
 
-[ext_resource type="Script" path="res://replace_me/gui_example/selection_panel.gd" id="1"]
+[ext_resource type="Script" uid="uid://b6vpgr5ks762h" path="res://replace_me/gui_example/selection_panel.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://bk1wcjtaqcyyd" path="res://addons/ivoyager_core/gui_widgets/selection_buttons.tscn" id="2"]
-[ext_resource type="PackedScene" path="res://addons/ivoyager_core/gui_mods/control_sized.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://kic6f5fdjaeq" path="res://addons/ivoyager_core/gui_mods/control_sized.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://b5k2m7jen3jwm" path="res://addons/ivoyager_core/gui_widgets/range_label.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://welwpw4boyv8" path="res://addons/ivoyager_core/gui_widgets/lat_long_label.tscn" id="5"]
 [ext_resource type="PackedScene" uid="uid://pukogbpgya48" path="res://addons/ivoyager_core/gui_widgets/selection_image.tscn" id="6"]
