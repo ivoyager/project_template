@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b6vpgr5ks762h" path="res://replace_me/gui_example/selection_panel.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://bk1wcjtaqcyyd" path="res://addons/ivoyager_core/gui_widgets/selection_buttons.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://kic6f5fdjaeq" path="res://addons/ivoyager_core/gui_mods/control_sized.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://dhx38xdl0rgyq" path="res://addons/ivoyager_core/gui_mods/control_sized.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://b5k2m7jen3jwm" path="res://addons/ivoyager_core/gui_widgets/range_label.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://welwpw4boyv8" path="res://addons/ivoyager_core/gui_widgets/lat_long_label.tscn" id="5"]
 [ext_resource type="PackedScene" uid="uid://pukogbpgya48" path="res://addons/ivoyager_core/gui_widgets/selection_image.tscn" id="6"]
@@ -149,4 +149,4 @@ mouse_filter = 2
 [node name="FocalLengthControl" parent="VBox/BottomHBox" instance=ExtResource("14_w75a1")]
 layout_mode = 2
 
-[node name="ControlMod" parent="." instance=ExtResource("3")]
+[node name="ControlSized" parent="." instance=ExtResource("3")]
