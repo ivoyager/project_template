@@ -21,11 +21,13 @@ extends PanelContainer
 
 # THIS IS AN EXAMPLE GUI SCENE! You can modify it or replace it.
 
+const ViewFlags := IVView.ViewFlags
+
 var default_view_name := &"LABEL_VIEW1" # will increment if taken
 var collection_name := &"SP"
 var is_cached := false # if false, persisted via gamesave
-var view_flags := IVView.ALL
-var init_flags := IVView.ALL_CAMERA
+var view_flags := ViewFlags.ALL
+var init_flags := ViewFlags.ALL_CAMERA
 var reserved_view_names: Array[StringName] = [&"BUTTON_HOME"]
 
 
