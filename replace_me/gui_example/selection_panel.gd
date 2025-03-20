@@ -33,9 +33,9 @@ var reserved_view_names: Array[StringName] = [&"BUTTON_HOME"]
 
 func _ready() -> void:
 	var mod: IVControlSized = $ControlSized
-	mod.init_min_size(IVEnums.GUISize.GUI_SMALL, Vector2(435.0, 291.0))
-	mod.init_min_size(IVEnums.GUISize.GUI_MEDIUM, Vector2(575.0, 354.0))
-	mod.init_min_size(IVEnums.GUISize.GUI_LARGE, Vector2(712.0, 421.0))
+	mod.init_min_size(IVGlobal.GUISize.GUI_SMALL, Vector2(435.0, 291.0))
+	mod.init_min_size(IVGlobal.GUISize.GUI_MEDIUM, Vector2(575.0, 354.0))
+	mod.init_min_size(IVGlobal.GUISize.GUI_LARGE, Vector2(712.0, 421.0))
 	
 	($"%ViewSaveFlow" as IVViewSaveFlow).init(($"%ViewSaveButton" as IVViewSaveButton),
 			default_view_name, collection_name, is_cached, view_flags, init_flags,
