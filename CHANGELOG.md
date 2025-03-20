@@ -6,13 +6,26 @@ File format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 See cloning and downloading instructions [here](https://www.ivoyager.dev/developers/).
 
+## [v0.0.23] - 2025-03-20
+
+Developed using Godot 4.4.
+
+### Changed
+
+* Typed all dictionaries.
+* Many code updates for plugin changes.
+* Updated plugin ivoyager_core to v0.0.23.
+* Updated plugin ivoyager_tables to v0.0.2.
+* Updated plugin ivoyager_units to v0.0.2.
+* Updated plugin ivoyager_save to v0.0.2.
+
 ## [v0.0.22] - 2025-03-07
 
 Developed using Godot 4.3. **We will update to 4.4 in the next release!**
 
 ### Changed
-* Updated plugin "ivoyager_core" to v0.0.21.
-* Replace plugin "ivoyager_tree_saver" with the new ["ivoyager_save"](https://github.com/ivoyager/ivoyager_save).
+* Updated plugin ivoyager_core to v0.0.22.
+* Replace plugin ivoyager_tree_saver with the new [ivoyager_save](https://github.com/ivoyager/ivoyager_save).
 
 ## [v0.0.21] - 2025-01-07
 
@@ -143,6 +156,7 @@ Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases]
 * Updated submodule 'ivoyager' to v0.0.10.
 
 
+[v0.0.23]: https://github.com/ivoyager/project_template/compare/v0.0.22...v0.0.23
 [v0.0.22]: https://github.com/ivoyager/project_template/compare/v0.0.21...v0.0.22
 [v0.0.21]: https://github.com/ivoyager/project_template/compare/v0.0.20...v0.0.21
 [v0.0.20]: https://github.com/ivoyager/project_template/compare/v0.0.19...v0.0.20
