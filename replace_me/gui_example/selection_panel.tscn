@@ -94,7 +94,7 @@ layout_mode = 2
 
 [node name="Home" parent="VBox/MainHBox/RightVBox/ViewSaveFlow" instance=ExtResource("7")]
 layout_mode = 2
-text = "BUTTON_HOME"
+text = "VIEW_HOME"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBox/MainHBox/RightVBox"]
 layout_mode = 2
@@ -115,15 +115,15 @@ mouse_filter = 2
 
 [node name="Zoom" parent="VBox/BottomHBox" instance=ExtResource("7")]
 layout_mode = 2
-text = "BUTTON_ZOOM"
+text = "VIEW_ZOOM"
 
 [node name="Fortyfive" parent="VBox/BottomHBox" instance=ExtResource("7")]
 layout_mode = 2
-text = "BUTTON_45_DEG"
+text = "VIEW_FORTYFIVE"
 
 [node name="Top" parent="VBox/BottomHBox" instance=ExtResource("7")]
 layout_mode = 2
-text = "BUTTON_TOP"
+text = "VIEW_TOP"
 
 [node name="Spacer1" type="Control" parent="VBox/BottomHBox"]
 layout_mode = 2
