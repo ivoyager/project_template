@@ -26,10 +26,10 @@ func _ready() -> void:
 	IVGlobal.update_gui_requested.connect(_resize)
 	IVGlobal.setting_changed.connect(_settings_listener)
 	
-	var mod: IVControlSized = $ControlMod
-	mod.init_min_size(IVEnums.GUISize.GUI_SMALL, Vector2(435.0, 291.0))
-	mod.init_min_size(IVEnums.GUISize.GUI_MEDIUM, Vector2(575.0, 354.0))
-	mod.init_min_size(IVEnums.GUISize.GUI_LARGE, Vector2(712.0, 421.0))
+	var mod: IVControlSized = $ControlSized
+	mod.init_min_size(IVGlobal.GUISize.GUI_SMALL, Vector2(435.0, 291.0))
+	mod.init_min_size(IVGlobal.GUISize.GUI_MEDIUM, Vector2(575.0, 354.0))
+	mod.init_min_size(IVGlobal.GUISize.GUI_LARGE, Vector2(712.0, 421.0))
 	
 	# widgets
 	($"%AsteroidsHScroll" as IVBodyHScroll).add_bodies_from_table("asteroids")

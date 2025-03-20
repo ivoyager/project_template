@@ -2,13 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://bgja2vd1iswvn" path="res://addons/ivoyager_core/gui_widgets/body_h_scroll.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://b8lhpum4e5tps" path="res://addons/ivoyager_core/gui_widgets/date_time_label.tscn" id="2"]
-[ext_resource type="PackedScene" path="res://addons/ivoyager_core/gui_mods/control_sized.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://dhx38xdl0rgyq" path="res://addons/ivoyager_core/gui_mods/control_sized.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://cre322bqbtbtd" path="res://addons/ivoyager_core/gui_widgets/planet_moon_buttons.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://wcxctits85co" path="res://addons/ivoyager_core/gui_widgets/sun_slice_button.tscn" id="5"]
 [ext_resource type="PackedScene" uid="uid://cc3uu3jh0620y" path="res://addons/ivoyager_core/gui_widgets/speed_label.tscn" id="6"]
 [ext_resource type="PackedScene" uid="uid://crmkiyfceanog" path="res://addons/ivoyager_core/gui_widgets/camera_lock_ckbx.tscn" id="7"]
 [ext_resource type="PackedScene" uid="uid://drl4tb0hbqhl" path="res://addons/ivoyager_core/gui_widgets/speed_buttons.tscn" id="8"]
-[ext_resource type="Script" path="res://replace_me/gui_example/navigation_panel.gd" id="9"]
+[ext_resource type="Script" uid="uid://hh1j7m02t23n" path="res://replace_me/gui_example/navigation_panel.gd" id="9"]
 
 [node name="NavigationPanel" type="PanelContainer"]
 anchors_preset = 3
@@ -85,4 +85,4 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ControlMod" parent="." instance=ExtResource("3")]
+[node name="ControlSized" parent="." instance=ExtResource("3")]

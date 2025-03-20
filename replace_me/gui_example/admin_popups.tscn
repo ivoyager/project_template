@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://cpws8iuc5ghi5"]
 
-[ext_resource type="Script" path="res://replace_me/gui_example/admin_popups.gd" id="1_53td3"]
+[ext_resource type="Script" uid="uid://coutyliyji02y" path="res://replace_me/gui_example/admin_popups.gd" id="1_53td3"]
 [ext_resource type="PackedScene" uid="uid://csvlw3mc4uvoc" path="res://addons/ivoyager_core/gui_popups/main_menu_base_popup.tscn" id="2_pgyn1"]
 [ext_resource type="PackedScene" uid="uid://8vqmd07h6kmk" path="res://addons/ivoyager_save/gui/load_dialog.tscn" id="3_7xo7u"]
 [ext_resource type="PackedScene" uid="uid://dit7yqgigdo3k" path="res://addons/ivoyager_save/gui/save_as_button.tscn" id="4_amnya"]

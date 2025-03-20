@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://ctyu72cpcsa2k"]
 
-[ext_resource type="Script" path="res://replace_me/gui_example/pbd_splash_screen.gd" id="1"]
+[ext_resource type="Script" uid="uid://l5m7do0p2sni" path="res://replace_me/gui_example/pbd_splash_screen.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://50qe34hvmkk7" path="res://replace_me/gui_example/pale_blue_dot.png" id="2"]
 [ext_resource type="PackedScene" uid="uid://2yd54bjfmbri" path="res://addons/ivoyager_core/gui_widgets/start_button.tscn" id="3_k0wno"]
 [ext_resource type="PackedScene" uid="uid://bkokwngymmnyk" path="res://addons/ivoyager_core/gui_widgets/version_label.tscn" id="4"]
