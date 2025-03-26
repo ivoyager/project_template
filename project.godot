@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="I, Voyager - Project Template"
-config/version="v0.0.23"
+config/version="v0.0.24.dev"
 run/main_scene="res://addons/ivoyager_core/tree_nodes/universe.tscn"
 config/features=PackedStringArray("4.4")
 boot_splash/bg_color=Color(0, 0, 0, 1)
@@ -23,7 +23,7 @@ icon="res://jupiter-icon-128.png"
 
 [autoload]
 
-IVUnits="*res://addons/ivoyager_units/units.gd"
+IVUnits="*res://replace_me/units.gd"
 IVQConvert="*res://addons/ivoyager_units/qconvert.gd"
 IVQFormat="*res://addons/ivoyager_units/qformat.gd"
 IVTableData="*res://addons/ivoyager_tables/table_data.gd"
