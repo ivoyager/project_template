@@ -6,18 +6,18 @@ File format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 See cloning and downloading instructions [here](https://www.ivoyager.dev/developers/).
 
-## [v0.0.24] - UNRELEASED
+## [v0.0.24] - 2025-03-31
 
 Developed using Godot 4.4.
 
 ### Added
-* IVUnits replacement singleton (from Planetarium) with scale change to support shadows fix.
+* IVUnits replacement singleton (from Planetarium) with scale change to support shadows.
 
 ### Changed
 * Various Rendering settings to support shadows.
-* Updated plugin ivoyager_core to v0.0.24.dev.
-* Updated plugin ivoyager_tables to v0.0.3.dev.
-* Updated plugin ivoyager_units to v0.0.3.dev.
+* Updated plugin ivoyager_core to v0.0.24. (Has shadows!)
+* Updated plugin ivoyager_tables to v0.0.3.
+* Updated plugin ivoyager_units to v0.0.3.
 
 ## [v0.0.23] - 2025-03-20
 
@@ -169,7 +169,7 @@ Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases]
 * Updated submodule 'ivoyager' to v0.0.10.
 
 
-[v0.0.24]: https://github.com/ivoyager/project_template/compare/v0.0.23...HEAD
+[v0.0.24]: https://github.com/ivoyager/project_template/compare/v0.0.23...v0.0.24
 [v0.0.23]: https://github.com/ivoyager/project_template/compare/v0.0.22...v0.0.23
 [v0.0.22]: https://github.com/ivoyager/project_template/compare/v0.0.21...v0.0.22
 [v0.0.21]: https://github.com/ivoyager/project_template/compare/v0.0.20...v0.0.21
