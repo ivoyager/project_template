@@ -34,9 +34,9 @@ extends Node
 # Scale notes:
 #
 # Godot 4.4 update after shadows work (v0.0.24.dev):
-# For the IVDynamicLight system, we need METER ~ 2e-3. Larger breaks moon
-# shadows on Jupiter. Self-shadow quality on ISS is already affected at 2e-3
-# but gets much worse at smaller values. Have not tested HTML5 yet.
+# For the IVDynamicLight system, we need METER ~ 1e-3. Larger breaks moon
+# shadows on Jupiter. Self-shadow quality on ISS is already affected at 1e-3
+# but gets much worse at smaller values. Needs testing in HTML5 export.
 #
 # Godot 4.3 update. Problems for HTML5 as below. However, Windows now appears
 # ok at 1e-10. Perhaps smaller value should be our base value (again)?
@@ -63,7 +63,7 @@ extends Node
 
 # SI base units
 const SECOND := 1.0
-const METER := 2e-3 # see notes above
+const METER := 1e-3 # see notes above
 const KG := 1.0
 const AMPERE := 1.0
 const KELVIN := 1.0

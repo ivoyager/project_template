@@ -14,6 +14,7 @@ Developed using Godot 4.4.
 * IVUnits replacement singleton (from Planetarium) with scale change to support shadows fix.
 
 ### Changed
+* Various Rendering settings to support shadows.
 * Updated plugin ivoyager_core to v0.0.24.dev.
 * Updated plugin ivoyager_tables to v0.0.3.dev.
 * Updated plugin ivoyager_units to v0.0.3.dev.
