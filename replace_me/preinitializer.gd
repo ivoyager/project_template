@@ -52,15 +52,19 @@ func _init() -> void:
 	IVCoreSettings.skip_splash_screen = false
 	IVCoreSettings.start_time = 25.0 * IVUnits.YEAR # from J2000 epoch
 	
+	# modify classes
+	IVCoreInitializer.gui_nodes[&"InGameGUI"] = RMGameGUI
+	IVCoreInitializer.gui_nodes[&"SplashScreen"] = PBDSplashScreen
+	IVCoreInitializer.gui_nodes[&"AdminPopups"] = RMAdminPopups
+	
+	# Save plugin
 	IVSave.file_extension = "MyProjectSave"
 	IVSave.file_description = "My Project Save"
 	IVSave.autosave_uses_suffix_generator = true
 	IVSave.quicksave_uses_suffix_generator = true
 	
-	# modify classes
-	IVCoreInitializer.gui_nodes[&"GameGUI"] = GameGUI
-	IVCoreInitializer.gui_nodes[&"SplashScreen"] = PBDSplashScreen
-	IVCoreInitializer.gui_nodes[&"AdminPopups"] = AdminPopups
+	# static file changes
+	IVSettingsManager.defaults[&"save_base_name"] = "Template"
 
 
 func _on_project_objects_instantiated() -> void:
@@ -75,8 +79,6 @@ func _on_project_objects_instantiated() -> void:
 		
 	var timekeeper: IVTimekeeper = IVGlobal.program.Timekeeper
 	timekeeper.start_speed = 1
-	var settings_manager: IVSettingsManager = IVGlobal.program.SettingsManager
-	settings_manager.defaults.save_base_name = "Template"
 
 
 func _on_project_nodes_added() -> void:

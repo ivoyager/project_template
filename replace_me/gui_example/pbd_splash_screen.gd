@@ -17,25 +17,30 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # *****************************************************************************
-# Example splash screen with Pale Blue Dot image and interactive text. You
-# probably want to replace this.
-
-extends Control
 class_name PBDSplashScreen
+extends Control
+
+## Example splash screen with Pale Blue Dot image and interactive text.
+
+
 const SCENE := "res://replace_me/gui_example/pbd_splash_screen.tscn"
 
 var _settings: Dictionary = IVGlobal.settings
 var _settings_manager: IVSettingsManager = IVGlobal.program[&"SettingsManager"]
 
+@onready var _loading_label: Label = %LoadingLabel
+@onready var _menu: VBoxContainer = %MenuVBox
 @onready var _pbd_caption: Label = %PBDCaption
 
 
 
 func _ready() -> void:
+	IVGlobal.state_changed.connect(_on_state_changed)
 	IVGlobal.simulator_started.connect(hide)
 	IVGlobal.simulator_exited.connect(show)
 	theme = IVGlobal.themes.splash_screen
-	(%MenuVBox as VBoxContainer).theme = IVGlobal.themes.main_menu
+	_menu.theme = IVGlobal.themes.main_menu
+	_loading_label.theme = IVGlobal.themes.main_menu # for larger text
 	_pbd_caption.mouse_entered.connect(_pbd_mouse_entered)
 	_pbd_caption.mouse_exited.connect(_pbd_mouse_exited)
 	_pbd_caption.gui_input.connect(_pbd_caption_input)
@@ -46,6 +51,12 @@ func _ready() -> void:
 		_pbd_caption.text = "TXT_PBD_SHORT"
 	if IVCoreSettings.skip_splash_screen:
 		hide()
+
+
+func _on_state_changed(state: Dictionary[StringName, Variant]) -> void:
+	var is_ok_to_start: bool = state.is_ok_to_start
+	_loading_label.visible = !state.is_assets_loaded
+	_menu.visible = state.is_ok_to_start
 
 
 func _pbd_mouse_entered() -> void:
