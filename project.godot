@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="I, Voyager - Project Template"
-config/version="v0.0.24"
+config/version="v0.0.25.dev"
 run/main_scene="res://addons/ivoyager_core/tree_nodes/universe.tscn"
 config/features=PackedStringArray("4.4")
 boot_splash/bg_color=Color(0, 0, 0, 1)
@@ -31,6 +31,7 @@ IVSave="*res://addons/ivoyager_save/save.gd"
 IVGlobal="*res://addons/ivoyager_core/editor_plugin/../singletons/global.gd"
 IVCoreSettings="*res://addons/ivoyager_core/editor_plugin/../singletons/core_settings.gd"
 IVCoreInitializer="*res://addons/ivoyager_core/editor_plugin/../singletons/core_initializer.gd"
+IVAstronomy="*res://addons/ivoyager_core/editor_plugin/../singletons/astronomy.gd"
 
 [debug]
 
@@ -135,7 +136,6 @@ motion_fix_enabled=true
 lights_and_shadows/directional_shadow/size=16384
 lights_and_shadows/directional_shadow/16_bits=false
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
-anti_aliasing/quality/use_taa=true
 
 [shader_globals]
 
@@ -158,8 +158,4 @@ iv_fragment_id_range={
 iv_sun_global_positions={
 "type": "mat3",
 "value": Basis(0, 0, 0, 0, 0, 0, 0, 0, 0)
-}
-iv_vec2_randf={
-"type": "vec2",
-"value": Vector2(0, 0)
 }

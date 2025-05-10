@@ -17,7 +17,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # *****************************************************************************
-class_name GameGUI
+class_name RMGameGUI
 extends Control
 const SCENE := "res://replace_me/gui_example/game_gui.tscn"
 

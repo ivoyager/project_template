@@ -17,7 +17,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # *****************************************************************************
-class_name AdminPopups
+class_name RMAdminPopups
 extends Control
 const SCENE := "res://replace_me/gui_example/admin_popups.tscn"
 
