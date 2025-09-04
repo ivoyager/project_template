@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b1mkm7ajlvvm0" path="res://addons/ivoyager_core/gui_widgets/track_ckbxs.tscn" id="8"]
 [ext_resource type="PackedScene" uid="uid://c71yn7f8ovhrl" path="res://addons/ivoyager_core/gui_widgets/selection_label.tscn" id="10"]
 [ext_resource type="PackedScene" uid="uid://bvs2mb8bj8gfn" path="res://addons/ivoyager_core/gui_widgets/view_save_flow.tscn" id="11"]
-[ext_resource type="PackedScene" uid="uid://b58glkdlp7x1i" path="res://addons/ivoyager_core/gui_widgets/selection_data.tscn" id="12"]
+[ext_resource type="PackedScene" uid="uid://dcy30ki8dt6lw" path="res://addons/ivoyager_core/gui_widgets/selection_data.tscn" id="12"]
 [ext_resource type="PackedScene" uid="uid://cwnvxi44ijkr4" path="res://addons/ivoyager_core/gui_widgets/up_lock_ckbx.tscn" id="14"]
 [ext_resource type="PackedScene" uid="uid://chl27l6aiico8" path="res://addons/ivoyager_core/gui_widgets/focal_length_control.tscn" id="14_w75a1"]
 [ext_resource type="PackedScene" uid="uid://do2jvg01jte0i" path="res://addons/ivoyager_core/gui_widgets/view_save_button.tscn" id="15"]
