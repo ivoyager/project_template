@@ -33,8 +33,8 @@ script = ExtResource("1_53td3")
 [node name="MarginContainer" type="MarginContainer" parent="MainMenuBasePopup"]
 offset_left = 4.0
 offset_top = 4.0
-offset_right = 208.0
-offset_bottom = 345.0
+offset_right = 96.0
+offset_bottom = 96.0
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
@@ -45,30 +45,39 @@ layout_mode = 2
 
 [node name="QuicksaveButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("4_riy3h")]
 layout_mode = 2
+theme_type_variation = &"LargeFont"
 
 [node name="SaveAsButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("4_amnya")]
 layout_mode = 2
+theme_type_variation = &"LargeFont"
 
 [node name="QuickloadButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("6_wxo3h")]
 layout_mode = 2
+theme_type_variation = &"LargeFont"
 
 [node name="LoadButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("4_swbp7")]
 layout_mode = 2
+theme_type_variation = &"LargeFont"
 
 [node name="OptionsButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("5_ce4q4")]
 layout_mode = 2
+theme_type_variation = &"LargeFont"
 
 [node name="HotkeysButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("6_8p3vk")]
 layout_mode = 2
+theme_type_variation = &"LargeFont"
 
 [node name="ExitButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("7_64fcv")]
 layout_mode = 2
+theme_type_variation = &"LargeFont"
 
 [node name="QuitButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("8_jhy6r")]
 layout_mode = 2
+theme_type_variation = &"LargeFont"
 
 [node name="ResumeButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("9_o3o8q")]
 layout_mode = 2
+theme_type_variation = &"LargeFont"
 
 [node name="LoadDialog" parent="." instance=ExtResource("3_7xo7u")]
 
