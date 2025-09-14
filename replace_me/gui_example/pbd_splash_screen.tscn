@@ -45,6 +45,7 @@ offset_bottom = -0.0800781
 [node name="LoadingLabel" type="Label" parent="AspectRatioContainer/TextureRect/VBox"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_type_variation = &"LargeFont"
 text = "LABEL_LOADING_ELLIPSIS"
 
 [node name="MenuVBox" type="VBoxContainer" parent="AspectRatioContainer/TextureRect/VBox"]
@@ -55,21 +56,27 @@ size_flags_horizontal = 0
 
 [node name="StartButton" parent="AspectRatioContainer/TextureRect/VBox/MenuVBox" instance=ExtResource("3_k0wno")]
 layout_mode = 2
+theme_type_variation = &"LargeFont"
 
 [node name="QuickloadButton" parent="AspectRatioContainer/TextureRect/VBox/MenuVBox" instance=ExtResource("4_k1j27")]
 layout_mode = 2
+theme_type_variation = &"LargeFont"
 
 [node name="LoadButton" parent="AspectRatioContainer/TextureRect/VBox/MenuVBox" instance=ExtResource("4_go2an")]
 layout_mode = 2
+theme_type_variation = &"LargeFont"
 
 [node name="OptionsButton" parent="AspectRatioContainer/TextureRect/VBox/MenuVBox" instance=ExtResource("5_fj2ko")]
 layout_mode = 2
+theme_type_variation = &"LargeFont"
 
 [node name="HotkeysButton" parent="AspectRatioContainer/TextureRect/VBox/MenuVBox" instance=ExtResource("6_e17mv")]
 layout_mode = 2
+theme_type_variation = &"LargeFont"
 
 [node name="QuitButton" parent="AspectRatioContainer/TextureRect/VBox/MenuVBox" instance=ExtResource("7_uo13d")]
 layout_mode = 2
+theme_type_variation = &"LargeFont"
 force_quit = true
 
 [node name="ProjectTemplateLabel" type="Label" parent="AspectRatioContainer/TextureRect/VBox"]

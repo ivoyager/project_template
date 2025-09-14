@@ -38,9 +38,6 @@ func _ready() -> void:
 	IVGlobal.state_changed.connect(_on_state_changed)
 	IVGlobal.simulator_started.connect(hide)
 	IVGlobal.simulator_exited.connect(show)
-	theme = IVGlobal.themes.splash_screen
-	_menu.theme = IVGlobal.themes.main_menu
-	_loading_label.theme = IVGlobal.themes.main_menu # for larger text
 	_pbd_caption.mouse_entered.connect(_pbd_mouse_entered)
 	_pbd_caption.mouse_exited.connect(_pbd_mouse_exited)
 	_pbd_caption.gui_input.connect(_pbd_caption_input)

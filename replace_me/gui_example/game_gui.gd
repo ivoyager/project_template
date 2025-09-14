@@ -28,20 +28,12 @@ const SCENE := "res://replace_me/gui_example/game_gui.tscn"
 
 
 func _ready() -> void:
-	IVGlobal.project_builder_finished.connect(_on_project_builder_finished)
 	IVGlobal.show_hide_gui_requested.connect(show_hide_gui)
 	
 	# We have some hide/show calls to hide away unfinished GUI
 	IVGlobal.simulator_started.connect(show)
 	IVGlobal.about_to_free_procedural_nodes.connect(hide) # on exit or game load
 	hide()
-
-
-func _on_project_builder_finished() -> void:
-	# We hook up to a theme managed by ThemeManager. This has dynamic fonts that
-	# change size when user changes GUI size in options and other changes that
-	# improve GUI widget appearance.
-	theme = IVGlobal.themes.main
 
 
 func _unhandled_key_input(event: InputEvent) -> void:
