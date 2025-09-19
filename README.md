@@ -3,7 +3,7 @@
 Use this template to create a new game or app set in a realistic solar system.
 
 [Homepage](https://www.ivoyager.dev)  
-[Forum](https://www.ivoyager.dev/forum)  
+[Forum](https://github.com/orgs/ivoyager/discussions)  
 [Issues](https://github.com/ivoyager/ivoyager_core/issues)  
 [Changelog](https://github.com/ivoyager/project_template/blob/master/CHANGELOG.md)
 
@@ -23,9 +23,11 @@ After above steps, your addons directory will contain three subdirectories: `ivo
 
 You can disable and remove the Save plugin if your application does not need game save functionality.
 
+LICENCE.txt, 3RD_PARTY.md, CREDITS.md and AUTHORS.md in the project directory are the same as files in res://addons/ivoyager_core/. You can replace or delete these in the template project directory, but please don't alter or delete these files in the plugin.
+
 See also our [Developer page](https://www.ivoyager.dev/developers/).
 
-For help, please ask questions at [our forum!](https://www.ivoyager.dev/forum/)
+For help, please ask questions at [our forum!](https://github.com/orgs/ivoyager/discussions)
 
 ### What is I, Voyager?
 I, Voyager is
@@ -34,10 +36,10 @@ I, Voyager is
 
 It is designed to be improved, modified and extended by the community. I, Voyager runs on the open-source [Godot Engine](https://godotengine.org) and primarily uses Godot’s easy-to-learn [GDScript](http://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/gdscript_basics.html#doc-gdscript) (similar to Python). It can be extended into an independent free-standing project (a game or other software product) using GDScript, C# or C++.
 
-If you are interested in our future development, see our official [Roadmap!](https://www.ivoyager.dev/forum/index.php?p=/discussion/41/roadmap)
+If you are interested in our future development, see our official [Roadmap!](https://github.com/orgs/ivoyager/discussions/5)
 
 ### What does I, Voyager cost?
-I, Voyager is free to use and distribute under the permissive [Apache License 2.0](https://github.com/ivoyager/ivoyager/blob/master/LICENSE.txt). Projects built with I, Voyager are owned by their creators. You are free to give away or sell what you make. There are no royalties or fees.
+I, Voyager is free to use and distribute under the permissive [Apache License 2.0](https://github.com/ivoyager/ivoyager_core/blob/master/LICENSE.txt). Projects built with I, Voyager are owned by their creators. You are free to give away or sell what you make. There are no royalties or fees.
 
 ### How do I contribute to I, Voyager development?
 Help us grow the community by following us on [Twitter](https://twitter.com/IVoygr) and [Facebook](https://www.facebook.com/IVoygr/). Exchange ideas and give and receive help on our [Forum](https://www.ivoyager.dev/forum). Report bugs or astronomical inaccuracies at our issue tracker [here](https://github.com/ivoyager/issues). Or contribute to code development via pull requests to our repositories at [github.com/ivoyager](https://github.com/ivoyager).
@@ -51,11 +53,11 @@ Creator and lead programmer Charlie Whitfield stumbled into the Godot Engine in 
 (* Godot devs, bring back the [TestCube](https://docs.godotengine.org/en/2.1/classes/class_testcube.html)!)
 
 ### Authors, credits and legal
-I, Voyager is possible due to public interest in space exploration and funding of government agencies like NASA and ESA, and the scientists and engineers that they employ. I, Voyager is also possible due to open-source software developers, and especially [Godot Engine's creators and contributors](https://github.com/godotengine/godot/blob/master/AUTHORS.md). Copyright 2017-2024 Charles Whitfield. I, Voyager is a registered trademark of Charles Whitfield in the U.S. For up-to-date lists of authors, credits, and license information, see files in our code repository [here](https://github.com/ivoyager/ivoyager) or follow these links:
-* [AUTHORS.md](https://github.com/ivoyager/ivoyager/blob/master/AUTHORS.md) - contributors to I, Voyager code and assets.
-* [CREDITS.md](https://github.com/ivoyager/ivoyager/blob/master/CREDITS.md) - individuals and organizations whose efforts made I, Voyager possible.  
-* [LICENSE.txt](https://github.com/ivoyager/ivoyager/blob/master/LICENSE.txt) - the I, Voyager license.
-* [3RD_PARTY.txt](https://github.com/ivoyager/ivoyager/blob/master/3RD_PARTY.txt) - copyright and license information for 3rd-party assets distributed in I, Voyager.
+I, Voyager is possible due to public interest in space exploration and funding of government agencies like NASA and ESA, and the scientists and engineers that they employ. I, Voyager is also possible due to open-source software developers, and especially [Godot Engine's creators and contributors](https://github.com/godotengine/godot/blob/master/AUTHORS.md). Copyright 2017-2025 Charles Whitfield. I, Voyager is a registered trademark of Charles Whitfield in the U.S. For up-to-date lists of authors, credits, and license information, see files in our code repository [here](https://github.com/ivoyager/ivoyager_core) or follow these links:
+* [AUTHORS.md](https://github.com/ivoyager/ivoyager_core/blob/master/AUTHORS.md) - contributors to I, Voyager code and assets.
+* [CREDITS.md](https://github.com/ivoyager/ivoyager_core/blob/master/CREDITS.md) - individuals and organizations whose efforts made I, Voyager possible.  
+* [LICENSE.txt](https://github.com/ivoyager/ivoyager_core/blob/master/LICENSE.txt) - the I, Voyager license.
+* [3RD_PARTY.txt](https://github.com/ivoyager/ivoyager_core/blob/master/3RD_PARTY.md) - copyright and license information for 3rd-party assets distributed in I, Voyager.
 
 ### Screen captures!
 
