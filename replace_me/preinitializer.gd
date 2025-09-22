@@ -26,7 +26,7 @@ extends RefCounted
 
 const PROJECT_NAME := "Project Template (Replace Me!)"
 
-const USE_THREADS := true # false can help threaded code debugging (e.g., I/O)
+const USE_THREADS := true # false can help threaded code debugging
 
 const VERBOSE_GLOBAL_SIGNALS := false
 const VERBOSE_STATEMANAGER_SIGNALS := false
@@ -34,7 +34,7 @@ const VERBOSE_STATEMANAGER_SIGNALS := false
 func _init() -> void:
 	
 	var version: String = ProjectSettings.get_setting("application/config/version")
-	print("%s %s" % [PROJECT_NAME, version])
+	print("%s v%s" % [PROJECT_NAME, version])
 	
 	# debug
 	if OS.is_debug_build and VERBOSE_GLOBAL_SIGNALS:
@@ -46,11 +46,9 @@ func _init() -> void:
 	IVGlobal.system_tree_ready.connect(_on_system_tree_ready)
 	
 	# change global init values
-	IVCoreSettings.project_name = PROJECT_NAME
-	IVCoreSettings.project_version = version # helps load file debug
 	IVCoreSettings.use_threads = USE_THREADS
 	IVCoreSettings.skip_splash_screen = false
-	IVCoreSettings.start_time = 25.0 * IVUnits.YEAR # from J2000 epoch
+	IVCoreSettings.start_time = 25.75 * IVUnits.YEAR # from J2000 epoch
 	
 	# modify classes
 	IVCoreInitializer.gui_nodes[&"InGameGUI"] = RMGameGUI

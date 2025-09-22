@@ -87,6 +87,7 @@ vertical_alignment = 2
 
 [node name="VersionLabel" parent="AspectRatioContainer/TextureRect/VBox" instance=ExtResource("4")]
 layout_mode = 2
+prepend = "v"
 
 [node name="CopyrightLabel" type="Label" parent="AspectRatioContainer/TextureRect/VBox"]
 layout_mode = 2
