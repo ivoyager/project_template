@@ -1,17 +1,17 @@
 [gd_scene load_steps=17 format=3 uid="uid://cpws8iuc5ghi5"]
 
 [ext_resource type="Script" uid="uid://coutyliyji02y" path="res://replace_me/gui_example/admin_popups.gd" id="1_53td3"]
-[ext_resource type="PackedScene" uid="uid://csvlw3mc4uvoc" path="res://addons/ivoyager_core/gui_popups/main_menu_base_popup.tscn" id="2_pgyn1"]
+[ext_resource type="PackedScene" uid="uid://csvlw3mc4uvoc" path="res://addons/ivoyager_core/gui_main/main_menu_base_popup.tscn" id="2_pgyn1"]
 [ext_resource type="PackedScene" uid="uid://8vqmd07h6kmk" path="res://addons/ivoyager_save/gui/load_dialog.tscn" id="3_7xo7u"]
 [ext_resource type="PackedScene" uid="uid://dit7yqgigdo3k" path="res://addons/ivoyager_save/gui/save_as_button.tscn" id="4_amnya"]
 [ext_resource type="PackedScene" uid="uid://c5afahau0g63j" path="res://addons/ivoyager_save/gui/save_dialog.tscn" id="4_la5f3"]
 [ext_resource type="PackedScene" uid="uid://rppwkgmgwt24" path="res://addons/ivoyager_save/gui/quicksave_button.tscn" id="4_riy3h"]
 [ext_resource type="PackedScene" uid="uid://dutosuhbt5g8l" path="res://addons/ivoyager_save/gui/load_button.tscn" id="4_swbp7"]
 [ext_resource type="PackedScene" uid="uid://boc2r4d0eomdr" path="res://addons/ivoyager_core/gui_widgets/options_button.tscn" id="5_ce4q4"]
-[ext_resource type="PackedScene" uid="uid://c87vdfooqojd1" path="res://addons/ivoyager_core/gui_popups/confirmation.tscn" id="5_eemtw"]
-[ext_resource type="PackedScene" uid="uid://do6i0el4c00jr" path="res://addons/ivoyager_core/gui_popups/options_popup.tscn" id="5_xwg04"]
+[ext_resource type="PackedScene" uid="uid://c87vdfooqojd1" path="res://addons/ivoyager_core/gui_main/confirmation.tscn" id="5_eemtw"]
+[ext_resource type="PackedScene" uid="uid://do6i0el4c00jr" path="res://addons/ivoyager_core/gui_main/options_popup.tscn" id="5_xwg04"]
 [ext_resource type="PackedScene" uid="uid://pjw4ki1qswq0" path="res://addons/ivoyager_core/gui_widgets/hotkeys_button.tscn" id="6_8p3vk"]
-[ext_resource type="PackedScene" uid="uid://b2fdgq3tjd8wq" path="res://addons/ivoyager_core/gui_popups/hotkeys_popup.tscn" id="6_dc8ao"]
+[ext_resource type="PackedScene" uid="uid://b2fdgq3tjd8wq" path="res://addons/ivoyager_core/gui_main/hotkeys_popup.tscn" id="6_dc8ao"]
 [ext_resource type="PackedScene" uid="uid://cfmljqrp3tuvp" path="res://addons/ivoyager_save/gui/quickload_button.tscn" id="6_wxo3h"]
 [ext_resource type="PackedScene" uid="uid://bwhxsdlg1kpbh" path="res://addons/ivoyager_core/gui_widgets/exit_button.tscn" id="7_64fcv"]
 [ext_resource type="PackedScene" uid="uid://dcw1843unaohr" path="res://addons/ivoyager_core/gui_widgets/quit_button.tscn" id="8_jhy6r"]
@@ -29,12 +29,11 @@ mouse_filter = 2
 script = ExtResource("1_53td3")
 
 [node name="MainMenuBasePopup" parent="." instance=ExtResource("2_pgyn1")]
+size = Vector2i(204, 341)
 
 [node name="MarginContainer" type="MarginContainer" parent="MainMenuBasePopup"]
-offset_left = 4.0
-offset_top = 4.0
-offset_right = 96.0
-offset_bottom = 96.0
+offset_right = 204.0
+offset_bottom = 341.0
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
