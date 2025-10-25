@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://rppwkgmgwt24" path="res://addons/ivoyager_save/gui/quicksave_button.tscn" id="4_riy3h"]
 [ext_resource type="PackedScene" uid="uid://dutosuhbt5g8l" path="res://addons/ivoyager_save/gui/load_button.tscn" id="4_swbp7"]
 [ext_resource type="PackedScene" uid="uid://boc2r4d0eomdr" path="res://addons/ivoyager_core/gui_widgets/options_button.tscn" id="5_ce4q4"]
-[ext_resource type="PackedScene" uid="uid://c87vdfooqojd1" path="res://addons/ivoyager_core/gui_main/confirmation.tscn" id="5_eemtw"]
 [ext_resource type="PackedScene" uid="uid://do6i0el4c00jr" path="res://addons/ivoyager_core/gui_main/options_popup.tscn" id="5_xwg04"]
 [ext_resource type="PackedScene" uid="uid://pjw4ki1qswq0" path="res://addons/ivoyager_core/gui_widgets/hotkeys_button.tscn" id="6_8p3vk"]
 [ext_resource type="PackedScene" uid="uid://b2fdgq3tjd8wq" path="res://addons/ivoyager_core/gui_main/hotkeys_popup.tscn" id="6_dc8ao"]
@@ -16,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bwhxsdlg1kpbh" path="res://addons/ivoyager_core/gui_widgets/exit_button.tscn" id="7_64fcv"]
 [ext_resource type="PackedScene" uid="uid://dcw1843unaohr" path="res://addons/ivoyager_core/gui_widgets/quit_button.tscn" id="8_jhy6r"]
 [ext_resource type="PackedScene" uid="uid://4wg2jxr7g6t2" path="res://addons/ivoyager_core/gui_widgets/resume_button.tscn" id="9_o3o8q"]
+[ext_resource type="PackedScene" uid="uid://bq5sg1c26wm60" path="res://addons/ivoyager_core/gui_main/confirmation_dialog.tscn" id="16_b86v6"]
 
 [node name="AdminPopups" type="Control"]
 process_mode = 3
@@ -86,4 +86,4 @@ theme_type_variation = &"LargeFont"
 
 [node name="HotkeysPopup" parent="." instance=ExtResource("6_dc8ao")]
 
-[node name="Confirmation" parent="." instance=ExtResource("5_eemtw")]
+[node name="ConfirmationDialog" parent="." instance=ExtResource("16_b86v6")]
