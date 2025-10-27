@@ -1,6 +1,5 @@
 [gd_scene load_steps=10 format=3 uid="uid://bsomxdam3kb7q"]
 
-[ext_resource type="PackedScene" uid="uid://bgja2vd1iswvn" path="res://addons/ivoyager_core/gui_widgets/body_h_scroll.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://b8lhpum4e5tps" path="res://addons/ivoyager_core/gui_widgets/date_time_label.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://cre322bqbtbtd" path="res://addons/ivoyager_core/gui_widgets/planet_moon_buttons.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://wcxctits85co" path="res://addons/ivoyager_core/gui_widgets/sun_slice_button.tscn" id="5"]
@@ -9,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://drl4tb0hbqhl" path="res://addons/ivoyager_core/gui_widgets/speed_buttons.tscn" id="8"]
 [ext_resource type="Script" uid="uid://hh1j7m02t23n" path="res://replace_me/gui_example/navigation_panel.gd" id="9"]
 [ext_resource type="PackedScene" uid="uid://bkcj6agxxgfw" path="res://addons/ivoyager_core/gui_helpers/control_mod_resizable.tscn" id="9_d0ked"]
+[ext_resource type="PackedScene" uid="uid://3ofokqme2067" path="res://addons/ivoyager_core/gui_widgets/nav_button_box.tscn" id="9_l37g2"]
 
 [node name="NavigationPanel" type="PanelContainer"]
 anchors_preset = 3
@@ -75,15 +75,21 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="AsteroidsHScroll" parent="HBox/RightSideContent/TopVBox" instance=ExtResource("1")]
-unique_name_in_owner = true
+[node name="AsteroidsScroll" type="ScrollContainer" parent="HBox/RightSideContent/TopVBox"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="SpacecraftHScroll" parent="HBox/RightSideContent/TopVBox" instance=ExtResource("1")]
-unique_name_in_owner = true
+[node name="AsteroidsBox" parent="HBox/RightSideContent/TopVBox/AsteroidsScroll" instance=ExtResource("9_l37g2")]
+layout_mode = 2
+body_tables = Array[StringName]([&"asteroids"])
+
+[node name="SpacecraftScroll" type="ScrollContainer" parent="HBox/RightSideContent/TopVBox"]
 layout_mode = 2
 size_flags_vertical = 3
+
+[node name="SpacecraftBox" parent="HBox/RightSideContent/TopVBox/SpacecraftScroll" instance=ExtResource("9_l37g2")]
+layout_mode = 2
+body_tables = Array[StringName]([&"spacecrafts"])
 
 [node name="ControlModResizable" parent="." instance=ExtResource("9_d0ked")]
 sizes = Array[Vector2]([Vector2(435, 291), Vector2(575, 354), Vector2(712, 421)])

@@ -22,6 +22,6 @@ extends PanelContainer
 # THIS IS AN EXAMPLE GUI SCENE! You can modify it or replace it.
 
 
-func _ready() -> void:
-	($"%AsteroidsHScroll" as IVBodyHScroll).add_bodies_from_table("asteroids")
-	($"%SpacecraftHScroll" as IVBodyHScroll).add_bodies_from_table("spacecrafts")
+#func _ready() -> void:
+	#($"%AsteroidsHScroll" as IVBodyHScroll).add_bodies_from_table("asteroids")
+	#($"%SpacecraftHScroll" as IVBodyHScroll).add_bodies_from_table("spacecrafts")
