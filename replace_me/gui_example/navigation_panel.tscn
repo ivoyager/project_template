@@ -1,14 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://bsomxdam3kb7q"]
+[gd_scene load_steps=9 format=3 uid="uid://bsomxdam3kb7q"]
 
+[ext_resource type="PackedScene" uid="uid://t13lvtablxvu" path="res://addons/ivoyager_core/gui_widgets/nav_button.tscn" id="1_d0ked"]
 [ext_resource type="PackedScene" uid="uid://b8lhpum4e5tps" path="res://addons/ivoyager_core/gui_widgets/date_time_label.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://cre322bqbtbtd" path="res://addons/ivoyager_core/gui_widgets/planet_moon_buttons.tscn" id="4"]
-[ext_resource type="PackedScene" uid="uid://wcxctits85co" path="res://addons/ivoyager_core/gui_widgets/sun_slice_button.tscn" id="5"]
 [ext_resource type="PackedScene" uid="uid://cc3uu3jh0620y" path="res://addons/ivoyager_core/gui_widgets/speed_label.tscn" id="6"]
 [ext_resource type="PackedScene" uid="uid://crmkiyfceanog" path="res://addons/ivoyager_core/gui_widgets/camera_lock_ckbx.tscn" id="7"]
 [ext_resource type="PackedScene" uid="uid://drl4tb0hbqhl" path="res://addons/ivoyager_core/gui_widgets/speed_buttons.tscn" id="8"]
-[ext_resource type="Script" uid="uid://hh1j7m02t23n" path="res://replace_me/gui_example/navigation_panel.gd" id="9"]
 [ext_resource type="PackedScene" uid="uid://bkcj6agxxgfw" path="res://addons/ivoyager_core/gui_helpers/control_mod_resizable.tscn" id="9_d0ked"]
-[ext_resource type="PackedScene" uid="uid://3ofokqme2067" path="res://addons/ivoyager_core/gui_widgets/nav_button_box.tscn" id="9_l37g2"]
+[ext_resource type="PackedScene" uid="uid://3ofokqme2067" path="res://addons/ivoyager_core/gui_widgets/nav_buttons_box.tscn" id="9_l37g2"]
 
 [node name="NavigationPanel" type="PanelContainer"]
 anchors_preset = 3
@@ -20,15 +19,15 @@ offset_left = -14.0
 offset_top = -14.0
 grow_horizontal = 0
 grow_vertical = 0
-script = ExtResource("9")
 
 [node name="HBox" type="HBoxContainer" parent="."]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="SunSliceButton" parent="HBox" instance=ExtResource("5")]
+[node name="SunButton" parent="HBox" instance=ExtResource("1_d0ked")]
 layout_mode = 2
-size_flags_horizontal = 3
+body_name = &"STAR_SUN"
+use_texture_slice = true
 
 [node name="RightSideContent" type="MarginContainer" parent="HBox"]
 layout_mode = 2
@@ -78,17 +77,23 @@ size_flags_horizontal = 3
 [node name="AsteroidsScroll" type="ScrollContainer" parent="HBox/RightSideContent/TopVBox"]
 layout_mode = 2
 size_flags_vertical = 3
+follow_focus = true
+draw_focus_border = true
 
 [node name="AsteroidsBox" parent="HBox/RightSideContent/TopVBox/AsteroidsScroll" instance=ExtResource("9_l37g2")]
 layout_mode = 2
+size_flags_vertical = 3
 body_tables = Array[StringName]([&"asteroids"])
 
 [node name="SpacecraftScroll" type="ScrollContainer" parent="HBox/RightSideContent/TopVBox"]
 layout_mode = 2
 size_flags_vertical = 3
+follow_focus = true
+draw_focus_border = true
 
 [node name="SpacecraftBox" parent="HBox/RightSideContent/TopVBox/SpacecraftScroll" instance=ExtResource("9_l37g2")]
 layout_mode = 2
+size_flags_vertical = 3
 body_tables = Array[StringName]([&"spacecrafts"])
 
 [node name="ControlModResizable" parent="." instance=ExtResource("9_d0ked")]
