@@ -153,4 +153,4 @@ mouse_filter = 2
 layout_mode = 2
 
 [node name="ControlModResizable" parent="." instance=ExtResource("15_tvuf7")]
-sizes = Array[Vector2]([Vector2(435, 291), Vector2(575, 354), Vector2(712, 421)])
+base_size = Vector2(575, 354)

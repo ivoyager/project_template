@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://t13lvtablxvu" path="res://addons/ivoyager_core/gui_widgets/nav_button.tscn" id="1_d0ked"]
 [ext_resource type="PackedScene" uid="uid://b8lhpum4e5tps" path="res://addons/ivoyager_core/gui_widgets/date_time_label.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://cre322bqbtbtd" path="res://addons/ivoyager_core/gui_widgets/planet_moon_buttons.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://cc3uu3jh0620y" path="res://addons/ivoyager_core/gui_widgets/speed_label.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://cjtauq7kev3vl" path="res://addons/ivoyager_core/gui_widgets/nav_buttons_system.tscn" id="6_4v7ee"]
 [ext_resource type="PackedScene" uid="uid://crmkiyfceanog" path="res://addons/ivoyager_core/gui_widgets/camera_lock_ckbx.tscn" id="7"]
 [ext_resource type="PackedScene" uid="uid://drl4tb0hbqhl" path="res://addons/ivoyager_core/gui_widgets/speed_buttons.tscn" id="8"]
 [ext_resource type="PackedScene" uid="uid://bkcj6agxxgfw" path="res://addons/ivoyager_core/gui_helpers/control_mod_resizable.tscn" id="9_d0ked"]
@@ -70,9 +70,8 @@ layout_mode = 2
 [node name="SpeedButtons" parent="HBox/RightSideContent/TopVBox/TopHBox" instance=ExtResource("8")]
 layout_mode = 2
 
-[node name="PlanetMoonButtons" parent="HBox/RightSideContent/TopVBox" instance=ExtResource("4")]
+[node name="NavButtonsSystem" parent="HBox/RightSideContent/TopVBox" instance=ExtResource("6_4v7ee")]
 layout_mode = 2
-size_flags_horizontal = 3
 
 [node name="AsteroidsScroll" type="ScrollContainer" parent="HBox/RightSideContent/TopVBox"]
 layout_mode = 2
@@ -97,4 +96,4 @@ size_flags_vertical = 3
 body_tables = Array[StringName]([&"spacecrafts"])
 
 [node name="ControlModResizable" parent="." instance=ExtResource("9_d0ked")]
-sizes = Array[Vector2]([Vector2(435, 291), Vector2(575, 354), Vector2(712, 421)])
+base_size = Vector2(575, 354)
