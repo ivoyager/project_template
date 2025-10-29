@@ -72,6 +72,7 @@ layout_mode = 2
 
 [node name="NavButtonsSystem" parent="HBox/RightSideContent/TopVBox" instance=ExtResource("6_4v7ee")]
 layout_mode = 2
+size_flags_stretch_ratio = 7.5
 
 [node name="AsteroidsScroll" type="ScrollContainer" parent="HBox/RightSideContent/TopVBox"]
 layout_mode = 2
