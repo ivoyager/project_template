@@ -48,12 +48,18 @@ func _ready() -> void:
 		_pbd_caption.text = "TXT_PBD_SHORT"
 	if IVCoreSettings.skip_splash_screen:
 		hide()
+	_menu.hide()
 
 
 func _on_state_changed(state: Dictionary[StringName, Variant]) -> void:
-	var is_ok_to_start: bool = state.is_ok_to_start
 	_loading_label.visible = !state.is_assets_loaded
-	_menu.visible = state.is_ok_to_start
+	if !_menu.visible and state.is_ok_to_start:
+		_show_menu_and_grab_focus()
+
+
+func _show_menu_and_grab_focus() -> void:
+	_menu.show()
+	(%StartButton as Button).grab_focus()
 
 
 func _pbd_mouse_entered() -> void:
