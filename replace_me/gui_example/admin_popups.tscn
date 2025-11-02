@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cpws8iuc5ghi5"]
+[gd_scene load_steps=18 format=3 uid="uid://cpws8iuc5ghi5"]
 
 [ext_resource type="Script" uid="uid://coutyliyji02y" path="res://replace_me/gui_example/admin_popups.gd" id="1_53td3"]
 [ext_resource type="PackedScene" uid="uid://csvlw3mc4uvoc" path="res://addons/ivoyager_core/gui_main/main_menu_base_popup.tscn" id="2_pgyn1"]
@@ -17,6 +17,13 @@
 [ext_resource type="PackedScene" uid="uid://4wg2jxr7g6t2" path="res://addons/ivoyager_core/gui_widgets/resume_button.tscn" id="9_o3o8q"]
 [ext_resource type="PackedScene" uid="uid://bq5sg1c26wm60" path="res://addons/ivoyager_core/gui_main/confirmation_dialog.tscn" id="16_b86v6"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b86v6"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(0, 0, 0, 1)
+
 [node name="AdminPopups" type="Control"]
 process_mode = 3
 layout_mode = 3
@@ -29,53 +36,70 @@ mouse_filter = 2
 script = ExtResource("1_53td3")
 
 [node name="MainMenuBasePopup" parent="." instance=ExtResource("2_pgyn1")]
-size = Vector2i(204, 341)
+size = Vector2i(214, 341)
+theme_override_styles/panel = SubResource("StyleBoxFlat_b86v6")
 
-[node name="MarginContainer" type="MarginContainer" parent="MainMenuBasePopup"]
-offset_right = 204.0
-offset_bottom = 341.0
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 15
-theme_override_constants/margin_right = 15
-theme_override_constants/margin_bottom = 15
-
-[node name="MenuVBox" type="VBoxContainer" parent="MainMenuBasePopup/MarginContainer"]
-layout_mode = 2
-
-[node name="QuicksaveButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("4_riy3h")]
-layout_mode = 2
+[node name="QuicksaveButton" parent="MainMenuBasePopup" instance=ExtResource("4_riy3h")]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 194.0
+offset_bottom = 321.0
 theme_type_variation = &"LargeFont"
 
-[node name="SaveAsButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("4_amnya")]
-layout_mode = 2
+[node name="SaveAsButton" parent="MainMenuBasePopup" instance=ExtResource("4_amnya")]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 194.0
+offset_bottom = 321.0
 theme_type_variation = &"LargeFont"
 
-[node name="QuickloadButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("6_wxo3h")]
-layout_mode = 2
+[node name="QuickloadButton" parent="MainMenuBasePopup" instance=ExtResource("6_wxo3h")]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 194.0
+offset_bottom = 321.0
 theme_type_variation = &"LargeFont"
 
-[node name="LoadButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("4_swbp7")]
-layout_mode = 2
+[node name="LoadButton" parent="MainMenuBasePopup" instance=ExtResource("4_swbp7")]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 194.0
+offset_bottom = 321.0
 theme_type_variation = &"LargeFont"
 
-[node name="OptionsButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("5_ce4q4")]
-layout_mode = 2
+[node name="OptionsButton" parent="MainMenuBasePopup" instance=ExtResource("5_ce4q4")]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 194.0
+offset_bottom = 321.0
 theme_type_variation = &"LargeFont"
 
-[node name="HotkeysButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("6_8p3vk")]
-layout_mode = 2
+[node name="HotkeysButton" parent="MainMenuBasePopup" instance=ExtResource("6_8p3vk")]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 194.0
+offset_bottom = 321.0
 theme_type_variation = &"LargeFont"
 
-[node name="ExitButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("7_64fcv")]
-layout_mode = 2
+[node name="ExitButton" parent="MainMenuBasePopup" instance=ExtResource("7_64fcv")]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 194.0
+offset_bottom = 321.0
 theme_type_variation = &"LargeFont"
 
-[node name="QuitButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("8_jhy6r")]
-layout_mode = 2
+[node name="QuitButton" parent="MainMenuBasePopup" instance=ExtResource("8_jhy6r")]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 194.0
+offset_bottom = 321.0
 theme_type_variation = &"LargeFont"
 
-[node name="ResumeButton" parent="MainMenuBasePopup/MarginContainer/MenuVBox" instance=ExtResource("9_o3o8q")]
-layout_mode = 2
+[node name="ResumeButton" parent="MainMenuBasePopup" instance=ExtResource("9_o3o8q")]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 194.0
+offset_bottom = 321.0
 theme_type_variation = &"LargeFont"
 
 [node name="LoadDialog" parent="." instance=ExtResource("3_7xo7u")]
