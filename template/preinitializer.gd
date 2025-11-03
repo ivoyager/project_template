@@ -47,13 +47,13 @@ func _init() -> void:
 	
 	# change global init values
 	IVCoreSettings.use_threads = USE_THREADS
-	IVCoreSettings.skip_splash_screen = false
+	IVCoreSettings.wait_for_start_request = true
 	IVCoreSettings.start_time = 25.75 * IVUnits.YEAR # from J2000 epoch
 	
 	# modify classes
-	IVCoreInitializer.gui_nodes[&"InGameGUI"] = RMGameGUI
-	IVCoreInitializer.gui_nodes[&"SplashScreen"] = PBDSplashScreen
-	IVCoreInitializer.gui_nodes[&"AdminPopups"] = RMAdminPopups
+	#IVCoreInitializer.gui_nodes[&"InGameGUI"] = RMGameGUI
+	#IVCoreInitializer.gui_nodes[&"SplashScreen"] = PBDSplashScreen
+	#IVCoreInitializer.gui_nodes[&"AdminPopups"] = RMAdminPopups
 	
 	# Save plugin
 	IVSave.file_extension = "MyProjectSave"
@@ -73,8 +73,7 @@ func _on_project_objects_instantiated() -> void:
 	
 	# debug
 	if OS.is_debug_build and VERBOSE_STATEMANAGER_SIGNALS:
-		var state_manager: IVStateManager = IVGlobal.program.StateManager
-		IVDebug.signal_verbosely_all(state_manager, "StateManager") # print all StateManager signal emits
+		IVDebug.signal_verbosely_all(IVStateManager, "StateManager") # print all StateManager signal emits
 		
 	var timekeeper: IVTimekeeper = IVGlobal.program.Timekeeper
 	timekeeper.start_speed = 1

@@ -1,0 +1,113 @@
+[gd_scene load_steps=23 format=3 uid="uid://bj163rx3xqq7x"]
+
+[ext_resource type="Script" uid="uid://do4tlylce2vud" path="res://template/universe.gd" id="1_34662"]
+[ext_resource type="PackedScene" uid="uid://0r58al8slcnw" path="res://addons/ivoyager_core/ui_main/fragment_identifier.tscn" id="2_qusnu"]
+[ext_resource type="PackedScene" uid="uid://dd1xhk38f1jmf" path="res://addons/ivoyager_core/ui_main/top_ui.tscn" id="3_7k3ls"]
+[ext_resource type="PackedScene" uid="uid://cij2gsmtnwhcb" path="res://addons/ivoyager_core/ui_main/world_controller.tscn" id="4_jadw6"]
+[ext_resource type="PackedScene" uid="uid://c6yqdxh0igm7a" path="res://addons/ivoyager_core/ui_main/mouse_target_label.tscn" id="5_uvxtl"]
+[ext_resource type="PackedScene" uid="uid://cgv7mkfok4nux" path="res://addons/ivoyager_core/ui_main/show_hide_gui.tscn" id="6_iwlsa"]
+[ext_resource type="PackedScene" uid="uid://ctyu72cpcsa2k" path="res://template/gui/pbd_splash_screen.tscn" id="7_afbtk"]
+[ext_resource type="PackedScene" uid="uid://csvlw3mc4uvoc" path="res://addons/ivoyager_core/ui_main/main_menu_base_popup.tscn" id="7_sqq5a"]
+[ext_resource type="PackedScene" uid="uid://boc2r4d0eomdr" path="res://addons/ivoyager_core/ui_widgets/options_button.tscn" id="8_ch3t3"]
+[ext_resource type="PackedScene" uid="uid://rppwkgmgwt24" path="res://addons/ivoyager_save/gui/quicksave_button.tscn" id="8_k7n7j"]
+[ext_resource type="PackedScene" uid="uid://dit7yqgigdo3k" path="res://addons/ivoyager_save/gui/save_as_button.tscn" id="9_afbtk"]
+[ext_resource type="PackedScene" uid="uid://pjw4ki1qswq0" path="res://addons/ivoyager_core/ui_widgets/hotkeys_button.tscn" id="9_utg11"]
+[ext_resource type="PackedScene" uid="uid://dcw1843unaohr" path="res://addons/ivoyager_core/ui_widgets/quit_button.tscn" id="10_b7q8g"]
+[ext_resource type="PackedScene" uid="uid://cfmljqrp3tuvp" path="res://addons/ivoyager_save/gui/quickload_button.tscn" id="10_j036s"]
+[ext_resource type="PackedScene" uid="uid://4wg2jxr7g6t2" path="res://addons/ivoyager_core/ui_widgets/resume_button.tscn" id="11_7udys"]
+[ext_resource type="PackedScene" uid="uid://dutosuhbt5g8l" path="res://addons/ivoyager_save/gui/load_button.tscn" id="11_bgcqk"]
+[ext_resource type="PackedScene" uid="uid://do6i0el4c00jr" path="res://addons/ivoyager_core/ui_main/options_popup.tscn" id="12_r8n0p"]
+[ext_resource type="PackedScene" uid="uid://b2fdgq3tjd8wq" path="res://addons/ivoyager_core/ui_main/hotkeys_popup.tscn" id="13_xb4om"]
+[ext_resource type="PackedScene" uid="uid://bwhxsdlg1kpbh" path="res://addons/ivoyager_core/ui_widgets/exit_button.tscn" id="14_lsu7o"]
+[ext_resource type="PackedScene" uid="uid://bq5sg1c26wm60" path="res://addons/ivoyager_core/ui_main/confirmation_dialog.tscn" id="14_r1tsy"]
+[ext_resource type="PackedScene" uid="uid://8vqmd07h6kmk" path="res://addons/ivoyager_save/gui/load_dialog.tscn" id="17_omp5a"]
+[ext_resource type="PackedScene" uid="uid://c5afahau0g63j" path="res://addons/ivoyager_save/gui/save_dialog.tscn" id="18_u5moa"]
+
+[node name="Universe" type="Node3D"]
+script = ExtResource("1_34662")
+
+[node name="FragmentIdentifier" parent="." instance=ExtResource("2_qusnu")]
+
+[node name="TopUI" parent="." instance=ExtResource("3_7k3ls")]
+mouse_filter = 1
+
+[node name="WorldController" parent="TopUI" instance=ExtResource("4_jadw6")]
+layout_mode = 1
+
+[node name="MouseTargetLabel" parent="TopUI" instance=ExtResource("5_uvxtl")]
+layout_mode = 0
+offset_right = 1.0
+offset_bottom = 23.0
+
+[node name="ShowHideGUI" parent="TopUI" instance=ExtResource("6_iwlsa")]
+layout_mode = 1
+
+[node name="PBDSplashScreen" parent="TopUI" instance=ExtResource("7_afbtk")]
+layout_mode = 1
+
+[node name="MainMenuBasePopup" parent="TopUI" instance=ExtResource("7_sqq5a")]
+size = Vector2i(182, 100)
+
+[node name="QuicksaveButton" parent="TopUI/MainMenuBasePopup" instance=ExtResource("8_k7n7j")]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 178.0
+offset_bottom = 96.0
+
+[node name="SaveAsButton" parent="TopUI/MainMenuBasePopup" instance=ExtResource("9_afbtk")]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 178.0
+offset_bottom = 96.0
+
+[node name="QuickloadButton" parent="TopUI/MainMenuBasePopup" instance=ExtResource("10_j036s")]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 178.0
+offset_bottom = 96.0
+
+[node name="LoadButton" parent="TopUI/MainMenuBasePopup" instance=ExtResource("11_bgcqk")]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 178.0
+offset_bottom = 96.0
+
+[node name="OptionsButton" parent="TopUI/MainMenuBasePopup" instance=ExtResource("8_ch3t3")]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 178.0
+offset_bottom = 96.0
+
+[node name="HotkeysButton" parent="TopUI/MainMenuBasePopup" instance=ExtResource("9_utg11")]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 178.0
+offset_bottom = 96.0
+
+[node name="ExitButton" parent="TopUI/MainMenuBasePopup" instance=ExtResource("14_lsu7o")]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 178.0
+offset_bottom = 96.0
+
+[node name="QuitButton" parent="TopUI/MainMenuBasePopup" instance=ExtResource("10_b7q8g")]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 178.0
+offset_bottom = 96.0
+
+[node name="ResumeButton" parent="TopUI/MainMenuBasePopup" instance=ExtResource("11_7udys")]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 178.0
+offset_bottom = 96.0
+
+[node name="LoadDialog" parent="TopUI" instance=ExtResource("17_omp5a")]
+
+[node name="SaveDialog" parent="TopUI" instance=ExtResource("18_u5moa")]
+
+[node name="OptionsPopup" parent="TopUI" instance=ExtResource("12_r8n0p")]
+
+[node name="HotkeysPopup" parent="TopUI" instance=ExtResource("13_xb4om")]
+
+[node name="ConfirmationDialog" parent="TopUI" instance=ExtResource("14_r1tsy")]

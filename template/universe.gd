@@ -1,4 +1,4 @@
-# game_gui.gd
+# universe.gd
 # This file is part of I, Voyager
 # https://ivoyager.dev
 # *****************************************************************************
@@ -17,32 +17,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # *****************************************************************************
-class_name RMGameGUI
-extends Control
-const SCENE := "res://replace_me/gui_example/game_gui.tscn"
+class_name Universe
+extends Node3D
 
-# THIS IS AN EXAMPLE GUI SCENE! You can modify it or replace it.
-#
-# SCENE path must be defined above for our IVCoreInitializer to add it as a
-# scene.
+## Root scene node for the simulator.
+##
+## This root scene was duplicated and modified from [IVUniverseTemplate] in the
+## Core plugin (res://addons/ivoyager_core/tree_nodes/universe_template.tscn).[br][br]
+##
+## See [IVUniverseTemplate] for documentation on the scene tree.[br][br]
+##
+## Also see comments in res://addons/ivoyager_core/override_template.cfg.
+
+
+const PERSIST_MODE := IVGlobal.PERSIST_PROPERTIES_ONLY ## Don't free on load.
 
 
 func _ready() -> void:
-	IVGlobal.show_hide_gui_requested.connect(show_hide_gui)
-	
-	# We have some hide/show calls to hide away unfinished GUI
-	IVGlobal.simulator_started.connect(show)
-	IVGlobal.about_to_free_procedural_nodes.connect(hide) # on exit or game load
-	hide()
-
-
-func _unhandled_key_input(event: InputEvent) -> void:
-	if event.is_action_pressed("toggle_all_gui"):
-		show_hide_gui()
-		get_viewport().set_input_as_handled()
-
-
-func show_hide_gui(is_toggle := true, is_show := true) -> void:
-	if !IVGlobal.state.is_system_built:
-		return
-	visible = !visible if is_toggle else is_show
+	if IVCoreSettings.pause_only_stops_time:
+		process_mode = PROCESS_MODE_ALWAYS

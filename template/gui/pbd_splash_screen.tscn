@@ -1,0 +1,120 @@
+[gd_scene load_steps=10 format=3 uid="uid://ctyu72cpcsa2k"]
+
+[ext_resource type="Script" uid="uid://l5m7do0p2sni" path="res://template/gui/pbd_splash_screen.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://50qe34hvmkk7" path="res://template/gui/pale_blue_dot.png" id="2"]
+[ext_resource type="PackedScene" uid="uid://2yd54bjfmbri" path="res://addons/ivoyager_core/ui_widgets/start_button.tscn" id="3_k0wno"]
+[ext_resource type="PackedScene" uid="uid://bkokwngymmnyk" path="res://addons/ivoyager_core/ui_widgets/version_label.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://dutosuhbt5g8l" path="res://addons/ivoyager_save/gui/load_button.tscn" id="4_go2an"]
+[ext_resource type="PackedScene" uid="uid://cfmljqrp3tuvp" path="res://addons/ivoyager_save/gui/quickload_button.tscn" id="4_k1j27"]
+[ext_resource type="PackedScene" uid="uid://boc2r4d0eomdr" path="res://addons/ivoyager_core/ui_widgets/options_button.tscn" id="5_fj2ko"]
+[ext_resource type="PackedScene" uid="uid://pjw4ki1qswq0" path="res://addons/ivoyager_core/ui_widgets/hotkeys_button.tscn" id="6_e17mv"]
+[ext_resource type="PackedScene" uid="uid://dcw1843unaohr" path="res://addons/ivoyager_core/ui_widgets/quit_button.tscn" id="7_uo13d"]
+
+[node name="PBDSplashScreen" type="ColorRect"]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="MarginContainer"]
+layout_mode = 2
+ratio = 1.6532
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/AspectRatioContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="LeftVBox" type="VBoxContainer" parent="MarginContainer/AspectRatioContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LoadingLabel" type="Label" parent="MarginContainer/AspectRatioContainer/HBoxContainer/LeftVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LargeFont"
+text = "LABEL_LOADING_ELLIPSIS"
+
+[node name="MenuVBox" type="VBoxContainer" parent="MarginContainer/AspectRatioContainer/HBoxContainer/LeftVBox"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="StartButton" parent="MarginContainer/AspectRatioContainer/HBoxContainer/LeftVBox/MenuVBox" instance=ExtResource("3_k0wno")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LargeFont"
+
+[node name="QuickloadButton" parent="MarginContainer/AspectRatioContainer/HBoxContainer/LeftVBox/MenuVBox" instance=ExtResource("4_k1j27")]
+layout_mode = 2
+theme_type_variation = &"LargeFont"
+
+[node name="LoadButton" parent="MarginContainer/AspectRatioContainer/HBoxContainer/LeftVBox/MenuVBox" instance=ExtResource("4_go2an")]
+layout_mode = 2
+theme_type_variation = &"LargeFont"
+
+[node name="OptionsButton" parent="MarginContainer/AspectRatioContainer/HBoxContainer/LeftVBox/MenuVBox" instance=ExtResource("5_fj2ko")]
+layout_mode = 2
+theme_type_variation = &"LargeFont"
+
+[node name="HotkeysButton" parent="MarginContainer/AspectRatioContainer/HBoxContainer/LeftVBox/MenuVBox" instance=ExtResource("6_e17mv")]
+layout_mode = 2
+theme_type_variation = &"LargeFont"
+
+[node name="QuitButton" parent="MarginContainer/AspectRatioContainer/HBoxContainer/LeftVBox/MenuVBox" instance=ExtResource("7_uo13d")]
+layout_mode = 2
+theme_type_variation = &"LargeFont"
+force_quit = true
+
+[node name="ProjectTemplateLabel" type="Label" parent="MarginContainer/AspectRatioContainer/HBoxContainer/LeftVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Project Template"
+vertical_alignment = 2
+
+[node name="VersionLabel" parent="MarginContainer/AspectRatioContainer/HBoxContainer/LeftVBox" instance=ExtResource("4")]
+layout_mode = 2
+prepend = "v"
+
+[node name="CopyrightLabel" type="Label" parent="MarginContainer/AspectRatioContainer/HBoxContainer/LeftVBox"]
+layout_mode = 2
+text = "
+(c) 2017-2025
+Charlie Whitfield"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/AspectRatioContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 7.0
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="PBDCaption" type="Label" parent="MarginContainer/AspectRatioContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+size_flags_stretch_ratio = 2.1
+mouse_filter = 1
+text = "LABEL_PBD_SHORT"
+vertical_alignment = 2
+autowrap_mode = 3

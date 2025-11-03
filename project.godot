@@ -12,18 +12,18 @@ config_version=5
 
 config/name="I, Voyager - Project Template"
 config/version="0.1.rc"
-run/main_scene="res://addons/ivoyager_core/tree_nodes/universe.tscn"
+run/main_scene="uid://bj163rx3xqq7x"
 config/features=PackedStringArray("4.5")
 boot_splash/bg_color=Color(0, 0, 0, 1)
-boot_splash/image="res://replace_me/gui_example/pale_blue_dot.png"
-config/icon="res://replace_me/jupiter-icon-128.png"
+boot_splash/image="res://template/gui/pale_blue_dot.png"
+config/icon="res://template/jupiter-icon-128.png"
 main_scene="res://addons/ivoyager_core/tree_nodes/universe.tscn"
 name="I, Voyager - Project Template"
 icon="res://jupiter-icon-128.png"
 
 [autoload]
 
-IVUnits="*res://replace_me/units.gd"
+IVUnits="*res://template/units.gd"
 IVQConvert="*res://addons/ivoyager_units/qconvert.gd"
 IVQFormat="*res://addons/ivoyager_units/qformat.gd"
 IVTableData="*res://addons/ivoyager_tables/table_data.gd"
@@ -31,6 +31,8 @@ IVSave="*res://addons/ivoyager_save/save.gd"
 IVGlobal="*res://addons/ivoyager_core/editor_plugin/../singletons/global.gd"
 IVCoreSettings="*res://addons/ivoyager_core/editor_plugin/../singletons/core_settings.gd"
 IVCoreInitializer="*res://addons/ivoyager_core/editor_plugin/../singletons/core_initializer.gd"
+IVSettingsManager="*res://addons/ivoyager_core/editor_plugin/../singletons/settings_manager.gd"
+IVStateManager="*res://addons/ivoyager_core/editor_plugin/../singletons/state_manager.gd"
 IVAstronomy="*res://addons/ivoyager_core/editor_plugin/../singletons/astronomy.gd"
 
 [debug]

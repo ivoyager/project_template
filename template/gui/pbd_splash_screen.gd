@@ -18,42 +18,39 @@
 # limitations under the License.
 # *****************************************************************************
 class_name PBDSplashScreen
-extends Control
+extends ColorRect
 
 ## Example splash screen with Pale Blue Dot image and interactive text.
 
-
-const SCENE := "res://replace_me/gui_example/pbd_splash_screen.tscn"
-
 var _settings: Dictionary = IVGlobal.settings
-var _settings_manager: IVSettingsManager = IVGlobal.program[&"SettingsManager"]
 
 @onready var _loading_label: Label = %LoadingLabel
 @onready var _menu: VBoxContainer = %MenuVBox
 @onready var _pbd_caption: Label = %PBDCaption
 
 
-
 func _ready() -> void:
-	IVGlobal.state_changed.connect(_on_state_changed)
+	IVGlobal.core_inited.connect(_configure_for_core_init)
+	IVStateManager.state_changed.connect(_on_state_changed)
 	IVGlobal.simulator_started.connect(hide)
 	IVGlobal.simulator_exited.connect(show)
 	_pbd_caption.mouse_entered.connect(_pbd_mouse_entered)
 	_pbd_caption.mouse_exited.connect(_pbd_mouse_exited)
 	_pbd_caption.gui_input.connect(_pbd_caption_input)
 	_pbd_caption.set("theme_override_colors/font_color", Color.LIGHT_BLUE)
-	if _settings.pbd_splash_caption_open:
-		_pbd_caption.text = "TXT_PBD_LONG"
-	else:
-		_pbd_caption.text = "TXT_PBD_SHORT"
-	if IVCoreSettings.skip_splash_screen:
-		hide()
 	_menu.hide()
 
 
-func _on_state_changed(state: Dictionary[StringName, Variant]) -> void:
-	_loading_label.visible = !state.is_assets_loaded
-	if !_menu.visible and state.is_ok_to_start:
+func _configure_for_core_init() -> void:
+	if _settings[&"pbd_splash_caption_open"]:
+		_pbd_caption.text = "TXT_PBD_LONG"
+	else:
+		_pbd_caption.text = "TXT_PBD_SHORT"
+
+
+func _on_state_changed() -> void:
+	_loading_label.visible = not IVStateManager.is_assets_loaded
+	if !_menu.visible and IVStateManager.is_ok_to_start:
 		_show_menu_and_grab_focus()
 
 
@@ -73,5 +70,5 @@ func _pbd_mouse_exited() -> void:
 func _pbd_caption_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_pressed():
 		var is_open: bool = !_settings.pbd_splash_caption_open
-		_settings_manager.change_current("pbd_splash_caption_open", is_open)
+		IVSettingsManager.change_current("pbd_splash_caption_open", is_open)
 		_pbd_caption.text = "TXT_PBD_LONG" if is_open else "TXT_PBD_SHORT"
