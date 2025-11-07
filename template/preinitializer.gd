@@ -47,7 +47,7 @@ func _init() -> void:
 	
 	# change global init values
 	IVCoreSettings.use_threads = USE_THREADS
-	IVCoreSettings.wait_for_start_request = true
+	IVCoreSettings.wait_for_start = true
 	IVCoreSettings.start_time = 25.75 * IVUnits.YEAR # from J2000 epoch
 	
 	# modify classes

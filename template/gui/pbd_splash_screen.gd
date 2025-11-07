@@ -24,24 +24,29 @@ extends ColorRect
 
 var _settings: Dictionary = IVGlobal.settings
 
-@onready var _loading_label: Label = %LoadingLabel
 @onready var _menu: VBoxContainer = %MenuVBox
+@onready var _start_button: Button = %StartButton
+@onready var _project_label: Label = %ProjectLabel
+@onready var _version_label: Label = %VersionLabel
+@onready var _copyright_label: Label = %CopyrightLabel
 @onready var _pbd_caption: Label = %PBDCaption
 
 
 func _ready() -> void:
-	IVGlobal.core_inited.connect(_configure_for_core_init)
+	IVGlobal.translations_imported.connect(_on_translations_imported)
 	IVStateManager.state_changed.connect(_on_state_changed)
 	IVGlobal.simulator_started.connect(hide)
 	IVGlobal.simulator_exited.connect(show)
 	_pbd_caption.mouse_entered.connect(_pbd_mouse_entered)
 	_pbd_caption.mouse_exited.connect(_pbd_mouse_exited)
 	_pbd_caption.gui_input.connect(_pbd_caption_input)
-	_pbd_caption.set("theme_override_colors/font_color", Color.LIGHT_BLUE)
-	_menu.hide()
+	_pbd_caption.add_theme_color_override("font_color", Color.LIGHT_SKY_BLUE)
 
 
-func _configure_for_core_init() -> void:
+func _on_translations_imported() -> void:
+	_project_label.show()
+	_version_label.show()
+	_copyright_label.show()
 	if _settings[&"pbd_splash_caption_open"]:
 		_pbd_caption.text = "TXT_PBD_LONG"
 	else:
@@ -49,26 +54,21 @@ func _configure_for_core_init() -> void:
 
 
 func _on_state_changed() -> void:
-	_loading_label.visible = not IVStateManager.is_assets_loaded
-	if !_menu.visible and IVStateManager.is_ok_to_start:
-		_show_menu_and_grab_focus()
-
-
-func _show_menu_and_grab_focus() -> void:
-	_menu.show()
-	(%StartButton as Button).grab_focus()
+	_menu.visible = IVStateManager.is_ok_to_start
+	if IVStateManager.is_ok_to_start:
+		_start_button.grab_focus()
 
 
 func _pbd_mouse_entered() -> void:
-	_pbd_caption.set("theme_override_colors/font_color", Color.WHITE)
+	_pbd_caption.remove_theme_color_override("font_color")
 
 
 func _pbd_mouse_exited() -> void:
-	_pbd_caption.set("theme_override_colors/font_color", Color.LIGHT_SKY_BLUE)
+	_pbd_caption.add_theme_color_override("font_color", Color.LIGHT_SKY_BLUE)
 
 
 func _pbd_caption_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_pressed():
-		var is_open: bool = !_settings.pbd_splash_caption_open
+		var is_open: bool = not _settings.pbd_splash_caption_open
 		IVSettingsManager.change_current("pbd_splash_caption_open", is_open)
 		_pbd_caption.text = "TXT_PBD_LONG" if is_open else "TXT_PBD_SHORT"

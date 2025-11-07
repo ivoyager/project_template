@@ -1,15 +1,17 @@
-[gd_scene load_steps=23 format=3 uid="uid://bj163rx3xqq7x"]
+[gd_scene load_steps=25 format=3 uid="uid://bj163rx3xqq7x"]
 
 [ext_resource type="Script" uid="uid://do4tlylce2vud" path="res://template/universe.gd" id="1_34662"]
 [ext_resource type="PackedScene" uid="uid://0r58al8slcnw" path="res://addons/ivoyager_core/ui_main/fragment_identifier.tscn" id="2_qusnu"]
 [ext_resource type="PackedScene" uid="uid://dd1xhk38f1jmf" path="res://addons/ivoyager_core/ui_main/top_ui.tscn" id="3_7k3ls"]
 [ext_resource type="PackedScene" uid="uid://cij2gsmtnwhcb" path="res://addons/ivoyager_core/ui_main/world_controller.tscn" id="4_jadw6"]
 [ext_resource type="PackedScene" uid="uid://c6yqdxh0igm7a" path="res://addons/ivoyager_core/ui_main/mouse_target_label.tscn" id="5_uvxtl"]
-[ext_resource type="PackedScene" uid="uid://cgv7mkfok4nux" path="res://addons/ivoyager_core/ui_main/show_hide_gui.tscn" id="6_iwlsa"]
+[ext_resource type="PackedScene" uid="uid://cgv7mkfok4nux" path="res://addons/ivoyager_core/ui_main/show_hide_ui.tscn" id="6_iwlsa"]
 [ext_resource type="PackedScene" uid="uid://ctyu72cpcsa2k" path="res://template/gui/pbd_splash_screen.tscn" id="7_afbtk"]
+[ext_resource type="PackedScene" uid="uid://bsomxdam3kb7q" path="res://template/gui/navigation_panel.tscn" id="7_bgcqk"]
 [ext_resource type="PackedScene" uid="uid://csvlw3mc4uvoc" path="res://addons/ivoyager_core/ui_main/main_menu_base_popup.tscn" id="7_sqq5a"]
 [ext_resource type="PackedScene" uid="uid://boc2r4d0eomdr" path="res://addons/ivoyager_core/ui_widgets/options_button.tscn" id="8_ch3t3"]
 [ext_resource type="PackedScene" uid="uid://rppwkgmgwt24" path="res://addons/ivoyager_save/gui/quicksave_button.tscn" id="8_k7n7j"]
+[ext_resource type="PackedScene" uid="uid://ci63agucrjxcr" path="res://template/gui/selection_panel.tscn" id="8_lsu7o"]
 [ext_resource type="PackedScene" uid="uid://dit7yqgigdo3k" path="res://addons/ivoyager_save/gui/save_as_button.tscn" id="9_afbtk"]
 [ext_resource type="PackedScene" uid="uid://pjw4ki1qswq0" path="res://addons/ivoyager_core/ui_widgets/hotkeys_button.tscn" id="9_utg11"]
 [ext_resource type="PackedScene" uid="uid://dcw1843unaohr" path="res://addons/ivoyager_core/ui_widgets/quit_button.tscn" id="10_b7q8g"]
@@ -41,6 +43,29 @@ offset_bottom = 23.0
 
 [node name="ShowHideGUI" parent="TopUI" instance=ExtResource("6_iwlsa")]
 layout_mode = 1
+
+[node name="NavigationPanel" parent="TopUI/ShowHideGUI" instance=ExtResource("7_bgcqk")]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -59.0
+offset_bottom = 0.0
+grow_vertical = 0
+
+[node name="SelectionPanel" parent="TopUI/ShowHideGUI" instance=ExtResource("8_lsu7o")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -893.0
+offset_top = -354.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 0
 
 [node name="PBDSplashScreen" parent="TopUI" instance=ExtResource("7_afbtk")]
 layout_mode = 1

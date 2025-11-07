@@ -16,11 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://b02brsb71lrev" path="res://addons/ivoyager_core/ui_widgets/huds_popup_button.tscn" id="16"]
 
 [node name="SelectionPanel" type="PanelContainer"]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -354.0
 offset_right = 893.0
+offset_bottom = 354.0
 
 [node name="VBox" type="VBoxContainer" parent="."]
 layout_mode = 2

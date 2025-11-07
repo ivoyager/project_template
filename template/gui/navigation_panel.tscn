@@ -10,15 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://3ofokqme2067" path="res://addons/ivoyager_core/ui_widgets/nav_buttons_box.tscn" id="9_l37g2"]
 
 [node name="NavigationPanel" type="PanelContainer"]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -14.0
-offset_top = -14.0
-grow_horizontal = 0
-grow_vertical = 0
+offset_right = 486.0
+offset_bottom = 59.0
 
 [node name="HBox" type="HBoxContainer" parent="."]
 layout_mode = 2
