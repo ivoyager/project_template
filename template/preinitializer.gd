@@ -28,8 +28,8 @@ const PROJECT_NAME := "Project Template (Replace Me!)"
 
 const USE_THREADS := true # false can help threaded code debugging
 
-const VERBOSE_GLOBAL_SIGNALS := false
-const VERBOSE_STATEMANAGER_SIGNALS := false
+#const VERBOSE_GLOBAL_SIGNALS := false
+#const VERBOSE_STATEMANAGER_SIGNALS := false
 
 func _init() -> void:
 	
@@ -37,23 +37,21 @@ func _init() -> void:
 	print("%s v%s" % [PROJECT_NAME, version])
 	
 	# debug
-	if OS.is_debug_build and VERBOSE_GLOBAL_SIGNALS:
-		IVDebug.signal_verbosely_all(IVGlobal, "Global") # print all IVGlobal signal emits
+	#if OS.is_debug_build and VERBOSE_GLOBAL_SIGNALS:
+		#IVDebug.signal_verbosely_all(IVGlobal, "Global") # print all IVGlobal signal emits
 	
 	print("Use threads = ", USE_THREADS)
-	IVGlobal.project_objects_instantiated.connect(_on_project_objects_instantiated)
-	IVGlobal.project_nodes_added.connect(_on_project_nodes_added)
-	IVGlobal.system_tree_ready.connect(_on_system_tree_ready)
+	IVStateManager.project_objects_instantiated.connect(_on_project_objects_instantiated)
+	IVStateManager.project_nodes_added.connect(_on_project_nodes_added)
+	IVStateManager.system_tree_ready.connect(_on_system_tree_ready)
 	
 	# change global init values
 	IVCoreSettings.use_threads = USE_THREADS
 	IVCoreSettings.wait_for_start = true
 	IVCoreSettings.start_time = 25.75 * IVUnits.YEAR # from J2000 epoch
 	
-	# modify classes
-	#IVCoreInitializer.gui_nodes[&"InGameGUI"] = RMGameGUI
-	#IVCoreInitializer.gui_nodes[&"SplashScreen"] = PBDSplashScreen
-	#IVCoreInitializer.gui_nodes[&"AdminPopups"] = RMAdminPopups
+	IVSettingsManager.set_default("pbd_splash_caption_open", false)
+	IVSettingsManager.set_default(&"save_base_name", "Template")
 	
 	# Save plugin
 	IVSave.file_extension = "MyProjectSave"
@@ -62,8 +60,6 @@ func _init() -> void:
 	IVSave.autosave_uses_suffix_generator = true
 	IVSave.quicksave_uses_suffix_generator = true
 	
-	# static file changes
-	IVSettingsManager.defaults[&"save_base_name"] = "Template"
 
 
 func _on_project_objects_instantiated() -> void:
@@ -72,10 +68,10 @@ func _on_project_objects_instantiated() -> void:
 	# added to the tree).
 	
 	# debug
-	if OS.is_debug_build and VERBOSE_STATEMANAGER_SIGNALS:
-		IVDebug.signal_verbosely_all(IVStateManager, "StateManager") # print all StateManager signal emits
+	#if OS.is_debug_build and VERBOSE_STATEMANAGER_SIGNALS:
+		#IVDebug.signal_verbosely_all(IVStateManager, "StateManager") # print all StateManager signal emits
 		
-	var timekeeper: IVTimekeeper = IVGlobal.program.Timekeeper
+	var timekeeper: IVTimekeeper = IVGlobal.program[&"Timekeeper"]
 	timekeeper.start_speed = 1
 
 

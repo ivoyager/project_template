@@ -22,7 +22,6 @@ extends ColorRect
 
 ## Example splash screen with Pale Blue Dot image and interactive text.
 
-var _settings: Dictionary = IVGlobal.settings
 
 @onready var _menu: VBoxContainer = %MenuVBox
 @onready var _start_button: Button = %StartButton
@@ -35,8 +34,8 @@ var _settings: Dictionary = IVGlobal.settings
 func _ready() -> void:
 	IVGlobal.translations_imported.connect(_on_translations_imported)
 	IVStateManager.state_changed.connect(_on_state_changed)
-	IVGlobal.simulator_started.connect(hide)
-	IVGlobal.simulator_exited.connect(show)
+	IVStateManager.simulator_started.connect(hide)
+	IVStateManager.simulator_exited.connect(show)
 	_pbd_caption.mouse_entered.connect(_pbd_mouse_entered)
 	_pbd_caption.mouse_exited.connect(_pbd_mouse_exited)
 	_pbd_caption.gui_input.connect(_pbd_caption_input)
@@ -47,7 +46,7 @@ func _on_translations_imported() -> void:
 	_project_label.show()
 	_version_label.show()
 	_copyright_label.show()
-	if _settings[&"pbd_splash_caption_open"]:
+	if IVSettingsManager.get_setting(&"pbd_splash_caption_open"):
 		_pbd_caption.text = "TXT_PBD_LONG"
 	else:
 		_pbd_caption.text = "TXT_PBD_SHORT"
@@ -69,6 +68,6 @@ func _pbd_mouse_exited() -> void:
 
 func _pbd_caption_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_pressed():
-		var is_open: bool = not _settings.pbd_splash_caption_open
-		IVSettingsManager.change_current("pbd_splash_caption_open", is_open)
+		var is_open: bool = not IVSettingsManager.get_setting(&"pbd_splash_caption_open")
+		IVSettingsManager.change_setting("pbd_splash_caption_open", is_open)
 		_pbd_caption.text = "TXT_PBD_LONG" if is_open else "TXT_PBD_SHORT"
