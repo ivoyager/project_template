@@ -41,9 +41,8 @@ func _init() -> void:
 		#IVDebug.signal_verbosely_all(IVGlobal, "Global") # print all IVGlobal signal emits
 	
 	print("Use threads = ", USE_THREADS)
-	IVStateManager.project_objects_instantiated.connect(_on_project_objects_instantiated)
-	IVStateManager.project_nodes_added.connect(_on_project_nodes_added)
-	IVStateManager.system_tree_ready.connect(_on_system_tree_ready)
+	IVStateManager.core_init_program_objects_instantiated.connect(
+			_on_core_init_program_objects_instantiated)
 	
 	# change global init values
 	IVCoreSettings.use_threads = USE_THREADS
@@ -62,7 +61,7 @@ func _init() -> void:
 	
 
 
-func _on_project_objects_instantiated() -> void:
+func _on_core_init_program_objects_instantiated() -> void:
 	# Here you can access and change init values for program Nodes and
 	# program RefCounteds before they are used (for Nodes, before they are
 	# added to the tree).
@@ -73,13 +72,3 @@ func _on_project_objects_instantiated() -> void:
 		
 	var timekeeper: IVTimekeeper = IVGlobal.program[&"Timekeeper"]
 	timekeeper.start_speed = 1
-
-
-func _on_project_nodes_added() -> void:
-	pass
-
-
-func _on_system_tree_ready(_is_new_game: bool) -> void:
-	# The solar system has been built or loaded, but we haven't started the
-	# sim yet. See ivoyager/singletons/global.gd for more "state" signals.
-	pass

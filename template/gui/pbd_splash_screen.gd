@@ -34,8 +34,6 @@ extends ColorRect
 func _ready() -> void:
 	IVGlobal.translations_imported.connect(_on_translations_imported)
 	IVStateManager.state_changed.connect(_on_state_changed)
-	IVStateManager.simulator_started.connect(hide)
-	IVStateManager.simulator_exited.connect(show)
 	_pbd_caption.mouse_entered.connect(_pbd_mouse_entered)
 	_pbd_caption.mouse_exited.connect(_pbd_mouse_exited)
 	_pbd_caption.gui_input.connect(_pbd_caption_input)
@@ -53,8 +51,9 @@ func _on_translations_imported() -> void:
 
 
 func _on_state_changed() -> void:
-	_menu.visible = IVStateManager.is_ok_to_start
-	if IVStateManager.is_ok_to_start:
+	visible = IVStateManager.show_splash_screen
+	_menu.visible = IVStateManager.ok_to_start
+	if IVStateManager.ok_to_start:
 		_start_button.grab_focus()
 
 
