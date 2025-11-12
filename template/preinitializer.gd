@@ -55,9 +55,9 @@ func _init() -> void:
 	# Save plugin
 	IVSave.file_extension = "MyProjectSave"
 	IVSave.file_description = "My Project Save"
-	IVSave.input_enabled = true
 	IVSave.autosave_uses_suffix_generator = true
 	IVSave.quicksave_uses_suffix_generator = true
+	IVSave.configure_save_plugin()
 	
 
 

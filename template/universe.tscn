@@ -72,6 +72,7 @@ layout_mode = 1
 
 [node name="MainMenuBasePopup" parent="TopUI" instance=ExtResource("7_sqq5a")]
 size = Vector2i(182, 100)
+focus_path = NodePath("QuicksaveButton")
 
 [node name="QuicksaveButton" parent="TopUI/MainMenuBasePopup" instance=ExtResource("8_k7n7j")]
 offset_left = 4.0
