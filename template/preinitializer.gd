@@ -28,8 +28,8 @@ const PROJECT_NAME := "Project Template (Replace Me!)"
 
 const USE_THREADS := true # false can help threaded code debugging
 
-const VERBOSE_GLOBAL_SIGNALS := false
-const VERBOSE_STATEMANAGER_SIGNALS := false
+#const VERBOSE_GLOBAL_SIGNALS := false
+#const VERBOSE_STATEMANAGER_SIGNALS := false
 
 func _init() -> void:
 	
@@ -37,54 +37,38 @@ func _init() -> void:
 	print("%s v%s" % [PROJECT_NAME, version])
 	
 	# debug
-	if OS.is_debug_build and VERBOSE_GLOBAL_SIGNALS:
-		IVDebug.signal_verbosely_all(IVGlobal, "Global") # print all IVGlobal signal emits
+	#if OS.is_debug_build and VERBOSE_GLOBAL_SIGNALS:
+		#IVDebug.signal_verbosely_all(IVGlobal, "Global") # print all IVGlobal signal emits
 	
 	print("Use threads = ", USE_THREADS)
-	IVGlobal.project_objects_instantiated.connect(_on_project_objects_instantiated)
-	IVGlobal.project_nodes_added.connect(_on_project_nodes_added)
-	IVGlobal.system_tree_ready.connect(_on_system_tree_ready)
+	IVStateManager.core_init_program_objects_instantiated.connect(
+			_on_core_init_program_objects_instantiated)
 	
 	# change global init values
 	IVCoreSettings.use_threads = USE_THREADS
-	IVCoreSettings.skip_splash_screen = false
+	IVCoreSettings.wait_for_start = true
 	IVCoreSettings.start_time = 25.75 * IVUnits.YEAR # from J2000 epoch
 	
-	# modify classes
-	IVCoreInitializer.gui_nodes[&"InGameGUI"] = RMGameGUI
-	IVCoreInitializer.gui_nodes[&"SplashScreen"] = PBDSplashScreen
-	IVCoreInitializer.gui_nodes[&"AdminPopups"] = RMAdminPopups
+	IVSettingsManager.set_default("pbd_splash_caption_open", false)
+	IVSettingsManager.set_default(&"save_base_name", "Template")
 	
 	# Save plugin
 	IVSave.file_extension = "MyProjectSave"
 	IVSave.file_description = "My Project Save"
-	IVSave.input_enabled = true
 	IVSave.autosave_uses_suffix_generator = true
 	IVSave.quicksave_uses_suffix_generator = true
+	IVSave.configure_save_plugin()
 	
-	# static file changes
-	IVSettingsManager.defaults[&"save_base_name"] = "Template"
 
 
-func _on_project_objects_instantiated() -> void:
+func _on_core_init_program_objects_instantiated() -> void:
 	# Here you can access and change init values for program Nodes and
 	# program RefCounteds before they are used (for Nodes, before they are
 	# added to the tree).
 	
 	# debug
-	if OS.is_debug_build and VERBOSE_STATEMANAGER_SIGNALS:
-		var state_manager: IVStateManager = IVGlobal.program.StateManager
-		IVDebug.signal_verbosely_all(state_manager, "StateManager") # print all StateManager signal emits
+	#if OS.is_debug_build and VERBOSE_STATEMANAGER_SIGNALS:
+		#IVDebug.signal_verbosely_all(IVStateManager, "StateManager") # print all StateManager signal emits
 		
-	var timekeeper: IVTimekeeper = IVGlobal.program.Timekeeper
+	var timekeeper: IVTimekeeper = IVGlobal.program[&"Timekeeper"]
 	timekeeper.start_speed = 1
-
-
-func _on_project_nodes_added() -> void:
-	pass
-
-
-func _on_system_tree_ready(_is_new_game: bool) -> void:
-	# The solar system has been built or loaded, but we haven't started the
-	# sim yet. See ivoyager/singletons/global.gd for more "state" signals.
-	pass
