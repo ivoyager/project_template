@@ -28,12 +28,12 @@ IVQConvert="*res://addons/ivoyager_units/qconvert.gd"
 IVQFormat="*res://addons/ivoyager_units/qformat.gd"
 IVTableData="*res://addons/ivoyager_tables/table_data.gd"
 IVSave="*res://addons/ivoyager_save/save.gd"
-IVGlobal="*res://addons/ivoyager_core/editor_plugin/../singletons/global.gd"
-IVCoreSettings="*res://addons/ivoyager_core/editor_plugin/../singletons/core_settings.gd"
-IVCoreInitializer="*res://addons/ivoyager_core/editor_plugin/../singletons/core_initializer.gd"
-IVSettingsManager="*res://addons/ivoyager_core/editor_plugin/../singletons/settings_manager.gd"
-IVStateManager="*res://addons/ivoyager_core/editor_plugin/../singletons/state_manager.gd"
-IVAstronomy="*res://addons/ivoyager_core/editor_plugin/../singletons/astronomy.gd"
+IVGlobal="*res://addons/ivoyager_core/editor/../singletons/global.gd"
+IVCoreSettings="*res://addons/ivoyager_core/editor/../singletons/core_settings.gd"
+IVCoreInitializer="*res://addons/ivoyager_core/editor/../singletons/core_initializer.gd"
+IVSettingsManager="*res://addons/ivoyager_core/editor/../singletons/settings_manager.gd"
+IVStateManager="*res://addons/ivoyager_core/editor/../singletons/state_manager.gd"
+IVAstronomy="*res://addons/ivoyager_core/editor/../singletons/astronomy.gd"
 
 [debug]
 
@@ -123,7 +123,7 @@ locale/translations=PackedStringArray("res://addons/ivoyager_units/text/units_nu
 [locale]
 
 test="en"
-translations=PackedStringArray("res://addons/ivoyager_core/data/text/entities_text.en.translation", "res://addons/ivoyager_core/data/text/gui_text.en.translation", "res://addons/ivoyager_core/data/text/long_text.en.translation")
+translations=PackedStringArray("res://addons/ivoyager_core/text/entities_text.en.translation", "res://addons/ivoyager_core/text/gui_text.en.translation", "res://addons/ivoyager_core/text/long_text.en.translation")
 
 [logging]
 
