@@ -28,12 +28,12 @@ IVQConvert="*res://addons/ivoyager_units/qconvert.gd"
 IVQFormat="*res://addons/ivoyager_units/qformat.gd"
 IVTableData="*res://addons/ivoyager_tables/table_data.gd"
 IVSave="*res://addons/ivoyager_save/save.gd"
+IVAstronomy="*res://addons/ivoyager_core/editor/../singletons/astronomy.gd"
 IVGlobal="*res://addons/ivoyager_core/editor/../singletons/global.gd"
 IVCoreSettings="*res://addons/ivoyager_core/editor/../singletons/core_settings.gd"
 IVCoreInitializer="*res://addons/ivoyager_core/editor/../singletons/core_initializer.gd"
 IVSettingsManager="*res://addons/ivoyager_core/editor/../singletons/settings_manager.gd"
 IVStateManager="*res://addons/ivoyager_core/editor/../singletons/state_manager.gd"
-IVAstronomy="*res://addons/ivoyager_core/editor/../singletons/astronomy.gd"
 
 [debug]
 
