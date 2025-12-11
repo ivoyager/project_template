@@ -47,7 +47,7 @@ func _init() -> void:
 	# change global init values
 	IVCoreSettings.use_threads = USE_THREADS
 	IVCoreSettings.wait_for_start = true
-	IVCoreSettings.start_time = 25.75 * IVUnits.YEAR # from J2000 epoch
+	IVCoreSettings.start_time_date_clock = [2026, 1, 1, 12, 0, 0]
 	
 	IVSettingsManager.set_default("pbd_splash_caption_open", false)
 	IVSettingsManager.set_default(&"save_base_name", "Template")
@@ -70,5 +70,5 @@ func _on_core_init_program_objects_instantiated() -> void:
 	#if OS.is_debug_build and VERBOSE_STATEMANAGER_SIGNALS:
 		#IVDebug.signal_verbosely_all(IVStateManager, "StateManager") # print all StateManager signal emits
 		
-	var timekeeper: IVTimekeeper = IVGlobal.program[&"Timekeeper"]
-	timekeeper.start_speed = 1
+	var speed_manager: IVSpeedManager = IVGlobal.program[&"SpeedManager"]
+	speed_manager.start_speed = 1
