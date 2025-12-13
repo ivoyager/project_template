@@ -1,6 +1,6 @@
 # Project Template
 
-Use this template to create a new game or app set in a realistic solar system.
+Use this template to create a new game or app set in a realistic (or not realistic) solar system.
 
 [Homepage](https://www.ivoyager.dev)  
 [Forum](https://github.com/orgs/ivoyager/discussions)  
@@ -32,7 +32,7 @@ For help, please ask questions at [our forum!](https://github.com/orgs/ivoyager/
 ### What is I, Voyager?
 I, Voyager is
 1. an open-source software planetarium 
-2. a development platform for creating games and educational apps in a realistic solar system.
+2. a development platform for creating games and educational apps in a realistic solar system (or not realistic if you want).
 
 It is designed to be improved, modified and extended by the community. I, Voyager runs on the open-source [Godot Engine](https://godotengine.org) and primarily uses Godot’s easy-to-learn [GDScript](http://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/gdscript_basics.html#doc-gdscript) (similar to Python). It can be extended into an independent free-standing project (a game or other software product) using GDScript, C# or C++.
 

@@ -2,4 +2,4 @@
 
 ## Creator and Lead Programmer
 
-    Charlie Whitifield
+	Charlie Whitifield
