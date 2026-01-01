@@ -53,6 +53,8 @@ mouse_filter = 2
 
 [node name="DateTimeLabel" parent="HBox/RightSideContent/TopVBox/TopHBox" instance=ExtResource("2")]
 layout_mode = 2
+show_speed = false
+show_pause = false
 
 [node name="Spacer2" type="Control" parent="HBox/RightSideContent/TopVBox/TopHBox"]
 layout_mode = 2

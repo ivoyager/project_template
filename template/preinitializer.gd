@@ -72,3 +72,23 @@ func _on_core_init_program_objects_instantiated() -> void:
 		
 	var speed_manager: IVSpeedManager = IVGlobal.program[&"SpeedManager"]
 	speed_manager.start_speed = 1
+	speed_manager.speeds = [
+		IVUnits.SECOND,
+		IVUnits.SECOND * 10,
+		IVUnits.SECOND * 100,
+		IVUnits.SECOND * 1e3,
+		IVUnits.SECOND * 1e4,
+		IVUnits.SECOND * 1e5,
+		IVUnits.SECOND * 1e6,
+		IVUnits.SECOND * 1e7,
+	]
+	speed_manager.speed_names = [
+		&"1x",
+		&"10x",
+		&"100x",
+		&"1000x",
+		&"10,000x",
+		&"100,000x",
+		&"1,000,000x",
+		&"10,000,000x",
+	]
