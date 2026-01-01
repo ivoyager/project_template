@@ -11,8 +11,9 @@ See cloning and downloading instructions [here](https://www.ivoyager.dev/develop
 Under development using Godot 4.5.1. We'll be moving on to 4.6 betas soon! Everything looked ok in a brief test.
 
 ### Changed
+* Added template game speeds in preinitializer.gd.
 * Removed unneeded/unmaintained website text in README.md.
-* Updated plugin ivoyager_core to v0.1.1.dev.
+* Updating plugin ivoyager_core to follow v0.1.1.dev.
 
 ## [v0.1] - 2025-12-13
 
