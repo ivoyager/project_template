@@ -92,7 +92,7 @@ unique_name_in_owner = true
 visible = false
 layout_mode = 2
 text = "
-(c) 2017-2025
+(c) 2019-2026
 Charlie Whitfield"
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer"]
