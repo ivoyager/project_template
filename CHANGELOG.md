@@ -6,20 +6,23 @@ File format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 See cloning and downloading instructions [here](https://www.ivoyager.dev/developers/).
 
-## [v0.1.1] - UNRELEASED
+## [v0.1.1] - 2026-02-09
 
-Under development using Godot 4.5.1. We'll be moving on to 4.6 betas soon! Everything looked ok in a brief test.
+Released using Godot 4.6.
 
 ### Changed
 * Added template game speeds in preinitializer.gd.
 * Removed unneeded/unmaintained website text in README.md.
-* Updating plugin ivoyager_core to follow v0.1.1.dev.
+* Updated plugin ivoyager_core to v0.1.1.
+* Updated plugin ivoyager_tables to v0.1.1.
+* Updated plugin ivoyager_units to v0.1.1.
+* Updated plugin ivoyager_save to v0.1.1.
 
 ## [v0.1] - 2025-12-13
 
 Beta release!
 
-Developed using Godot 4.5.1.
+Released using Godot 4.5.1.
 
 ### Changed
 * Updated GUI for new Core plugin widgets.
@@ -32,7 +35,7 @@ Developed using Godot 4.5.1.
 
 ## [v0.0.25] - 2025-06-12
 
-Developed using Godot 4.4.1.
+Released using Godot 4.4.1.
 
 ### Changed
 * Updated plugin ivoyager_core to v0.0.25.
@@ -42,7 +45,7 @@ Developed using Godot 4.4.1.
 
 ## [v0.0.24] - 2025-03-31
 
-Developed using Godot 4.4.
+Released using Godot 4.4.
 
 ### Added
 * IVUnits replacement singleton (from Planetarium) with scale change to support shadows.
@@ -55,7 +58,7 @@ Developed using Godot 4.4.
 
 ## [v0.0.23] - 2025-03-20
 
-Developed using Godot 4.4.
+Released using Godot 4.4.
 
 ### Changed
 
@@ -68,7 +71,7 @@ Developed using Godot 4.4.
 
 ## [v0.0.22] - 2025-03-07
 
-Developed using Godot 4.3. **We will update to 4.4 in the next release!**
+Released using Godot 4.3. **We will update to 4.4 in the next release!**
 
 ### Changed
 * Updated plugin ivoyager_core to v0.0.22.
@@ -76,7 +79,7 @@ Developed using Godot 4.3. **We will update to 4.4 in the next release!**
 
 ## [v0.0.21] - 2025-01-07
 
-Developed using Godot 4.3.
+Released using Godot 4.3.
 
 ### Changed
 * Updated plugin 'ivoyager_core' to v0.0.21.
@@ -84,7 +87,7 @@ Developed using Godot 4.3.
 
 ## [v0.0.20] - 2024-12-20
 
-Developed using Godot 4.3.
+Released using Godot 4.3.
 
 ### Changed
 * Updated plugin 'ivoyager_core' to v0.0.20.
@@ -92,7 +95,7 @@ Developed using Godot 4.3.
 
 ## [v0.0.19] - 2024-12-16
 
-Developed using Godot 4.3.
+Released using Godot 4.3.
 
 ### Changed
 * Updated plugin 'ivoyager_core' to v0.0.19.
@@ -101,7 +104,7 @@ Developed using Godot 4.3.
 
 ## [v0.0.18] - 2024-03-15
 
-Developed using Godot 4.2.1. _Has backward breaking changes!_
+Released using Godot 4.2.1. _Has backward breaking changes!_
 
 **NEW!** ivoyager_core editor plugin will download and add (or replace) assets for you. Just press 'Download' if prompted.
 
@@ -115,7 +118,7 @@ Developed using Godot 4.2.1. _Has backward breaking changes!_
 
 ## [v0.0.17] - 2023-10-03
 
-Developed for Godot 4.1.1.
+Released using Godot 4.1.1.
 
 Requires non-Git-tracked **ivoyager_assets-0.0.17**. Download from ivoyager_core [releases](https://github.com/ivoyager/ivoyager_core/releases) and add as res://addons/ivoyager_assets.
 
@@ -128,7 +131,7 @@ Requires non-Git-tracked **ivoyager_assets-0.0.17**. Download from ivoyager_core
 
 **We've migrated to Godot 4!**
 
-Developed for Godot 4.1.1.
+Released using Godot 4.1.1.
 
 Requires non-Git-tracked **ivoyager_assets-0.0.16**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
 
@@ -140,7 +143,7 @@ Requires non-Git-tracked **ivoyager_assets-0.0.16**; find in [ivoyager releases]
 
 ## [v0.0.15] - 2023-07-24
 
-Developed for Godot 3.5.2. **This is the final release using Godot 3.x!**
+Released using Godot 3.5.2. **This is the final release using Godot 3.x!**
 
 Requires non-Git-tracked **ivoyager_assets-0.0.14**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
 
@@ -149,7 +152,7 @@ Requires non-Git-tracked **ivoyager_assets-0.0.14**; find in [ivoyager releases]
 
 ## [v0.0.14] - 2023-03-15
 
-Developed for Godot 3.5.2.
+Released using Godot 3.5.2.
 
 Requires non-Git-tracked **ivoyager_assets-0.0.14**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
 
@@ -159,7 +162,7 @@ Requires non-Git-tracked **ivoyager_assets-0.0.14**; find in [ivoyager releases]
 
 ## [v0.0.13] - 2022-09-28
 
-Developed for Godot 3.5.1.
+Released using Godot 3.5.1.
 
 Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
 
@@ -168,7 +171,7 @@ Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases]
 
 ## [v0.0.12] - 2022-01-20
 
-Developed using Godot 3.4.2.stable.
+Released using Godot 3.4.2.stable.
 
 Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
 
@@ -177,7 +180,7 @@ Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases]
 
 ## [v0.0.11] - 2022-01-19
 
-Developed using Godot 3.4.2.stable.
+Released using Godot 3.4.2.stable.
 
 Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
 
@@ -192,7 +195,7 @@ Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases]
 
 ## [v0.0.10] - 2022-01-09
 
-Developed using Godot 3.4.2.stable.
+Released using Godot 3.4.2.stable.
 
 Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
 
@@ -203,7 +206,7 @@ Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases]
 * Updated submodule 'ivoyager' to v0.0.10.
 
 
-[v0.1.1]: https://github.com/ivoyager/project_template/compare/v0.1...HEAD
+[v0.1.1]: https://github.com/ivoyager/project_template/compare/v0.1...v0.1.1
 [v0.1]: https://github.com/ivoyager/project_template/compare/v0.0.25...v0.1
 [v0.0.25]: https://github.com/ivoyager/project_template/compare/v0.0.24...v0.0.25
 [v0.0.24]: https://github.com/ivoyager/project_template/compare/v0.0.23...v0.0.24

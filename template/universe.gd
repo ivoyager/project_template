@@ -40,4 +40,4 @@ extends Node3D
 ## [url=https://github.com/ivoyager/ivoyager_save]Save plugin[/url] is used.
 ## Nodes have persistence only if they and all ancestors have this constant set
 ## to PERSIST_PROPERTIES_ONLY or PERSIST_PROCEDURAL.
-const PERSIST_MODE := IVGlobal.PERSIST_PROPERTIES_ONLY # Godot ISSUE 4.5.1: Class doc broken! 
+const PERSIST_MODE := IVGlobal.PERSIST_PROPERTIES_ONLY # Godot ISSUE 4.5.1: Class doc doesn't show. 
