@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bj163rx3xqq7x"]
+[gd_scene format=3 uid="uid://bj163rx3xqq7x"]
 
 [ext_resource type="Script" uid="uid://do4tlylce2vud" path="res://template/universe.gd" id="1_34662"]
 [ext_resource type="PackedScene" uid="uid://b15j2rbaf1c4j" path="res://addons/ivoyager_core/tree/world_environment.tscn" id="2_lsu7o"]
@@ -26,29 +26,29 @@
 [ext_resource type="PackedScene" uid="uid://8vqmd07h6kmk" path="res://addons/ivoyager_save/gui/load_dialog.tscn" id="17_omp5a"]
 [ext_resource type="PackedScene" uid="uid://c5afahau0g63j" path="res://addons/ivoyager_save/gui/save_dialog.tscn" id="18_u5moa"]
 
-[node name="Universe" type="Node3D"]
+[node name="Universe" type="Node3D" unique_id=1680779284]
 process_mode = 3
 script = ExtResource("1_34662")
 
-[node name="WorldEnvironment" parent="." instance=ExtResource("2_lsu7o")]
+[node name="WorldEnvironment" parent="." unique_id=153172909 instance=ExtResource("2_lsu7o")]
 
-[node name="FragmentIdentifier" parent="." instance=ExtResource("2_qusnu")]
+[node name="FragmentIdentifier" parent="." unique_id=1536322255 instance=ExtResource("2_qusnu")]
 
-[node name="TopUI" parent="." instance=ExtResource("3_7k3ls")]
+[node name="TopUI" parent="." unique_id=982918464 instance=ExtResource("3_7k3ls")]
 mouse_filter = 1
 
-[node name="WorldController" parent="TopUI" instance=ExtResource("4_jadw6")]
+[node name="WorldController" parent="TopUI" unique_id=2000532265 instance=ExtResource("4_jadw6")]
 layout_mode = 1
 
-[node name="MouseTargetLabel" parent="TopUI" instance=ExtResource("5_uvxtl")]
+[node name="MouseTargetLabel" parent="TopUI" unique_id=679582270 instance=ExtResource("5_uvxtl")]
 layout_mode = 0
 offset_right = 1.0
 offset_bottom = 23.0
 
-[node name="ShowHideGUI" parent="TopUI" instance=ExtResource("6_iwlsa")]
+[node name="ShowHideGUI" parent="TopUI" unique_id=1857668986 instance=ExtResource("6_iwlsa")]
 layout_mode = 1
 
-[node name="NavigationPanel" parent="TopUI/ShowHideGUI" instance=ExtResource("7_bgcqk")]
+[node name="NavigationPanel" parent="TopUI/ShowHideGUI" unique_id=95833219 instance=ExtResource("7_bgcqk")]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -57,7 +57,7 @@ offset_top = -59.0
 offset_bottom = 0.0
 grow_vertical = 0
 
-[node name="SelectionPanel" parent="TopUI/ShowHideGUI" instance=ExtResource("8_lsu7o")]
+[node name="SelectionPanel" parent="TopUI/ShowHideGUI" unique_id=1348198947 instance=ExtResource("8_lsu7o")]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -71,73 +71,73 @@ offset_bottom = 0.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="PBDSplashScreen" parent="TopUI" instance=ExtResource("7_afbtk")]
+[node name="PBDSplashScreen" parent="TopUI" unique_id=267160173 instance=ExtResource("7_afbtk")]
 layout_mode = 1
 
-[node name="MainMenuBasePopup" parent="TopUI" instance=ExtResource("7_sqq5a")]
+[node name="MainMenuBasePopup" parent="TopUI" unique_id=1207736109 instance=ExtResource("7_sqq5a")]
 size = Vector2i(182, 100)
 focus_path = NodePath("QuicksaveButton")
 
-[node name="QuicksaveButton" parent="TopUI/MainMenuBasePopup" instance=ExtResource("8_k7n7j")]
+[node name="QuicksaveButton" parent="TopUI/MainMenuBasePopup" unique_id=794296817 instance=ExtResource("8_k7n7j")]
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 178.0
 offset_bottom = 96.0
 
-[node name="SaveAsButton" parent="TopUI/MainMenuBasePopup" instance=ExtResource("9_afbtk")]
+[node name="SaveAsButton" parent="TopUI/MainMenuBasePopup" unique_id=102153888 instance=ExtResource("9_afbtk")]
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 178.0
 offset_bottom = 96.0
 
-[node name="QuickloadButton" parent="TopUI/MainMenuBasePopup" instance=ExtResource("10_j036s")]
+[node name="QuickloadButton" parent="TopUI/MainMenuBasePopup" unique_id=560146872 instance=ExtResource("10_j036s")]
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 178.0
 offset_bottom = 96.0
 
-[node name="LoadButton" parent="TopUI/MainMenuBasePopup" instance=ExtResource("11_bgcqk")]
+[node name="LoadButton" parent="TopUI/MainMenuBasePopup" unique_id=1412298977 instance=ExtResource("11_bgcqk")]
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 178.0
 offset_bottom = 96.0
 
-[node name="OptionsButton" parent="TopUI/MainMenuBasePopup" instance=ExtResource("8_ch3t3")]
+[node name="OptionsButton" parent="TopUI/MainMenuBasePopup" unique_id=1146248304 instance=ExtResource("8_ch3t3")]
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 178.0
 offset_bottom = 96.0
 
-[node name="HotkeysButton" parent="TopUI/MainMenuBasePopup" instance=ExtResource("9_utg11")]
+[node name="HotkeysButton" parent="TopUI/MainMenuBasePopup" unique_id=1509537147 instance=ExtResource("9_utg11")]
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 178.0
 offset_bottom = 96.0
 
-[node name="ExitButton" parent="TopUI/MainMenuBasePopup" instance=ExtResource("14_lsu7o")]
+[node name="ExitButton" parent="TopUI/MainMenuBasePopup" unique_id=579245829 instance=ExtResource("14_lsu7o")]
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 178.0
 offset_bottom = 96.0
 
-[node name="QuitButton" parent="TopUI/MainMenuBasePopup" instance=ExtResource("10_b7q8g")]
+[node name="QuitButton" parent="TopUI/MainMenuBasePopup" unique_id=994835322 instance=ExtResource("10_b7q8g")]
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 178.0
 offset_bottom = 96.0
 
-[node name="ResumeButton" parent="TopUI/MainMenuBasePopup" instance=ExtResource("11_7udys")]
+[node name="ResumeButton" parent="TopUI/MainMenuBasePopup" unique_id=422909626 instance=ExtResource("11_7udys")]
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 178.0
 offset_bottom = 96.0
 
-[node name="LoadDialog" parent="TopUI" instance=ExtResource("17_omp5a")]
+[node name="LoadDialog" parent="TopUI" unique_id=218126053 instance=ExtResource("17_omp5a")]
 
-[node name="SaveDialog" parent="TopUI" instance=ExtResource("18_u5moa")]
+[node name="SaveDialog" parent="TopUI" unique_id=67322322 instance=ExtResource("18_u5moa")]
 
-[node name="OptionsPopup" parent="TopUI" instance=ExtResource("12_r8n0p")]
+[node name="OptionsPopup" parent="TopUI" unique_id=1036101610 instance=ExtResource("12_r8n0p")]
 
-[node name="HotkeysPopup" parent="TopUI" instance=ExtResource("13_xb4om")]
+[node name="HotkeysPopup" parent="TopUI" unique_id=897101042 instance=ExtResource("13_xb4om")]
 
-[node name="ConfirmationDialog" parent="TopUI" instance=ExtResource("14_r1tsy")]
+[node name="ConfirmationDialog" parent="TopUI" unique_id=292454186 instance=ExtResource("14_r1tsy")]
