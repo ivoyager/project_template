@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="I, Voyager - Project Template"
-config/version="0.1.1"
+config/version="0.1.2.dev"
 run/main_scene="uid://bj163rx3xqq7x"
 config/features=PackedStringArray("4.6")
 boot_splash/bg_color=Color(0, 0, 0, 1)
