@@ -75,6 +75,7 @@ grow_vertical = 0
 layout_mode = 1
 
 [node name="MainMenuBasePopup" parent="TopUI" unique_id=1207736109 instance=ExtResource("7_sqq5a")]
+position = Vector2i(0, 0)
 size = Vector2i(182, 100)
 focus_path = NodePath("QuicksaveButton")
 
