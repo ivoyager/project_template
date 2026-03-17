@@ -6,6 +6,16 @@ File format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 See cloning and downloading instructions [here](https://www.ivoyager.dev/developers/).
 
+
+## [v0.1.2] - UNRELEASED
+
+Under development using Godot 4.6.1.
+
+### Changed
+* Updated plugin ivoyager_core to v0.1.2.dev.
+* Updated plugin ivoyager_tables to v0.1.2.dev.
+
+
 ## [v0.1.1] - 2026-02-09
 
 Released using Godot 4.6.
@@ -206,6 +216,7 @@ Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases]
 * Updated submodule 'ivoyager' to v0.0.10.
 
 
+[v0.1.2]: https://github.com/ivoyager/project_template/compare/v0.1.1...HEAD
 [v0.1.1]: https://github.com/ivoyager/project_template/compare/v0.1...v0.1.1
 [v0.1]: https://github.com/ivoyager/project_template/compare/v0.0.25...v0.1
 [v0.0.25]: https://github.com/ivoyager/project_template/compare/v0.0.24...v0.0.25
