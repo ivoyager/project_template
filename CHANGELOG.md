@@ -9,11 +9,16 @@ See cloning and downloading instructions [here](https://www.ivoyager.dev/develop
 
 ## [v0.1.2] - UNRELEASED
 
-Under development using Godot 4.6.1.
+Under development using Godot 4.6.2.
+
+### Added
+* Plugin ivoyager_assistant v0.0.1.dev. Under development to allow AI tests and (eventually) AI assistance for accessibility (e.g., voice navigation).
 
 ### Changed
-* Updated plugin ivoyager_core to v0.1.2.dev.
-* Updated plugin ivoyager_tables to v0.1.2.dev.
+* Updated plugin ivoyager_core to v0.1.2.dev
+* Updated plugin ivoyager_tables to v0.1.2.dev
+* Updated plugin ivoyager_units to v0.1.2.dev
+* Updated plugin ivoyager_save to v0.1.2.dev
 
 
 ## [v0.1.1] - 2026-02-09
