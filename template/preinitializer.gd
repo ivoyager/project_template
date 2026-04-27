@@ -19,10 +19,12 @@
 # *****************************************************************************
 extends RefCounted
 
-# This file is specified for instantiation in res://ivoyager_override.cfg.
-# We can use this file to modify base IVCoreSettings, IVCoreInitializer, and
-# instantiated program objects. (As an alternative, all IVCoreSettings and
-# IVCoreInitializer changes could be done in res://ivoyager_override.cfg.)
+## Project preinitializer instantiated via [code]res://ivoyager_override.cfg[/code].
+##
+## Used to modify base [IVCoreSettings], [IVCoreInitializer], and instantiated
+## program objects before the scene tree is built. (As an alternative, all
+## [IVCoreSettings] and [IVCoreInitializer] changes could be done in
+## [code]res://ivoyager_override.cfg[/code].)
 
 const PROJECT_NAME := "Project Template (Replace Me!)"
 
