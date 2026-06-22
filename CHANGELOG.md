@@ -9,7 +9,7 @@ See cloning and downloading instructions [here](https://www.ivoyager.dev/develop
 
 ## [v0.1.2] - UNRELEASED
 
-Under development using Godot 4.6.2.
+Under development using Godot 4.7.
 
 ### Added
 * Plugin ivoyager_assistant v0.0.1.dev. Under development to allow AI tests and (eventually) AI assistance for accessibility (e.g., voice navigation).
