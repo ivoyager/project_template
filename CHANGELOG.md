@@ -7,19 +7,19 @@ File format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 See cloning and downloading instructions [here](https://www.ivoyager.dev/developers/).
 
 
-## [v0.1.2] - UNRELEASED
+## [v0.1.2] - 2026-06-29
 
-Under development using Godot 4.7.
+Released using Godot 4.6.
 
 ### Added
-* Plugin ivoyager_assistant v0.0.1.dev. Under development to allow AI tests and (eventually) AI assistance for accessibility (e.g., voice navigation).
+* Plugin ivoyager_assistant v0.0.1. Under development to allow AI tests and (eventually) AI assistance for accessibility (e.g., voice navigation).
 
 ### Changed
 * Removed IVFragmentIdentifier from scene tree. (New system in Core.)
-* Updated plugin ivoyager_core to v0.1.2.dev
-* Updated plugin ivoyager_tables to v0.1.2.dev
-* Updated plugin ivoyager_units to v0.1.2.dev
-* Updated plugin ivoyager_save to v0.1.2.dev
+* Updated plugin ivoyager_core to v0.1.2
+* Updated plugin ivoyager_tables to v0.1.2
+* Updated plugin ivoyager_units to v0.1.2
+* Updated plugin ivoyager_save to v0.1.2
 * Completed doc comments in all files.
 
 
@@ -223,7 +223,7 @@ Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases]
 * Updated submodule 'ivoyager' to v0.0.10.
 
 
-[v0.1.2]: https://github.com/ivoyager/project_template/compare/v0.1.1...HEAD
+[v0.1.2]: https://github.com/ivoyager/project_template/compare/v0.1.1...v0.1.2
 [v0.1.1]: https://github.com/ivoyager/project_template/compare/v0.1...v0.1.1
 [v0.1]: https://github.com/ivoyager/project_template/compare/v0.0.25...v0.1
 [v0.0.25]: https://github.com/ivoyager/project_template/compare/v0.0.24...v0.0.25
