@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://bq5sg1c26wm60" path="res://addons/ivoyager_core/ui/confirmation_dialog.tscn" id="14_r1tsy"]
 [ext_resource type="PackedScene" uid="uid://8vqmd07h6kmk" path="res://addons/ivoyager_save/gui/load_dialog.tscn" id="17_omp5a"]
 [ext_resource type="PackedScene" uid="uid://c5afahau0g63j" path="res://addons/ivoyager_save/gui/save_dialog.tscn" id="18_u5moa"]
+[ext_resource type="PackedScene" uid="uid://bgmsnatpv0h5g" path="res://addons/ivoyager_core/ui/screenshot_dialog.tscn" id="26_omp5a"]
 
 [node name="Universe" type="Node3D" unique_id=1680779284]
 process_mode = 3
@@ -142,3 +143,5 @@ offset_bottom = 96.0
 [node name="HotkeysPopup" parent="TopUI" unique_id=897101042 instance=ExtResource("13_xb4om")]
 
 [node name="ConfirmationDialog" parent="TopUI" unique_id=292454186 instance=ExtResource("14_r1tsy")]
+
+[node name="ScreenshotDialog" parent="TopUI" unique_id=1000173049 instance=ExtResource("26_omp5a")]
