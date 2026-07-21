@@ -4,7 +4,7 @@ This document is an incomplete list of contributions to I, Voyager that are not 
 
 See list of direct contributors ("authors") [here](https://github.com/ivoyager/ivoyager_core/blob/master/AUTHORS.md).
 
-See 3rd-party copyright and licence information [here](https://github.com/ivoyager/ivoyager_core/blob/master/3RD_PARTY.md).
+See 3rd-party copyright and licence information [here](https://github.com/ivoyager/asset_downloads/blob/master/3RD_PARTY.md).
 
 ---
 
@@ -17,6 +17,8 @@ See 3rd-party copyright and licence information [here](https://github.com/ivoyag
 **[NASA, JPL Solar System Dynamics](https://ssd.jpl.nasa.gov/)** - Source data for large body orbits.
 
 **[Asteroids Dynamic Site](https://newton.spacedys.com/astdys)** - Source data for asteroid proper orbits.
+
+**[ESA, Hipparcos Catalogue](https://www.cosmos.esa.int/web/hipparcos)** - Source data for stars.
 
 **[Björn Jónsson](https://bjj.mmedia.is)** - Source data used to generate shader samplers for Saturn's rings ([here](https://bjj.mmedia.is/data/s_rings/index.html)).
 
