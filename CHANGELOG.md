@@ -11,6 +11,9 @@ See cloning and downloading instructions [here](https://www.ivoyager.dev/develop
 
 Under development using Godot 4.7.
 
+### Added
+* Added IVOYAGER_WORKS.md. (Synchronized with 3RD_PARTY.md and CREDITS.md in other repositories.)
+
 ### Changed
 * Added IVStarsVisual to scene tree (required by Core plugin changes).
 * Added IVScreenshotDialog to scene tree (required by Core plugin changes).
