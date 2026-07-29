@@ -15,6 +15,7 @@ Under development using Godot 4.7.
 * Added IVOYAGER_WORKS.md. (Synchronized with 3RD_PARTY.md and CREDITS.md in other repositories.)
 
 ### Changed
+* Sync 3RD_PARTY.md and IVOYAGER_WORKS.md with assets and Core submodule.
 * Added IVStarsVisual to scene tree (required by Core plugin changes).
 * Added IVScreenshotDialog to scene tree (required by Core plugin changes).
 * Set METER := 1.0 (was 1e-3). Core plugin changes cured the scale sensitivity that forced the smaller value.
