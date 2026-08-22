@@ -24,7 +24,7 @@ After above steps, your addons directory will contain three subdirectories: `ivo
 
 You can disable and remove the Save plugin if your application does not need game save functionality.
 
-Authors, credits, and legal files in the project directory (AUTHORS.md, CREDITS.md, LICENCE.txt, 3RD_PARTY.md) are copied from the Core plugin (addons/ivoyager_core/). You should replace or delete these in your new project directory (it's your project and we're not authors!), but don't alter or delete these files in the plugin. Please do give us credit in your project!
+Authors, credits, and legal files in the project directory (AUTHORS.md, CREDITS.md, LICENSE.txt, 3RD_PARTY.md, IVOYAGER_ASSETS.md) are copied from the Core plugin (addons/ivoyager_core/). You should replace or delete these in your new project directory (it's your project and we're not authors!), but don't alter or delete these files in the plugin. Please do give us credit in your project!
 
 ![](https://www.ivoyager.dev/wp-content/uploads/2025/12/template-gui-0.1.jpg)
 It's not a "game" but you can move the camera around the solar system. The template GUI was thrown together rather quickly (literally in minutes) using widgets from [a large set of 47](https://github.com/ivoyager/ivoyager_core/tree/master/ui_widgets) developed for the [Planetarium](https://www.ivoyager.dev/planetarium/). The Project Template also has a template splash screen, a main menu, options & hotkeys popups, and save/load functionality with dialogs.

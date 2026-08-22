@@ -50,6 +50,7 @@ func _init() -> void:
 	IVCoreSettings.use_threads = USE_THREADS
 	IVCoreSettings.wait_for_start = true
 	IVCoreSettings.start_time_date_clock = [2026, 1, 1, 12, 0, 0]
+	IVCoreSettings.enable_physical_light = true
 	
 	IVSettingsManager.set_default("pbd_splash_caption_open", false)
 	IVSettingsManager.set_default(&"save_base_name", "Template")

@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="I, Voyager - Project Template"
-config/version="0.2"
+config/version="0.2.1.dev"
 run/main_scene="uid://bj163rx3xqq7x"
 config/features=PackedStringArray("4.7")
 boot_splash/bg_color=Color(0, 0, 0, 1)
@@ -167,4 +167,20 @@ iv_farwarp_start={
 iv_reference_viewport_height={
 "type": "float",
 "value": 1080.0
+}
+iv_exposure={
+"type": "float",
+"value": 1.0
+}
+iv_emission_energy_scale={
+"type": "float",
+"value": 1.0
+}
+iv_emission_luminance_scale={
+"type": "float",
+"value": 0.0
+}
+iv_limb_scale={
+"type": "float",
+"value": 1.0
 }
