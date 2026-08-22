@@ -7,6 +7,14 @@ File format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 See cloning and downloading instructions [here](https://www.ivoyager.dev/developers/).
 
 
+## [v0.2.1] - UNRELEASED
+
+Under development using Godot 4.7.1.
+
+### Changed
+* Attribution docs restructured: `IVOYAGER_WORKS.md` is retired and replaced by `IVOYAGER_ASSETS.md`, which documents every distributed asset individually with its own copyright and license; `3RD_PARTY.md` becomes a clean list by copyright holder. README.md updated to match.
+
+
 ## [v0.2] - 2026-08-01
 
 Released using Godot 4.7.1.
