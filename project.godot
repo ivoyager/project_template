@@ -184,3 +184,7 @@ iv_limb_scale={
 "type": "float",
 "value": 1.0
 }
+iv_display_encode={
+"type": "float",
+"value": 0.0
+}
