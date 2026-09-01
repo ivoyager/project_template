@@ -12,11 +12,12 @@ See cloning and downloading instructions [here](https://www.ivoyager.dev/develop
 Under development using Godot 4.7.2.
 
 ### Added
-* Enabled the Core plugin's new physical-light system (`IVCoreSettings.enable_physical_light`): physically calibrated sunlight, sky and ambient with a software compensating camera. A "Physical Light" row appears in Options (default on). Registered the required `iv_exposure` shader global in project.godot.
+* Enabled the Core plugin's new physical-light system (`IVCoreSettings.enable_physical_light`): physically calibrated sunlight, sky and ambient with a software compensating camera. A "Physical Light" row appears in Options (default on).
 
 ### Changed
 * Attribution docs restructured: `IVOYAGER_WORKS.md` is retired and replaced by `IVOYAGER_ASSETS.md`, which documents every distributed asset individually with its own copyright and license; `3RD_PARTY.md` becomes a clean list by copyright holder. README.md updated to match.
 * [Dev ongoing] Updating plugin ivoyager_core with v0.2.1.dev.
+* [Dev ongoing] Updating plugin ivoyager_tables with v0.2.1.dev.
 * [Dev ongoing] Updating plugin ivoyager_assistant with v0.0.3.dev.
 
 
