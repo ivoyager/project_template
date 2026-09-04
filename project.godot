@@ -188,3 +188,7 @@ iv_display_encode={
 "type": "float",
 "value": 0.0
 }
+iv_psf_sigma={
+"type": "float",
+"value": 0.5
+}
