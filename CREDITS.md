@@ -18,13 +18,17 @@ See 3rd-party copyright and license information in [3RD_PARTY.md](3RD_PARTY.md),
 
 **[Asteroids Dynamic Site](https://newton.spacedys.com/astdys)** - Source data for asteroid proper orbits.
 
-**[ESA, Hipparcos Catalogue](https://www.cosmos.esa.int/web/hipparcos)** - Source data for stars (ESA, 1997; ESA SP-1200) - positions, magnitudes and B-V colors - converted to binaries and displayed by shader code.
+**[NASA, JPL Small-Body Database](https://ssd.jpl.nasa.gov/tools/sbdb_query.html)** - Source data for asteroid names and discovery designations.
+
+**[ESA, Hipparcos Catalogue](https://www.cosmos.esa.int/web/hipparcos)** - Source data for stars (ESA, 1997; ESA SP-1200) - positions, magnitudes, B-V colors and parallaxes - converted to binaries and displayed by shader code.
+
+**[ESA, Tycho-2 Catalogue](https://www.cosmos.esa.int/web/hipparcos/tycho-2)** - Source data for stars (Høg et al. 2000, A&A 355, L27) - positions and BT/VT photometry for the 2.43 million stars beyond the Hipparcos catalog - converted to binaries and displayed by shader code.
 
 **[Natural Earth](https://www.naturalearthdata.com)** - Public-domain 1:10m ocean and lake polygons: the water mask behind Earth's roughness (Sun-glint) map. Made with Natural Earth.
 
 **[Björn Jónsson](https://bjj.mmedia.is)** - For *many* world maps (see [3RD_PARTY.md](3RD_PARTY.md)) and helpful guidance that we used to build our own. We used Jónsson's ring light data ([here](https://bjj.mmedia.is/data/s_rings/index.html)) for our shader-rendered Saturn rings.
 
-**Published photometry used as color and brightness references** - Measurements that decide what our maps look like without ever becoming a distributed file: Karkoschka (2001) for the Uranian moons' geometric albedos; Mallama, Krobusek & Pavlov (2017) for Mars; Irwin et al. (2024) for the true colors of Uranus and Neptune; Villanueva et al. (2025) for Venus' cloud reflectance; Hillier et al. (1994) for Triton's surface normal reflectance; Olkin et al. (2017) for the global color of Pluto, alongside NASA/Johns Hopkins APL/Southwest Research Institute/Alex Parker's refined-calibration natural-color view of it; Cartwright et al., *Optical Spectra of the Large Uranian Moons* (Zenodo, doi:10.5281/zenodo.18745327, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)) for the tints of Ariel, Umbriel, Titania and Oberon; Mayorga et al. (2021) for Europa; Nelson et al. (1990) for Triton's inter-filter calibration; Fernando et al. (2024) for Phobos and Deimos; and Buratti et al. (2017) for Pluto's reflectance range.
+**Published photometry used as color and brightness references** - Measurements that decide what our maps look like without ever becoming a distributed file: Karkoschka (2001) for the Uranian moons' geometric albedos; Mallama, Krobusek & Pavlov (2017) for Mars and for how red Saturn's rings are overall, whose five-band magnitude model separates the ring system's light from the globe's; Irwin et al. (2024) for the true colors of Uranus and Neptune; Villanueva et al. (2025) for Venus' cloud reflectance; Hillier et al. (1994) for Triton's surface normal reflectance; Olkin et al. (2017) for the global color of Pluto, alongside NASA/Johns Hopkins APL/Southwest Research Institute/Alex Parker's refined-calibration natural-color view of it; Cartwright et al., *Optical Spectra of the Large Uranian Moons* (Zenodo, doi:10.5281/zenodo.18745327, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)) for the tints of Ariel, Umbriel, Titania and Oberon; Mayorga et al. (2021) for Europa; Nelson et al. (1990) for Triton's inter-filter calibration; Fernando et al. (2024) for Phobos and Deimos; and Buratti et al. (2017) for Pluto's reflectance range.
 
 **[Grant Sanderson, "3Blue1Brown"](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)** - Helping us *understand* the math.
 

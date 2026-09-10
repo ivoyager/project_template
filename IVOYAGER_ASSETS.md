@@ -550,17 +550,55 @@ map's bright tail runs out of headroom. Rides a custom mesh.
 
 ## Cloud and emission overlays
 
-### Earth clouds — `/cubemaps/Earth.clouds.albedo.512.png`
+### Earth clouds — `/cubemaps/Earth.clouds.albedo.2048.png`
 
-The Blue Marble 2002 combined cloud product from the NASA Earth Observatory (image by Reto
-Stöckli), carried as a translucent shell above the surface map. Reprojected, and split by us
-into the two quantities a translucent shell needs: the source's single greyscale channel is
-read as the deck's reflectance and separated into an opacity (alpha) and a cloud reflectance
-(rgb) by the standard conservative two-stream relation, so that an overcast texel is opaque
-rather than partly transparent. The split leaves the deck's own brightness unchanged, texel
-for texel; what it changes is how much of the surface shows through it.
+Satellite cloud retrievals for 2019 September 23 and 24, carried as a translucent shell above
+the surface map. The shell's two channels are the two independent quantities a translucent deck
+needs, and both are measured rather than assumed. Alpha is MODIS's own cloud FRACTION — the
+share of each 5 km box that its cloud mask calls cloudy, Terra everywhere it looked and Aqua
+in the lens-shaped gaps between Terra's equatorial swaths, together 99 % of the globe. Rgb is
+the reflectance of the cloud that is there, from retrieved cloud OPTICAL THICKNESS through the
+standard conservative two-stream relation at a reference incidence of 60°, with ice and water
+clouds taking their own scattering asymmetry. Keeping the two apart is what lets a texel half
+covered by opaque cloud behave differently from one wholly covered by thin cloud, which they do
+at every sun angle: the first passes full sunlight through its clear part and the second dims
+it.
 
-- **Third-party:** the imagery — Public Domain (NASA Earth Observatory).
+Optical thickness is retrieved only where the mask calls a 1 km pixel confidently overcast, so
+no one satellite has much of it. Four contribute: MODIS on Terra and Aqua, and VIIRS on Suomi
+NPP and NOAA-20, whose wider swath leaves no equatorial gap. Averaged, they reach 82 % of the
+cloudy area, and each platform's own granule-to-granule differences average down with them.
+The thickness channel is then carried as a regional field with the retrieved detail riding on
+top of it, faded out over about 25 km wherever the retrieval thins — so what is measured is
+shown at full detail, what is not takes its surroundings' level, and there is no boundary
+between the two. An equinox date holds the region that gets no daylight retrieval at all to
+about 1 % of the sphere, at the two poles.
+
+Cloud fraction is reported over 5 km boxes, and a 5 km box is 5 km only directly beneath the
+satellite: the scan stretches it to some 24 by 10 km at the edge of the swath, so the coverage
+channel resolves about 10 km of ground where the map's own texel is 4.9 km, and the boxes
+arrive as a mosaic lying in the satellite's frame rather than the map's. The box edges carry no
+information and are dissolved, and the texel-scale structure they cannot hold is taken from
+three further products of the same overpass, each of which sees cloud where the others cannot:
+corrected-reflectance true colour at 250 m, band 31 brightness temperature at 1 km, and the
+optical-thickness retrieval's own footprint. They are combined at weights solved separately in
+each region against the cloud fraction itself, so a product contributes only where it really
+does predict it — the reflectance over ocean and forest, the thermal band over desert, the
+retrieval over ice, and none of them where there is no cloud to see. Together they account for
+29 % of the structure the fraction still resolves; what is left is filled with a fractal field
+carrying the fraction's own measured statistics, and the local mean is restored afterward, so
+the coverage the retrieval actually reported is unchanged and only the structure inside a box
+is new.
+
+An instrument in a sun-synchronous orbit passes over every place at the same local time of day,
+so going once around the world its observations gain a whole day: any global picture built from
+one satellite has a join in it somewhere, and no processing removes that. Two consecutive days
+let us choose where the join falls. It is put along the path where the two days' cloud fields
+agree most closely, which wanders 155 degrees of longitude and lands where they differ by 8 % of
+the global average — rather than down a meridian, where it would draw a perfectly straight line.
+Global mean cloud fraction 0.62, against a published MODIS value near 0.67.
+
+- **Third-party:** the retrievals — Public Domain (NASA).
 
 ### Neptune clouds — `/cubemaps/Neptune.clouds.albedo.512.l03864.lr02738.h09663.hg11302.hb09756.png`
 
@@ -831,26 +869,64 @@ VRAM compression.
 These files are essentially data distributions. Each is a conversion of published catalog or
 model data into a form the renderer can sample, and we make no claim on their content.
 
-### `/starmaps/hipparcos_stars.*.ivbinary`
+### `/starmaps/stars.*.ivbinary`
 
-Star positions, magnitudes and B−V colors from the
-[ESA Hipparcos Catalogue](https://www.cosmos.esa.int/web/hipparcos) (ESA, 1997; ESA SP-1200),
-packed by magnitude limit. Nine files, one per limit, so a build can trade star count against
-memory.
+Directions, distances, magnitudes and B−V colors for 2,551,210 stars, from the
+[ESA Hipparcos Catalogue](https://www.cosmos.esa.int/web/hipparcos) (ESA, 1997; ESA SP-1200) and
+the [Tycho-2 Catalogue](https://www.cosmos.esa.int/web/hipparcos/tycho-2) (Høg et al. 2000,
+A&A 355, L27), both products of the ESA Hipparcos mission. Hipparcos supplies the measured V,
+B−V and parallax for its own 118,000 stars; Tycho-2 and its supplement supply the remaining 2.43
+million, which carry no parallax and sit on a 1 kpc shell, with Johnson V and B−V derived from
+Tycho B<sub>T</sub>/V<sub>T</sub> by the catalogue's own stated relation. The set is 99 %
+complete to V 11.0.
+
+Twenty-four files, each a half-magnitude bucket named for its faint end, so a project can trade
+star count against download size by shipping only the buckets its own field of view can use.
+Each star occupies ten bytes: a 16-bit direction per axis (5.5 arcsec), a 16-bit parallax, and
+one byte each of magnitude and color index.
 
 ### `/rings/*`
 
 Saturn ring light-scattering data created by
-[Björn Jónsson](https://bjj.mmedia.is/data/s_rings/index.html), converted to shader-sampler
-textures — three sets of nine, for backscatter, forward scatter and the unlit side.
+[Björn Jónsson](https://bjj.mmedia.is/data/s_rings/index.html), converted to a shader-sampler
+texture: one half-float image carrying his three radial brightness profiles as layers —
+backscattered light, forward-scattered light at a phase angle of 139°, and the unlit side —
+paired with his transparency profile as the fraction of the background each radius occludes. His profiles are measured in Voyager images over the Voyager
+stellar occultation optical depth, sampled every 5 km from 74,510 to 140,390 km from Saturn's
+centre. The file holds them in linear light with each one's own observing geometry divided out,
+so that what it carries is the ring's scattering strength and the shader can re-apply the
+geometry at the angles it is rendering.
 
-- Please credit Björn Jónsson.
+The colour is ours, and both halves of it are measured. How it varies with radius comes from
+Cassini's Visual and Infrared Mapping Spectrometer: that instrument's two visible spectral
+slopes, published as radial profiles by Hedman et al. (2013), describe a reflectance spectrum
+every 20 km, and integrating each of those against the CIE colour-matching functions gives its
+radius a colour. The A and B rings come out distinctly red, the C ring and the Cassini Division
+much less so, and the C ring reddens steadily outward across its whole width. How red the
+system is overall comes instead from disc-integrated photometry, which no spectrometer scan can
+supply: Mallama, Krobusek and Pavlov (2017) model Saturn's magnitude against ring opening angle
+and solar phase in each of U, B, V, R and I, and at zero opening the rings are edge-on and the
+model is the globe alone, so the difference between the two is the ring system's own light, band
+by band. That gives a colour index of B−V 0.93 — tan, and less red than the planet it circles.
+The two determinations share no instrument and no method, and they agree on the system's mean
+colour to 6%.
+
+The unlit side is given the same colour as the lit side, at its own luminance. Its light is the
+same particles seen through the layer rather than off it, so its scattering strength has their
+spectrum; over every radius the unlit-side scan reaches, its measured colour is within 5% of the
+lit-side scan's.
+
+- **Third-party:** the three brightness profiles and the transparency profile, wholly — please
+  credit Björn Jónsson. The radial colour is derived from Cassini VIMS data
+  (NASA/JPL-Caltech/University of Arizona; please cite Hedman et al. 2013).
+- **I, Voyager:** the colour of the tint. No separate copyright is asserted over it.
 
 ### `/asteroid_binaries/*`
 
 Asteroid proper orbital elements from the
 [Asteroids Dynamic Site (AstDyS)](https://newton.spacedys.com/astdys), packed by orbital group
-and magnitude limit.
+and magnitude limit. Asteroid names and discovery designations are from NASA/JPL's
+[Small-Body Database](https://ssd.jpl.nasa.gov/tools/sbdb_query.html).
 
 ---
 

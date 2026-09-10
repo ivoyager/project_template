@@ -50,7 +50,11 @@ Global maps of Callisto, Ganymede, Io, Neptune and Saturn downloaded from https:
   - `/cubemaps/Io.normal.512.png` — his Io DEM, scaled as he recommends and converted to surface normals. The conversion is mechanical; the map is his.
   - `/cubemaps/Neptune.clouds.albedo.512.l03864.lr02738.h09663.hg11302.hb09756.png` — **his light clouds and dark spots only**, cut into a translucent overlay; the banding pattern beneath it is generated in shader code.
   - `/cubemaps/Saturn.albedo.1024.l03864.lg03094.lb01682.h08149.hb05395.png` — his color and his detail as downloaded; level and map projection adjusted.
-  - `/rings/*` — **his ring light-scattering data**, converted to shader-sampler textures.
+  - `/rings/saturn.rings.13177.exr` — **his ring light-scattering data**: his three radial
+    brightness profiles and his transparency profile, wholly, converted to one shader-sampler
+    texture. Format only. The colour is I, Voyager's, derived from Cassini VIMS spectra (credit
+    NASA/JPL-Caltech/University of Arizona; please cite Hedman et al. 2013) and from published
+    photometry. See [IVOYAGER_ASSETS.md](IVOYAGER_ASSETS.md).
 - **Copyright:** Björn Jónsson
 - **License:** From "Use of the planetary maps" on his [acknowledgements page](https://bjj.mmedia.is/acknow.html):
 ```
@@ -120,7 +124,7 @@ Most NASA images and models are in the public domain. Use is governed by [NASA I
   - `/cubemaps/Phoebe.albedo.512.png` — imagery only, with the unimaged regions filled with the flat average grey of the imaged surface.
   - `/cubemaps/Pluto.albedo.1024.l00323.lg00174.lb00052.h17335.hg16561.hb16557.png` — **brightness structure and detail only.** The color is rebuilt against NASA's own natural-color view of Pluto (credit NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute/Alex Parker); the region New Horizons never imaged is filled with a flat average color.
   - `/cubemaps/Earth.albedo.2048.png` — land, ice and shallow-water imagery (Blue Marble Next Generation, July 2004; imagery by Reto Stöckli). The ocean level is I, Voyager's: the source's painted near-black placeholder is raised to a single derived color, carrying the source's own water imagery through unchanged; see IVOYAGER_ASSETS.md.
-  - `/cubemaps/Earth.clouds.albedo.512.png` — **cloud imagery only** (The Blue Marble 2002 combined cloud product; image by Reto Stöckli). Its single greyscale channel is split by us into the deck's opacity and its reflectance; see IVOYAGER_ASSETS.md.
+  - `/cubemaps/Earth.clouds.albedo.2048.png` — **cloud retrievals and imagery only** (MODIS cloud fraction, Terra and Aqua; cloud optical thickness from MODIS on Terra and Aqua and VIIRS on Suomi NPP and NOAA-20; MODIS corrected-reflectance true colour and band 31 brightness temperature, Terra and Aqua; all for 2019-09-23 and 2019-09-24, via NASA EOSDIS Global Imagery Browse Services). Recombined by us into the cloud fraction and cloud albedo a translucent deck needs, with the thickness carried at the scale the retrievals support; see IVOYAGER_ASSETS.md.
   - `/cubemaps/Earth.emission.1024.png` — imagery only (Black Marble 2016 grayscale, lights-only), warm-tinted, and with the product's tile-corner marks cleared where nothing else is lit near them.
   - `/cubemaps/Enceladus.normal.512.png`, `/cubemaps/Moon.normal.1024.png` — **elevation data only** (Cassini Global DEM 200m, Schenk & McKinnon 2024; LRO LOLA via the CGI Moon Kit). The surface-normal maps derived from them are I, Voyager works.
   - `/meshes/Ceres.obj` + `/cubemaps/Ceres.normal.512.png`, and `/meshes/Vesta.obj` + `/cubemaps/Vesta.normal.512.png` — **elevation data only** (Dawn Framing Camera HAMO Digital Terrain Models, Preusker et al. 2016). The meshes and surface-normal maps are I, Voyager works.
