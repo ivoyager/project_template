@@ -55,11 +55,6 @@ gdscript/warnings/unsafe_call_argument=true
 gdscript/warnings/return_value_discarded=false
 gdscript/warnings/static_called_on_instance=0
 
-[display]
-
-window/size/viewport_width=1800
-window/size/viewport_height=945
-
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/ivoyager_assistant/plugin.cfg", "res://addons/ivoyager_core/plugin.cfg", "res://addons/ivoyager_save/plugin.cfg", "res://addons/ivoyager_tables/plugin.cfg", "res://addons/ivoyager_units/plugin.cfg")
