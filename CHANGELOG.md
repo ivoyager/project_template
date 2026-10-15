@@ -7,19 +7,19 @@ File format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 See cloning and downloading instructions [here](https://www.ivoyager.dev/developers/).
 
 
-## [v0.2.1] - UNRELEASED
+## [v0.2.1] - 2026-10-15
 
-Under development using Godot 4.7.2.
+Released using Godot 4.7.2.
 
 ### Added
 * Enabled the Core plugin's new physical-light system (`IVCoreSettings.enable_physical_light`): physically calibrated sunlight, sky and ambient with a software compensating camera. A "Physical Light" row appears in Options (default on).
 * Enabled shader warm-up under the splash screen by adding Core `IVShaderWarmup`. Shader compiling happens before start rather than at first visit.
 
 ### Changed
-* Attribution docs restructured: `IVOYAGER_WORKS.md` is retired and replaced by `IVOYAGER_ASSETS.md`, which documents every distributed asset individually with its own copyright and license; `3RD_PARTY.md` becomes a clean list by copyright holder. README.md updated to match.
-* [Dev ongoing] Updating plugin ivoyager_core with v0.2.1.dev.
-* [Dev ongoing] Updating plugin ivoyager_tables with v0.2.1.dev.
-* [Dev ongoing] Updating plugin ivoyager_assistant with v0.0.3.dev.
+* Sync attribution docs with assets and Core submodule. (IVOYAGER_WORKS.md was replaced by IVOYAGER_ASSETS.md.)
+* Updated plugin ivoyager_core to v0.2.1.
+* Updated plugin ivoyager_tables to v0.2.1.
+* Updated plugin ivoyager_assistant to v0.0.3.
 
 
 ## [v0.2] - 2026-08-01
@@ -254,6 +254,7 @@ Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases]
 * Updated submodule 'ivoyager' to v0.0.10.
 
 
+[v0.2.1]: https://github.com/ivoyager/planetarium/compare/v0.2...v0.2.1
 [v0.2]: https://github.com/ivoyager/planetarium/compare/v0.1.2...v0.2
 [v0.1.2]: https://github.com/ivoyager/project_template/compare/v0.1.1...v0.1.2
 [v0.1.1]: https://github.com/ivoyager/project_template/compare/v0.1...v0.1.1
