@@ -139,8 +139,10 @@ offset_bottom = 96.0
 [node name="SaveDialog" parent="TopUI" unique_id=67322322 instance=ExtResource("18_u5moa")]
 
 [node name="OptionsPopup" parent="TopUI" unique_id=1036101610 instance=ExtResource("12_r8n0p")]
+size = Vector2i(693, 100)
 
 [node name="HotkeysPopup" parent="TopUI" unique_id=897101042 instance=ExtResource("13_xb4om")]
+size = Vector2i(693, 100)
 
 [node name="ConfirmationDialog" parent="TopUI" unique_id=292454186 instance=ExtResource("14_r1tsy")]
 

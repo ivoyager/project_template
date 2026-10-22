@@ -7,6 +7,19 @@ File format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 See cloning and downloading instructions [here](https://www.ivoyager.dev/developers/).
 
 
+## [v0.2.3] - UNRELEASED
+
+Under development using Godot 4.7.2.
+
+### Changed
+* `template/units.gd` is re-synced with the Units plugin's `units.gd`, so it declares the unit constants an automation client converts by and has the plugin's degree-symbol units.
+* project.godot no longer lists the Units plugin's translation (Core adds it now), and drops the Godot 3 keys in `[application]` and `[locale]`, which Godot 4 ignores.
+* [Dev ongoing] Updating plugin ivoyager_core with v0.2.3.dev.
+* [Dev ongoing] Updating plugin ivoyager_units with v0.2.3.dev.
+* [Dev ongoing] Updating plugin ivoyager_save with v0.2.3.dev.
+* [Dev ongoing] Updating plugin ivoyager_assistant with v0.0.5.dev.
+
+
 ## [v0.2.2] - 2026-10-15
 
 Released using Godot 4.7.2.
@@ -262,9 +275,10 @@ Requires non-Git-tracked **ivoyager_assets-0.0.10**; find in [ivoyager releases]
 * Updated submodule 'ivoyager' to v0.0.10.
 
 
-[v0.2.2]: https://github.com/ivoyager/planetarium/compare/v0.2.1...v0.2.2
-[v0.2.1]: https://github.com/ivoyager/planetarium/compare/v0.2...v0.2.1
-[v0.2]: https://github.com/ivoyager/planetarium/compare/v0.1.2...v0.2
+[v0.2.3]: https://github.com/ivoyager/project_template/compare/v0.2.2...HEAD
+[v0.2.2]: https://github.com/ivoyager/project_template/compare/v0.2.1...v0.2.2
+[v0.2.1]: https://github.com/ivoyager/project_template/compare/v0.2...v0.2.1
+[v0.2]: https://github.com/ivoyager/project_template/compare/v0.1.2...v0.2
 [v0.1.2]: https://github.com/ivoyager/project_template/compare/v0.1.1...v0.1.2
 [v0.1.1]: https://github.com/ivoyager/project_template/compare/v0.1...v0.1.1
 [v0.1]: https://github.com/ivoyager/project_template/compare/v0.0.25...v0.1
