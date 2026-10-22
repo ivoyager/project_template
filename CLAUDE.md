@@ -91,7 +91,7 @@ All GDScript code should compile with **zero warnings**. Apply these strategies:
 - **Launch by hand:** `"<godot_console_exe>" --path "<project_dir>" --windowed --position 0,0 --resolution 800x600`.
 - **Server:** `IVAssistantServer` runs in debug builds only and listens on `127.0.0.1:29071` by default (`[assistant]` in `addons/ivoyager_assistant/ivoyager_assistant.cfg`). Arguments after `--` override it per process (`--assistant-port=N`, `--assistant-instance=ID`), so several runs can go at once (`SPECIFICATION.md` §7.3).
 - **Test runner:** `python addons/ivoyager_assistant/tools/assistant_test.py --launch` runs the generic test sequence (`SPECIFICATION.md` §9). A script of your own launches with its `GodotLauncher` and talks through its `AssistantClient`; don't reimplement either. `tools/assistant_client.sh` sends single commands by hand.
-- **API:** use `describe`, `get` and `call` on declared members. The suite methods in `SPECIFICATION.md` §4.7–4.13 are deprecated; only the save/load methods (`save_game`, `load_game`, `get_save_status`) still lack a replacement.
+- **API:** use `describe`, `get` and `call` on declared members. The suite methods in `SPECIFICATION.md` §4.7–4.13 are deprecated; its §4.7 table names each one's replacement, including save/load on `IVSave`.
 - **Splash screen:** the template waits at its splash screen; a client starts the simulator with `call` on `IVStateManager.start`.
 - **Quit step:** Always call `quit` with `{"force":true}` as the **last test step**. This calls `IVStateManager.quit(true)`, which shuts down cleanly and reports errors such as orphan nodes and leaked resources in the Godot console output; `GodotLauncher` scans that output for them.
 
