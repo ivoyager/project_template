@@ -24,7 +24,8 @@ extends Node
 ## This file replaces the "Units" plugin template file at
 ## [code]addons/ivoyager_units/units.gd[/code] as set in res://ivoyager_override.cfg.
 ##
-## It is unchanged except for comments. The file override was necessary for much
+## It differs from that file only in comments; re-sync it whenever that file
+## changes. The file override was necessary for much
 ## of Core plugin development due to extreme sensitivity of lights and shadows
 ## to scale ([constant METER]) that varied with Godot versions and our Core plugin
 ## code. That sensitivity appears to be cured as of Godot 4.7 with Core 0.2. We're
@@ -111,6 +112,24 @@ const WEBER := VOLT * SECOND
 const TESLA := WEBER / METER ** 2
 const GRAVITATIONAL_CONSTANT := 6.67430e-11 * METER ** 3 / (KG * SECOND ** 2)
 
+## Unit constants an automation client may read to convert to and from the
+## simulator's internal units: a length in meters is [code]length / METER[/code].
+const AUTOMATION_PROPERTIES: Array[StringName] = [
+	&"SECOND",
+	&"METER",
+	&"KG",
+	&"DEG",
+	&"MINUTE",
+	&"HOUR",
+	&"DAY",
+	&"YEAR",
+	&"KM",
+	&"AU",
+	&"LIGHT_YEAR",
+	&"PARSEC",
+]
+
+
 
 ## Conversion multipliers for units that are linear with zero-intersect.
 ## Internal unit symbols must be unique. However, redundant symbol usage can
@@ -145,6 +164,7 @@ var unit_multipliers: Dictionary[StringName, float] = {
 	# angle
 	&"rad" : 1.0,
 	&"deg" : DEG, # IVQFormat displays as °
+	&"°" : DEG,
 	# temperature
 	&"K" : KELVIN,
 	# frequency
@@ -169,7 +189,9 @@ var unit_multipliers: Dictionary[StringName, float] = {
 	# angular velocity
 	&"rad/s" : 1.0 / SECOND, 
 	&"deg/d" : DEG / DAY,
+	&"°/d" : DEG / DAY,
 	&"deg/Cy" : DEG / CENTURY,
+	&"°/Cy" : DEG / CENTURY,
 	# particle density
 	&"m^-3" : 1.0 / METER ** 3,
 	# density
@@ -241,8 +263,13 @@ var unit_multipliers: Dictionary[StringName, float] = {
 ## and [param to_internal] specifies conversion to internal (true) or from
 ## internal (false).
 var unit_lambdas: Dictionary[StringName, Callable] = {
-	&"degC" : func convert_celsius(x: float, to_internal := true) -> float:
+	# Temperature conversions assume Kelvin is the internal unit.
+	&"degC" : func convert_deg_celsius(x: float, to_internal: bool) -> float:
 		return x + 273.15 if to_internal else x - 273.15,
-	&"degF" : func convert_fahrenheit(x: float, to_internal := true) -> float:
+	&"°C" : func convert_celsius(x: float, to_internal: bool) -> float:
+		return x + 273.15 if to_internal else x - 273.15,
+	&"degF" : func convert_deg_fahrenheit(x: float, to_internal: bool) -> float:
+		return  (x + 459.67) / 1.8 if to_internal else x * 1.8 - 459.67,
+	&"°F" : func convert_fahrenheit(x: float, to_internal: bool) -> float:
 		return  (x + 459.67) / 1.8 if to_internal else x * 1.8 - 459.67,
 }
