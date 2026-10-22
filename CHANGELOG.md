@@ -11,6 +11,9 @@ See cloning and downloading instructions [here](https://www.ivoyager.dev/develop
 
 Under development using Godot 4.7.2.
 
+### Added
+* `tests/template_test.py` runs the Assistant's generic tests and the template's save/load tests (round trip, repeated loads, gates, hotkeys, autosave, dialogs) in a temporary save directory; `TestProbe` (`tests/test_probe.gd`, added in `ivoyager_override2.cfg`) serves it.
+
 ### Changed
 * `template/units.gd` is re-synced with the Units plugin's `units.gd`, so it declares the unit constants an automation client converts by and has the plugin's degree-symbol units.
 * project.godot no longer lists the Units plugin's translation (Core adds it now), and drops the Godot 3 keys in `[application]` and `[locale]`, which Godot 4 ignores.

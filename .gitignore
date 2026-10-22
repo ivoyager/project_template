@@ -8,6 +8,7 @@ export_presets.cfg
 /addons/ivoyager_assets/
 /export/
 ~*
+__pycache__/
 
 # Claude Code
 .claude/settings.local.json

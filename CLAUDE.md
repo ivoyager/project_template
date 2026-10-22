@@ -39,6 +39,8 @@ Each plugin's editor plugin registers its autoloads from its own `.cfg`, so the 
 - replaces the `IVUnits` autoload with `template/units.gd`;
 - registers `template/preinitializer.gd` as the Core preinitializer.
 
+`ivoyager_override2.cfg` adds the test probe, `TestProbe` (`tests/test_probe.gd`), to the program. It is kept apart so a project made from the template can drop the probe by deleting that file and `tests/`.
+
 ### Initialization Flow
 
 1. Godot loads the plugins' autoloads.
@@ -54,6 +56,8 @@ The root scene, `template/universe.tscn` (class `Universe`), was made from Core'
 - `universe.gd` / `universe.tscn` — the root scene.
 - `units.gd` — a copy of `addons/ivoyager_units/units.gd` that replaces it, kept so the project can experiment with scale (`METER`). Re-sync it whenever the plugin's file changes: a copy that lags silently drops what the plugin adds, such as its automation declarations. Its header records how `METER` affected lighting and shadows in past Godot versions.
 - `gui/` — the splash screen (`PBDSplashScreen`) and the navigation and selection panels, assembled from Core's widgets.
+
+`tests/` holds the Assistant-driven tests (see *Testing with the Assistant Plugin*), not app code.
 
 ### Runtime Access
 
@@ -88,10 +92,11 @@ All GDScript code should compile with **zero warnings**. Apply these strategies:
 ## Testing with the Assistant Plugin
 
 - **Godot executable:** the newest `Godot_v*_console.exe` in the parent directory (`../`) of the major in `config/features`. `addons/ivoyager_assistant/tools/godot_executable.py` picks it; never run a bare `godot` or a build of another major. Use the `_console` variant to see stdout. If no build of that major is there, ask the user for the path.
-- **Launch by hand:** `"<godot_console_exe>" --path "<project_dir>" --windowed --position 0,0 --resolution 800x600`.
+- **Launch by hand:** `"<godot_console_exe>" --path "<project_dir>"`. Don't pass `--resolution`: test the GUI at the project's own window size, where its panels are laid out as a user sees them.
 - **Server:** `IVAssistantServer` runs in debug builds only and listens on `127.0.0.1:29071` by default (`[assistant]` in `addons/ivoyager_assistant/ivoyager_assistant.cfg`). Arguments after `--` override it per process (`--assistant-port=N`, `--assistant-instance=ID`), so several runs can go at once (`SPECIFICATION.md` §7.3).
-- **Test runner:** `python addons/ivoyager_assistant/tools/assistant_test.py --launch` runs the generic test sequence (`SPECIFICATION.md` §9). A script of your own launches with its `GodotLauncher` and talks through its `AssistantClient`; don't reimplement either. `tools/assistant_client.sh` sends single commands by hand.
-- **API:** use `describe`, `get` and `call` on declared members. The suite methods in `SPECIFICATION.md` §4.7–4.13 are deprecated; its §4.7 table names each one's replacement, including save/load on `IVSave`.
+- **Test runner:** `python tests/template_test.py --launch` runs the Assistant's generic test sequence (`SPECIFICATION.md` §9), then the template's save/load tests; its module docstring lists them and its options. Every save of a run goes to a temporary directory through `TestProbe.set_save_directory`, never the user's saves directory, so runs can go in parallel. A script of your own launches with the Assistant's `GodotLauncher` and talks through its `AssistantClient` (`addons/ivoyager_assistant/tools/assistant_test.py`); don't reimplement either. `tools/assistant_client.sh` sends single commands by hand.
+- **API:** use `describe`, `get` and `call` on declared members. The suites are gone; `SPECIFICATION.md` §4.7 maps each removed method to its replacement, including save/load on `IVSave`.
+- **A probe a test needs is a class that declares members, not a suite.** `TestProbe` is a program object added in `ivoyager_override2.cfg` and called by its role; add a member there when a test needs something the app's own classes don't declare (`SPECIFICATION.md` §7.2).
 - **Splash screen:** the template waits at its splash screen; a client starts the simulator with `call` on `IVStateManager.start`.
 - **Quit step:** Always call `quit` with `{"force":true}` as the **last test step**. This calls `IVStateManager.quit(true)`, which shuts down cleanly and reports errors such as orphan nodes and leaked resources in the Godot console output; `GodotLauncher` scans that output for them.
 
